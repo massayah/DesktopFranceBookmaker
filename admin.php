@@ -1893,6 +1893,7 @@ name="submit_delete_user_xiaoyi" value="Supprimer" onclick="if(!confirm('Voulez-
 
 </div><!--end center-->
 </div><!--end content-->
+<?php } }?>
 <?php include("footer.php"); ?>
 </div><!--end#container-->
 
