@@ -258,6 +258,7 @@ jeudi 11 juin<br>
 <p class="up"><a class="icon-up" href="#container">&nbsp;Haut de page</a></p>
 </div><!--end center-->
 </div><!--end content-->
+<?php }?>
 <?php include("footer.php"); ?>
 </div><!--end#container-->
 </body>
