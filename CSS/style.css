@@ -1,0 +1,1006 @@
+/* EuroBookMaker 2016 - CSS spécifiques par Martine */
+
+/* Couleurs */
+
+
+/* -------- */
+
+
+/* fontface pour localhost */
+
+/*@font-face { font-family: "Duru Sans"; 
+src: url('font/DuruSans-Regular.otf'); } */
+
+
+/* styles temporaires a supprimer */
+
+
+
+/* Liens */
+
+a {
+  color: #e11d25;
+  font-weight: bold;
+  padding: .4em;
+  text-decoration: underline;
+  transition: all 0.6s ease;
+}
+
+a:hover, a:active, a:focus {
+  text-decoration: none;
+}
+
+a:link {
+	-webkit-tap-highlight-color: transparent;
+}
+
+/* ----- */
+
+
+
+/* Styles communs*/
+
+
+p.up {clear: both; text-align: right; margin-top: 1em; margin-bottom: 1em;}
+
+h1, h2, h3, h4 {font-weight: normal}
+
+h2 {font-style: normal; color: #027ac2;}
+
+/*.rouge {color: #db2033;}*/
+
+li {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+
+
+
+/* Messages erreurs */
+
+p.error_message,
+#register_error_message,
+#top_error_message {
+  font-weight: bold;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background-color: #f00;
+  color: #fff;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+
+/* Messages save OK */
+
+#top_save_message {
+  font-weight: bold;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background-color: #0074c3 ;
+  color: #fff;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+
+
+/* Boutons */
+
+.btn-original {
+  font-weight: bold;
+  font-size: 1.2em;
+  background-color: #ffcb05;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fa3431), to(#c82a27)); /* Chrome, Safari 4+ */
+  background-image: -webkit-linear-gradient(top, #fa3431, #c82a27); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+  background-image:    -moz-linear-gradient(top, #fa3431, #c82a27); /* Firefox 3.6-15 */
+  background-image:      -o-linear-gradient(top, #fa3431, #c82a27); /* Opera 11.10-12.00 */
+  background-image:         linear-gradient(to bottom, #fa3431, #c82a27); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+  padding: 1em 1.5em;
+  -webkit-border-radius: 8px; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+  border-radius: 8px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+
+  /* useful if you don't want a bg color from leaking outside the border: */
+  background-clip: padding-box; /* Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+ */
+}
+
+.btn {
+  font-weight: bold;
+  font-size: 1.2em;
+  background-color: #ffcb05;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dd2235), to(#db2033)); /* Chrome, Safari 4+ */
+  background-image: -webkit-linear-gradient(top, #dd2235, #db2033); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+  background-image:    -moz-linear-gradient(top, #dd2235, #db2033); /* Firefox 3.6-15 */
+  background-image:      -o-linear-gradient(top, #dd2235, #db2033); /* Opera 11.10-12.00 */
+  background-image:         linear-gradient(to bottom, #dd2235, #db2033); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+  padding: 1em 1.5em;
+  -webkit-border-radius: 5px; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+  border-radius: 5px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+
+  /* useful if you don't want a bg color from leaking outside the border: */
+  background-clip: padding-box; /* Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+ */
+}
+
+.btn-rouge {
+  font-weight: bold;
+  font-size: 1.2em;
+  background-color: #ffcb05;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dd2235), to(#db2033)); /* Chrome, Safari 4+ */
+  background-image: -webkit-linear-gradient(top, #dd2235, #db2033); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+  background-image:    -moz-linear-gradient(top, #dd2235, #db2033); /* Firefox 3.6-15 */
+  background-image:      -o-linear-gradient(top, #dd2235, #db2033); /* Opera 11.10-12.00 */
+  background-image:         linear-gradient(to bottom, #dd2235, #db2033); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+  padding: 1em 1.5em;
+  -webkit-border-radius: 5px; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+  border-radius: 5px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+
+  /* useful if you don't want a bg color from leaking outside the border: */
+  background-clip: padding-box; /* Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+ */
+}
+
+input[type="submit"].btn-rouge {
+	padding: .5em 1em;
+	border: none;
+	color: #fff;
+	/*border: 1px solid #ccc;*/
+}
+
+input[type="submit"].btn-rouge:hover,
+input[type="submit"].btn-rouge:focus {
+	text-decoration: underline;
+	/*border: 1px solid #ccc;*/
+}
+
+
+.btn-vert {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.2em;
+  background-color: #32adde;
+  padding: 1em 1.5em;
+  -webkit-border-radius: 8px; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+  border-radius: 8px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+
+  /* useful if you don't want a bg color from leaking outside the border: */
+  background-clip: padding-box; /* Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+ */
+}
+
+.btn a,
+a.btn,
+.btn-rouge a,
+a.btn-rouge,
+.btn-vert a,
+a.btn-vert {
+  color: #fff;
+}
+
+.btn:hover,
+.btn a:hover,
+a.btn:hover,
+a.btn:focus,
+.btn-rouge:hover,
+.btn-rouge a:hover,
+a.btn-rouge:hover,
+a.btn-rouge:focus,
+.btn-vert:hover,
+.btn-vert a:hover,
+a.btn-vert:hover,
+a.btn-vert:focus {
+  text-decoration: none;
+}
+
+
+
+/* Panel */
+
+.panel {
+  padding: 20px;
+  border: 1px dashed #0db14e;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 30px 0px #ccc; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+          box-shadow: 0px 0px 30px 0px #ccc; /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
+}
+
+.panel a {
+  display: inline-block;
+  padding: 0.5em 1em;
+}
+
+
+
+
+
+/* ----------------- */
+/* LAYOUT */
+/* ----------------- */
+
+html {font-size: 70%;}
+
+
+body {
+  font-family: 'Exo 2', sans-serif;
+  color: #666;
+  background-color: #fff;
+}
+
+
+@media (min-width:600px) {
+
+body {background: url(../images/greyzz.png)}
+  
+}
+
+#content {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+
+@media (min-width:1140px) {
+
+#content {
+  padding-left: 0;
+  padding-right: 0;
+}
+  
+  
+}
+
+
+
+
+/* ------------------- */
+/* HEADER */
+/* ------------------- */
+
+
+#header {
+  background-color: #206cac;
+  margin: 0 0 30px 0;
+  padding: 0;
+}
+
+#login {
+  margin-top: 1em;
+  margin-right: 1em;
+  /*outline: 5px solid yellow;*/                          /* OUTLINE */
+}
+
+@media (min-width:600px) {
+  
+#header {
+  min-height: 160px;
+}
+  
+}
+
+@media (min-width:700px) {
+ 
+}
+
+
+@media (max-width:1023px) {
+  
+  #header img.logo-standard {display: none;}
+  
+}
+
+
+@media (min-width:1024px) {
+  
+  #header img.logo-600-1023 {display: none;}
+  
+  
+}
+
+
+/* Login form
+-------------------------------------------------------------- */
+
+/* Pour que le form de connexion en absolute, reste dessous */
+#login {position: relative;}
+
+
+/* Alignement à droite pour les grds écrans */
+@media (min-width:550px) {
+#login {
+  margin-left: auto;
+}
+}
+
+#login h3 {
+  color: #fff;
+}
+
+#login p {
+    margin:0;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 10px 10px 42px;
+    cursor:pointer;
+    background-color: #dd2235;
+    background-image:url('../images/open.png');
+    background-position: 10px;
+    background-repeat:no-repeat;
+    border: 1px solid #c1788c;
+    border-radius: 5px;
+    transition: all 0.6s ease;
+}
+
+#login p:hover,
+#login p:focus,
+.login-inscription:hover,
+.login-inscription:focus {
+background-color: #9a2128;
+text-decoration: underline;
+border: 1px solid transparent;
+}
+
+#login p.close {
+    background-image:url('../images/close.png');
+}
+
+#login-form {
+    position:absolute;
+    z-index:999;
+    background-color:#fff;
+    border:solid 1px rgb(220,220,220);
+    padding:12px;
+    width:300px;
+    box-shadow:1px 1px 4px rgb(220,220,220);
+    top: 60px;
+    left:0;
+    display:none;
+}
+
+#login-form label {
+    display:block;
+    margin-top: 0;
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"] {
+    display:block;
+    width: 100%;
+}
+
+#login-form input,
+#login-form label {
+    /*margin-bottom:4px;*/
+}
+#login-form .oubli {
+}
+
+.login-inscription {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #dd2235;
+  border: 1px solid #c1788c;
+  border-radius: 5px;
+}
+.login-inscription a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.6s ease;
+}
+
+.login-inscription a:hover,
+.login-inscription a:focus {
+  text-decoration: underline;
+}
+
+
+
+
+
+/* ------------------- */
+/* NAVIGATION */
+/* ------------------- */
+
+
+#navigation ul {
+	margin: 0;
+	padding: 0;
+}
+#navigation li {
+  display: inline;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+
+#navigation a {
+	display: block;
+	padding: .7em .5em;
+	border-bottom: 1px solid #ccc;
+	color: #e11d25;
+	font-weight: normal;
+	text-decoration: none;
+}
+#navigation a:hover,
+#navigation a:focus,
+#navigation a.current {
+	color: #206cac;
+	text-decoration: none;
+	background-color: #ccc;
+}
+
+
+@media(min-width:800px) {
+  
+  #navigation {
+  display: flex;
+  align-items: center;
+}
+#navigation a {
+	display: inline-block;
+	padding: 1em;
+	margin: 0.2em;
+	text-transform: uppercase;
+	/*text-shadow: 1px 1px 0 #fff;*/
+	background-color: transparent;
+	border-top: 1px solid #e11d25;
+	border-bottom: 1px solid #e11d25;
+}
+
+#navigation a:hover,
+#navigation a:focus,
+#navigation a.current {
+	border-top: none;
+	border-bottom: none;
+	background-color: transparent;
+}
+}
+
+
+/* FIN NAVIGATION */
+
+
+
+
+
+/* ------------------- */
+/* FOOTER */
+/* ------------------- */
+
+#footer {
+  color: #fff;
+  background-color: #2b2b2b;
+  padding: 2em;
+}
+
+
+@media (min-width:600px) {
+
+#footer {
+  background: url(../images/carbon_fibre_v2.png);
+}
+  
+  
+}
+
+
+
+/* ----------------- */
+/* TABLEAUX */
+/* ----------------- */
+
+
+/*#page_bet caption {
+  min-width: 17em;
+}
+
+
+table th {
+  font-weight: bold;
+}
+
+table th {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #027ac2;
+  color: #fff;
+}
+
+table th a {
+  color: #fff;
+}
+
+#page_ranking table th.first,
+#page_ranking table td.first {
+  width: 6em;
+}
+
+#page_ranking table th.rank-top,
+#page_ranking table td.rank-top {
+  width: 30em;
+}*/
+
+
+table th {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #027ac2;
+  color: #fff;
+}
+
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+Le remplacement des titres est fait dans chaque page contenant des tableaux.
+*/
+@media 
+only screen and (max-width:760px),
+(min-device-width:768px) and (max-device-width:1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+
+
+
+
+
+/* --------------------- */
+/* Page Accueil */
+/* --------------------- */
+
+
+
+#page_accueil h1 {color: #027ac2; margin-top: 1em;}
+
+#intro {margin-bottom: 5em;}
+
+
+
+.register, .bet, .win {
+  padding: 20px;
+  border: 1px dashed #0db14e;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 30px 0px #ccc; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+          box-shadow: 0px 0px 30px 0px #ccc; /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
+}
+
+#rules li {margin-top: 10px; margin-bottom: 10px;}
+
+
+
+
+@media (min-width:600px) {
+
+.inscription,
+.visites,
+.bet,
+.win {
+  display: inline-block;
+  width: 45%;
+}
+
+}
+
+
+/* ----------------- */
+/* Page Teams */
+/* ----------------- */
+
+
+#page_teams h2 {color: #027ac2;}
+#page_teams .autogrid4 {border-bottom: 1px solid #999;}
+
+/* Fancybox */
+
+.lbstyle {
+  width: 320px;
+  height:auto;
+  /*overflow:auto;*/
+}
+
+table.infoteam {
+  width: 95%;
+}
+
+
+@media (min-width:600px) {
+  
+ .lbstyle {
+   /*max-width: 600px;*/
+   /*text-align: center;*/
+}
+  
+}
+
+
+    
+
+/* --------------------- */
+/* Page Schedule */
+/* --------------------- */
+
+
+#page_schedule .autogrid2 div.matchfinale {
+  margin-left: 1.2em;
+}
+
+#page_schedule h2.schedule-marge {
+  margin-bottom: 1em;
+  padding-top: 2em;
+  border-top: 1px solid #ddd;
+}
+
+
+
+
+/* ------------------- */
+/* Page Top 4 */
+/* ------------------- */
+
+
+#top4-teams,
+#top4-choice {
+  border: 1px solid #ddd;
+}
+
+#top4-teams h1,
+#top4-choice h1 {
+  background-color: #0074c3;
+  color: #fff;
+  text-align: center;
+}
+
+.top4-group {padding: 0 0 0 1.5em;}
+
+.top4-group ul li {
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+#top4-choice ul {
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  color: #d72070;
+}
+
+
+#page_top p.up {    /* annulation du width 23,5% de grid3 */
+  width: 100%;
+}
+
+
+
+
+/* ----------------- */
+/* Page Bet */
+/* ----------------- */
+
+
+/*#page_bet h2 {
+  
+}
+
+#page_bet h2.sansbordhaut {
+  padding-top: 0;
+  border-top: 0;
+}
+
+#page_bet table th.thfirst {
+  background-color: #027ac2;
+  color: #fff;
+}
+
+#page_bet .autogrid2 div.matchfinale {
+  margin-left: 1.2em;
+}
+
+#page_bet caption {
+  font-style: normal;
+  color: #0074c3;
+  font-weight: bold;
+}
+
+#page_bet  form label {
+  font-weight: bold
+}
+
+#page_bet .rouge {
+  /*color: #db2033;*/
+  /*color: #206cac;
+  font-size: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-weight: bold;
+}*
+
+@media (max-width:600px) {
+  .bet-large {
+    display: none;
+  }
+  .bet-choix {
+    display: inline-block;
+  }
+}
+
+@media (min-width:601px) {
+  .bet-small {
+    display: none;
+  }
+}
+
+/* Alignement vertical des panels matchs */
+
+@media (min-width:600px) and (max-width:800px) {
+  .flexparent {
+  
+}
+  
+  .betmatch .flexparent > * {
+  display: flex;
+  align-content: space-around;
+}
+
+}
+
+@media (min-width:800px) {
+  .flexparent {
+ 
+}
+  
+  .betmatch .flexparent > * {
+  display: flex;
+  align-content: space-around;
+}
+
+}
+
+
+
+/* ------------------ */
+/* Page Ranking */
+/* ------------------ */
+
+#page_ranking #search_user {
+  padding: 2em;
+  margin-top: 3em;
+  margin-bottom: 1em;
+  /*background-color: #0074c3;
+  color: #fff;*/
+  font-weight: bold;
+  border: 1px solid #ddd;
+}
+
+#page_ranking table#my_rank {
+  max-width: 500px;
+}
+
+/*
+	Label the data pour tableau ranking
+	*/
+	#rank_users td:nth-of-type(1):before { content: "Place"; }
+	#rank_users td:nth-of-type(2):before { content: "Utilisateur"; }
+	#rank_users td:nth-of-type(3):before { content: "Top 4"; }
+	#rank_users td:nth-of-type(4):before { content: "Points"; }
+	/*td:nth-of-type(5):before { content: "Wars of Trek?"; }
+	td:nth-of-type(6):before { content: "Porn Name"; }
+	td:nth-of-type(7):before { content: "Date of Birth"; }
+	td:nth-of-type(8):before { content: "Dream Vacation City"; }
+	td:nth-of-type(9):before { content: "GPA"; }
+	td:nth-of-type(10):before { content: "Arbitrary Data"; }*/
+
+
+
+/* ------------------ */
+/* Page Admin */
+/* ------------------ */
+
+#page_admin input[type='number'] {
+  max-width: 2em;
+}
+
+#page_admin form input[type='submit'] {
+  margin-top: 1em;
+}
+
+
+/* TABS */
+
+
+.r-tabs {
+	position: relative;
+}
+
+.r-tabs .r-tabs-nav {
+	border-bottom: 1px solid #ccc;
+}
+
+.r-tabs .r-tabs-nav .r-tabs-tab {
+	position: relative;
+	top: 1px;
+}
+
+.r-tabs .r-tabs-nav .r-tabs-anchor {
+	background: #206cac;
+	margin-bottom: 3px;
+	padding: 10px 12px;
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+}
+
+.r-tabs .r-tabs-nav .r-tabs-state-active {
+	background-color: #fff;
+	margin-bottom: -1px;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+}
+
+.r-tabs .r-tabs-nav .r-tabs-state-disabled {
+	opacity: 0.5;
+}
+
+.r-tabs .r-tabs-nav .r-tabs-state-active .r-tabs-anchor {
+	color: #206cac;
+	background-color: #fff;
+}
+
+.r-tabs .r-tabs-panel {
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	margin-bottom: 3px;
+}
+
+.r-tabs .r-tabs-accordion-title .r-tabs-anchor {
+	display: block;
+	padding: 10px;
+	background-color: #206cac;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+	margin-bottom: 3px;
+}
+
+.r-tabs .r-tabs-accordion-title.r-tabs-state-disabled {
+	opacity: 0.5;
+}
+
+.r-tabs .r-tabs-accordion-title.r-tabs-state-active .r-tabs-anchor {
+	background-color: #fff;
+	color: #206cac;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	margin-bottom: 0;
+}
+
+
+
+
+
+
+/* ------------------ */
+/* Formulaires */
+/* ------------------ */
+
+form#register_form,
+form#contact_form {
+	max-width: 600px;
+	margin-top: 2em;
+	padding: 2em;
+	border: 1px solid #ccc;
+	background: #eee;
+	-webkit-border-radius: 8px; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+        border-radius: 8px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+
+  /* useful if you don't want a bg color from leaking outside the border: */
+  background-clip: padding-box; /* Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+ */
+}
+
+
+form#register_form label,
+form#contact_form label {
+	/*display: inline-block;*/
+	/*min-width: 200px;*/
+	font-weight: 700;
+}
+
+form#register_form .form-help,
+form#contact_form .form-help{
+	color: #555;
+	font-style: italic;
+	margin-bottom: 30px;
+}
+
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select,
+textarea,
+button,
+input[type="button"],
+input[type="reset"] {
+	/*min-width: 300px;*/
+	padding: .2em 0 .2em .2em;
+	border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+	padding: .5em 1em;
+	border: none;
+	color: #fff;
+	/*border: 1px solid #ccc;*/
+}
+
+form#register_form button,
+form#contact_form button {
+	margin-top: 50px;
+	color: #fff;
+	
+}
+
+form#contact_form input[type="text"],
+form#contact_form input[type="email"],
+form#contact_form input[type="submit"],
+form#contact_form button,
+form#contact_form textarea {
+  width: 100%;
+}
+
+#page_contact #contact_message {
+  padding: 1em;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  color: #db2033;
+}
+
+
+
+
+/* ------------------------------ */
+/* MEDIA QUERIES GENERALES */
+/* ------------------------------ */
+
+
