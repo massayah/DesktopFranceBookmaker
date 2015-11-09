@@ -6,7 +6,7 @@
 <?php include("PHP/bet_functions.php"); ?>
 
 <div id="content">
-<div class="center">
+<div class="mw1140p center">
 <!-- Message displayed if the user is not logged in -->
 <?php
 if (!isset($_SESSION['username']))
@@ -24,21 +24,21 @@ else
 {
 ?>
 
-<h1>Pariez sur les Matchs Eliminatoires.</h1>
+<h1 class="ptl">Pariez sur les Matchs Eliminatoires.</h1>
 <div id="search_team" class="mtl mbl"><label for="info_team">Rechercher une équipe&nbsp;:&nbsp;</label><input id="info_team" /></div>
 
 <div class="panel mbl">
 <h2>Accès direct</h2>
 
-<p><a href="#bet_huitiemes">Huitièmes de finale</a> <a href="#bet_quarts">Quarts de finale</a> <a href="#bet_demies">Demi-finales</a> <a href="#bet_finale">Finale</a></p>
+<p><a href="#bet_huitiemes">Huitièmes de finale</a> <a href="#bet_quarts">Quarts de finale</a> <a href="#bet_demies">Demi-finales</a> <a href="#bet_petitefinale">Petite Finale</a> <a href="#bet_finale">Finale</a></p>
 <p><a href="#">Tableau de la phase finale sur le site de la FIFA</a></p>
 
 </div><!--end Panel-->
 
 
 <div class="panel mbl">
-<h2>N'oubliez pas de parier sur :</h2>
-<a href="#bet40">Belgique - Ukraine</a>
+<h2>Les paris du jour</h2>
+<a href="#bet38">Angleterre - Espagne</a>
 </div><!--end Panel-->
 
 
@@ -46,42 +46,33 @@ else
 
 <h2 id="bet_huitiemes">Huitièmes de Finale</h2>
 
-<div class="autogrid2">
+<div class="grid-2-small-1-tiny-1">
 
-<table class="striped alternate">
-<caption>Huitième 1<br>
-<img src="images/flags/France.png" alt="France" width="20" height="20"> France vs Malte <img src="images/flags/Malte.png" alt="Malte" width="20" height="20"></caption>
-<tr>
-<th>PARIEZ
-<br>
-jusqu'au<br>
-mercredi 10 juin<br>
-21 h
+<div id="huitieme-1">
+<p class="h4-like pam"><span class="couleur">Samedi 25 juin</span> - 15h</p>
+<div class="panel txtcenter">
+<p class="mbs"><img src="images/flags/angleterre.png" alt="Angleterre" width="50" height="50"> <span class="h4-like medium-hidden small-hidden tiny-hidden mls mrs">Angleterre</span><span class="h4-like large-hidden mls mrs">ANG</span> vs <span class="h4-like medium-hidden small-hidden tiny-hidden mls mrs">Espagne</span><span class="h4-like large-hidden mls mrs">ESP</span> <img src="images/flags/espagne.png" alt="Espagne" width="50" height="50">
+</p>
+<p class="txtcenter h2-like mtn"><strong>1 - 0</strong></p>
 
-<div class="mts"><a href="#lb_france" id="lightbox_france">Infos France</a>
+<a href="#lb_angleterre" id="lightbox_angleterre">Infos Angleterre</a>
 
 <!-- Setting the lightbox for each team available if we click on the name of the team -->
 		<div style="display: none;">
-		<div id="lb_france" class="lbstyle">
-		<h2 class="h3-like">France</h2>
-			<p><strong>Palmarès Euro 2012</strong><br>
-			Quart de finale</p>
-			<h3>Matchs de Poule</h3>
+		<div id="lb_angleterre" class="lbstyle">
+		<h2 class="h3-like">Angleterre</h2>
+			<p><strong>Palmarès 2011</strong><br>
+			Vainqueur</p>
+			<h3>Points Poule A</h3>
 			<ul class="unstyled pln">
-			<li><strong>1er</strong> vs Malte&nbsp;:&nbsp;gagné 3 - 0</li>
-			<li><strong>2ème</strong> vs Ukraine&nbsp;:&nbsp;non joué</li>
-			<li><strong>3ème</strong> vs Belgique&nbsp;:&nbsp;non joué</li>
-			</ul>
-			<h3>Points Groupe A</h3>
-			<ul class="unstyled pln">
-			<li>France&nbsp;:&nbsp;<strong>3</strong></li>
-			<li>Ukraine&nbsp;:&nbsp;<strong>1</strong></li>
-			<li>Belgique&nbsp;:&nbsp;<strong>1</strong></li>
-			<li>Malte&nbsp;:&nbsp;<strong>0</strong></li>
+			<li>Australie&nbsp;:&nbsp;<strong>3</strong></li>
+			<li>Angleterre&nbsp;:&nbsp;<strong>1</strong></li>
+			<li>Pay de Galles&nbsp;:&nbsp;<strong>1</strong></li>
+			<li>Fidji&nbsp;:&nbsp;<strong>0</strong></li>
+			<li>Uruguay&nbsp;:&nbsp;<strong>0</strong></li>
 			</ul>
 			<h3>Phase finale</h3>
 			<ul class="unstyled pln">
-			<li><strong>8èmes</strong>&nbsp;:&nbsp;non joué</li>
 			<li><strong>quarts</strong>&nbsp;:&nbsp;non joué</li>
 			<li><strong>demies</strong>&nbsp;:&nbsp;non joué</li>
 			<li><strong>finale</strong>&nbsp;:&nbsp;non joué</li>
@@ -90,14 +81,12 @@ mercredi 10 juin<br>
 		</div>
 		<!-- End Setting the lightbox for each team available if we click on the name of the team -->
 
-</div>
-
-<div class="mts"><a href="#lb_malte" id="lightbox_malte">Infos Malte</a>
+ - <a href="#lb_espagne" id="lightbox_espagne">Infos Espagne</a>
 
 <!-- Setting the lightbox for each team available if we click on the name of the team -->
 		<div style="display: none;">
-		<div id="lb_malte" class="lbstyle">
-		<h2 class="h3-like">Malte</h2>
+		<div id="lb_espagne" class="lbstyle">
+		<h2 class="h3-like">Espagne</h2>
 			<p><strong>Palmarès Euro 2012 : </strong><br>
 			non qualifié</p>
 			<h3>Matchs de Poule</h3>
@@ -124,54 +113,74 @@ mercredi 10 juin<br>
 		</div>
 		<!-- End Setting the lightbox for each team available if we click on the name of the team -->
 
+<div class="grid-2-small-1-tiny-1">
+<div>
+<form id="bet37" action="bet2.php#bet37" method="POST" class="border-bet-form">
+<ul class="unstyled pln bet-choix txtleft">
+			<li><label for="Angleterre"><input type="radio" value="Angleterre" name="select_bet37">&nbsp;Angleterre</label></li>
+			<li><label for="Espagne"><input type="radio" value="Espagne" name="select_bet37">&nbsp;Espagne</label></li>
+			<li class="pam"><strong>Paris fermés</strong></li>
+</ul></form>
 </div>
+<div class="pam">
+<p>Votre choix</p>
+<p class="couleur">Angleterre</p>
+<p class="mtm">Résultat</p>
+<p class="couleur">Gagné</p>
+<p>Perdu</p>
+</div>
+</div><!--end grid-2-->
+</div><!--end panel-->
+</div><!--end huitieme-1-->
+		
 
-</th>
-<td>
-<form id="bet39" action="bet2.html#bet39" method="POST">
-<ul class="unstyled pln">
-			<li><label for="France"><input type="radio" value="France" name="select_bet39">&nbsp;France</label></li>
-			<li><label for="Malte"><input type="radio" value="Malte" name="select_bet39">&nbsp;Malte</label></li>
-			<li class="rouge">Paris fermés</li>
-</ul></form></td>
-</tr>
-<tr>
-<th>Votre choix</th>
-<td>
-  France</td>
-</tr>
-<tr>
-<th>Résultat</th>
-<td>
-		<p class="icon-check">Gagné</p>
-	</td>
-</tr>
-</table>
+<div id="huitieme-2">
+<p class="h4-like pam"><span class="couleur">Samedi 25 juin</span> - 18h</p>
+<div class="panel txtcenter">
+<p class="mbs"><img src="images/flags/angleterre.png" alt="Angleterre" width="50" height="50"> <span class="h4-like medium-hidden small-hidden tiny-hidden mls mrs">Angleterre</span><span class="h4-like large-hidden mls mrs">ANG</span> vs <span class="h4-like medium-hidden small-hidden tiny-hidden mls mrs">Espagne</span><span class="h4-like large-hidden mls mrs">ESP</span> <img src="images/flags/espagne.png" alt="Espagne" width="50" height="50">
+</p>
 
-<table class="striped alternate">
-<caption>Huitième 2<br>
-<img src="images/flags/Belgique.png" alt="Belgique" width="20" height="20"> Belgique vs Ukraine <img src="images/flags/Ukraine.png" alt="Ukraine" width="20" height="20"></caption>
-<tr>
-<th>
-PARIEZ
-<br>
-jusqu'au<br>
-jeudi 11 juin<br>
-18 h
+<p class="txtcenter h2-like mtn"><strong>non joué</strong></p>
 
-<div class="mts"><a href="#lb_belgique" id="lightbox_belgique">Infos Belgique</a>
+<a href="#lb_angleterre" id="lightbox_angleterre">Infos Angleterre</a>
 
 <!-- Setting the lightbox for each team available if we click on the name of the team -->
 		<div style="display: none;">
-		<div id="lb_belgique" class="lbstyle">
-		<h2 class="h3-like">Belgique</h2>
+		<div id="lb_angleterre" class="lbstyle">
+		<h2 class="h3-like">Angleterre</h2>
+			<p><strong>Palmarès 2011</strong><br>
+			Vainqueur</p>
+			<h3>Points Poule A</h3>
+			<ul class="unstyled pln">
+			<li>Australie&nbsp;:&nbsp;<strong>3</strong></li>
+			<li>Angleterre&nbsp;:&nbsp;<strong>1</strong></li>
+			<li>Pay de Galles&nbsp;:&nbsp;<strong>1</strong></li>
+			<li>Fidji&nbsp;:&nbsp;<strong>0</strong></li>
+			<li>Uruguay&nbsp;:&nbsp;<strong>0</strong></li>
+			</ul>
+			<h3>Phase finale</h3>
+			<ul class="unstyled pln">
+			<li><strong>quarts</strong>&nbsp;:&nbsp;non joué</li>
+			<li><strong>demies</strong>&nbsp;:&nbsp;non joué</li>
+			<li><strong>finale</strong>&nbsp;:&nbsp;non joué</li>
+			</ul>
+		</div>
+		</div>
+		<!-- End Setting the lightbox for each team available if we click on the name of the team -->
+
+ - <a href="#lb_espagne" id="lightbox_espagne">Infos Espagne</a>
+
+<!-- Setting the lightbox for each team available if we click on the name of the team -->
+		<div style="display: none;">
+		<div id="lb_espagne" class="lbstyle">
+		<h2 class="h3-like">Espagne</h2>
 			<p><strong>Palmarès Euro 2012 : </strong><br>
-			Matchs de Poule</p>
+			non qualifié</p>
 			<h3>Matchs de Poule</h3>
 			<ul class="unstyled pln">
-			<li><strong>1er</strong> vs Ukraine&nbsp;:&nbsp;nul 1 - 1</li>
-			<li><strong>2ème</strong> vs Malte&nbsp;:&nbsp;non joué</li>
-			<li><strong>3ème</strong> vs France&nbsp;:&nbsp;non joué</li>
+			<li><strong>1er</strong> vs France&nbsp;:&nbsp;perdu 3 - 0</li>
+			<li><strong>2ème</strong> vs Belgique&nbsp;:&nbsp;non joué</li>
+			<li><strong>3ème</strong> vs Ukraine&nbsp;:&nbsp;non joué</li>
 			</ul>
 			<h3>Points Groupe A</h3>
 			<ul class="unstyled pln">
@@ -191,68 +200,27 @@ jeudi 11 juin<br>
 		</div>
 		<!-- End Setting the lightbox for each team available if we click on the name of the team -->
 
+<div class="grid-2-small-1-tiny-1">
+<div>
+<form id="bet38" action="bet2.php#bet38" method="POST" class="border-bet-form">
+<ul class="unstyled pln bet-choix txtleft">
+			<li><label for="Angleterre"><input type="radio" value="Angleterre" name="select_bet38">&nbsp;Angleterre</label></li>
+			<li><label for="Espagne"><input type="radio" value="Espagne" name="select_bet38">&nbsp;Espagne</label></li>
+			<li class="mtm"><input type="submit" class="btn-rouge mts mbs" name="save_bet38" id="save_bet38" value="Valider"></li>
+</ul></form>
 </div>
-
-<div class="mts"><a href="#lb_ukraine" id="lightbox_ukraine">Infos Ukraine</a>
-
-<!-- Setting the lightbox for each team available if we click on the name of the team -->
-		<div style="display: none;">
-		<div id="lb_ukraine" class="lbstyle">
-		<h2 class="h3-like">France</h2>
-			<p><strong>Palmarès Euro 2012 : </strong><br>
-			Quarts de finale</p>
-			<h3>Matchs de Poule</h3>
-			<ul class="unstyled pln">
-			<li><strong>1er</strong> vs Belgique&nbsp;:&nbsp;nul 1 - 1</li>
-			<li><strong>2ème</strong> vs France&nbsp;:&nbsp;non joué</li>
-			<li><strong>3ème</strong> vs Malte&nbsp;:&nbsp;non joué</li>
-			</ul>
-			<h3>Points Groupe A</h3>
-			<ul class="unstyled pln">
-			<li>France&nbsp;:&nbsp;<strong>3</strong></li>
-			<li>Ukraine&nbsp;:&nbsp;<strong>1</strong></li>
-			<li>Belgique&nbsp;:&nbsp;<strong>1</strong></li>
-			<li>Malte&nbsp;:&nbsp;<strong>0</strong></li>
-			</ul>
-			<h3>Phase finale</h3>
-			<ul class="unstyled pln">
-			<li><strong>8èmes</strong>&nbsp;:&nbsp;non joué</li>
-			<li><strong>quarts</strong>&nbsp;:&nbsp;non joué</li>
-			<li><strong>demies</strong>&nbsp;:&nbsp;non joué</li>
-			<li><strong>finale</strong>&nbsp;:&nbsp;non joué</li>
-			</ul>
-		</div>
-		</div>
-		<!-- End Setting the lightbox for each team available if we click on the name of the team -->
-
+<div class="pam">
+<p>Votre choix</p>
+<p class="couleur">Angleterre</p>
+<p class="mtm">Résultat</p>
+<p class="couleur">Non joué</p>
 </div>
+</div><!--end grid-2-->
+</div><!--end panel-->
+</div><!--end huitieme-2-->
+		
 
-</th>
-<td>
-
-
-<form id="bet40" action="bet2.html#bet40" method="POST">
-<ul class="unstyled pln">
-			<li><label for="Belgique"><input type="radio" value="Belgique" name="select_bet2">&nbsp;Belgique</label></li>
-			<li><label for="Ukraine"><input type="radio" value="Ukraine" name="select_bet2">&nbsp;Ukraine</label></li>
-			<li class="mtm"><input type="submit" class="btn-vert mt1" name="save_bet40" id="save_bet40" value="Valider"></li>
-</ul></form></td>
-
-
-</tr>
-<tr>
-<th>Votre choix</th>
-<td>
-  Ukraine</td>
-</tr>
-<tr>
-<th>Résultat</th>
-<td>
-		<p>Pariez</p>
-	</td>
-</tr>
-</table>
-</div><!--end autogrid2-->
+</div><!--end grid-2-->
 
 
 <p class="up"><a class="icon-up" href="#container">&nbsp;Haut de page</a></p>

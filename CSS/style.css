@@ -88,39 +88,6 @@ p.error_message,
 
 /* Boutons */
 
-.btn-original {
-  font-weight: bold;
-  font-size: 1.2em;
-  background-color: #ffcb05;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fa3431), to(#c82a27)); /* Chrome, Safari 4+ */
-  background-image: -webkit-linear-gradient(top, #fa3431, #c82a27); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
-  background-image:    -moz-linear-gradient(top, #fa3431, #c82a27); /* Firefox 3.6-15 */
-  background-image:      -o-linear-gradient(top, #fa3431, #c82a27); /* Opera 11.10-12.00 */
-  background-image:         linear-gradient(to bottom, #fa3431, #c82a27); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
-  padding: 1em 1.5em;
-  -webkit-border-radius: 8px; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
-  border-radius: 8px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
-
-  /* useful if you don't want a bg color from leaking outside the border: */
-  background-clip: padding-box; /* Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+ */
-}
-
-.btn {
-  font-weight: bold;
-  font-size: 1.2em;
-  background-color: #ffcb05;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#dd2235), to(#db2033)); /* Chrome, Safari 4+ */
-  background-image: -webkit-linear-gradient(top, #dd2235, #db2033); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
-  background-image:    -moz-linear-gradient(top, #dd2235, #db2033); /* Firefox 3.6-15 */
-  background-image:      -o-linear-gradient(top, #dd2235, #db2033); /* Opera 11.10-12.00 */
-  background-image:         linear-gradient(to bottom, #dd2235, #db2033); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
-  padding: 1em 1.5em;
-  -webkit-border-radius: 5px; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
-  border-radius: 5px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
-
-  /* useful if you don't want a bg color from leaking outside the border: */
-  background-clip: padding-box; /* Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+ */
-}
 
 .btn-rouge {
   font-weight: bold;
@@ -153,41 +120,23 @@ input[type="submit"].btn-rouge:focus {
 }
 
 
-.btn-vert {
-  font-weight: bold;
-  text-align: center;
-  font-size: 1.2em;
-  background-color: #32adde;
-  padding: 1em 1.5em;
-  -webkit-border-radius: 8px; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
-  border-radius: 8px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
 
-  /* useful if you don't want a bg color from leaking outside the border: */
-  background-clip: padding-box; /* Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+ */
-}
-
-.btn a,
-a.btn,
 .btn-rouge a,
-a.btn-rouge,
-.btn-vert a,
-a.btn-vert {
+a.btn-rouge {
   color: #fff;
 }
 
-.btn:hover,
-.btn a:hover,
-a.btn:hover,
-a.btn:focus,
+
 .btn-rouge:hover,
 .btn-rouge a:hover,
 a.btn-rouge:hover,
-a.btn-rouge:focus,
-.btn-vert:hover,
-.btn-vert a:hover,
-a.btn-vert:hover,
-a.btn-vert:focus {
+a.btn-rouge:focus {
   text-decoration: none;
+}
+
+
+.couleur {
+  color: #027ac2;  /* bleu clair */
 }
 
 
@@ -275,23 +224,13 @@ body {background: url(../images/greyzz.png)}
   
 }
 
-@media (min-width:700px) {
- 
-}
-
-
+/* Logo différent selon taille d'écran */
 @media (max-width:1023px) {
-  
   #header img.logo-standard {display: none;}
-  
 }
-
 
 @media (min-width:1024px) {
-  
-  #header img.logo-600-1023 {display: none;}
-  
-  
+  #header img.logo-600-1023 {display: none;} 
 }
 
 
@@ -307,7 +246,9 @@ body {background: url(../images/greyzz.png)}
 #login {
   margin-left: auto;
 }
+
 }
+
 
 #login h3 {
   color: #fff;
@@ -391,6 +332,11 @@ border: 1px solid transparent;
 }
 
 
+/* Bouton admin connect */
+
+@media (max-width:1023px) {
+  .admin-connect {margin-right: 1em;}
+}
 
 
 
@@ -487,37 +433,6 @@ border: 1px solid transparent;
 /* ----------------- */
 
 
-/*#page_bet caption {
-  min-width: 17em;
-}
-
-
-table th {
-  font-weight: bold;
-}
-
-table th {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  background-color: #027ac2;
-  color: #fff;
-}
-
-table th a {
-  color: #fff;
-}
-
-#page_ranking table th.first,
-#page_ranking table td.first {
-  width: 6em;
-}
-
-#page_ranking table th.rank-top,
-#page_ranking table td.rank-top {
-  width: 30em;
-}*/
-
-
 table th {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -569,7 +484,7 @@ only screen and (max-width:760px),
 		white-space: nowrap;
 	}
 
-
+}
 
 
 
@@ -609,56 +524,6 @@ only screen and (max-width:760px),
 }
 
 }
-
-
-/* ----------------- */
-/* Page Teams */
-/* ----------------- */
-
-
-#page_teams h2 {color: #027ac2;}
-#page_teams .autogrid4 {border-bottom: 1px solid #999;}
-
-/* Fancybox */
-
-.lbstyle {
-  width: 320px;
-  height:auto;
-  /*overflow:auto;*/
-}
-
-table.infoteam {
-  width: 95%;
-}
-
-
-@media (min-width:600px) {
-  
- .lbstyle {
-   /*max-width: 600px;*/
-   /*text-align: center;*/
-}
-  
-}
-
-
-    
-
-/* --------------------- */
-/* Page Schedule */
-/* --------------------- */
-
-
-#page_schedule .autogrid2 div.matchfinale {
-  margin-left: 1.2em;
-}
-
-#page_schedule h2.schedule-marge {
-  margin-bottom: 1em;
-  padding-top: 2em;
-  border-top: 1px solid #ddd;
-}
-
 
 
 
@@ -701,86 +566,30 @@ table.infoteam {
 
 
 /* ----------------- */
-/* Page Bet */
+/* Pages Bet */
 /* ----------------- */
 
 
-/*#page_bet h2 {
-  
+/* Fancybox */
+
+.lbstyle {
+  width: 320px;
+  height:auto;
+  /*overflow:auto;*/
 }
 
-#page_bet h2.sansbordhaut {
-  padding-top: 0;
-  border-top: 0;
+table.infoteam {
+  width: 95%;
 }
 
-#page_bet table th.thfirst {
+/* Fin Fancybox */
+
+
+/* fond des form pour les paris */
+.border-bet-form {
   background-color: #027ac2;
+  padding-left: 0.5em;
   color: #fff;
-}
-
-#page_bet .autogrid2 div.matchfinale {
-  margin-left: 1.2em;
-}
-
-#page_bet caption {
-  font-style: normal;
-  color: #0074c3;
-  font-weight: bold;
-}
-
-#page_bet  form label {
-  font-weight: bold
-}
-
-#page_bet .rouge {
-  /*color: #db2033;*/
-  /*color: #206cac;
-  font-size: 1em;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  font-weight: bold;
-}*
-
-@media (max-width:600px) {
-  .bet-large {
-    display: none;
-  }
-  .bet-choix {
-    display: inline-block;
-  }
-}
-
-@media (min-width:601px) {
-  .bet-small {
-    display: none;
-  }
-}
-
-/* Alignement vertical des panels matchs */
-
-@media (min-width:600px) and (max-width:800px) {
-  .flexparent {
-  
-}
-  
-  .betmatch .flexparent > * {
-  display: flex;
-  align-content: space-around;
-}
-
-}
-
-@media (min-width:800px) {
-  .flexparent {
- 
-}
-  
-  .betmatch .flexparent > * {
-  display: flex;
-  align-content: space-around;
-}
-
 }
 
 
@@ -914,8 +723,8 @@ table.infoteam {
 /* Formulaires */
 /* ------------------ */
 
-form#register_form,
-form#contact_form {
+#register_form,
+#contact_form {
 	max-width: 600px;
 	margin-top: 2em;
 	padding: 2em;
@@ -929,15 +738,15 @@ form#contact_form {
 }
 
 
-form#register_form label,
-form#contact_form label {
+#register_form label,
+#contact_form label {
 	/*display: inline-block;*/
 	/*min-width: 200px;*/
 	font-weight: 700;
 }
 
-form#register_form .form-help,
-form#contact_form .form-help{
+#register_form .form-help,
+#contact_form .form-help{
 	color: #555;
 	font-style: italic;
 	margin-bottom: 30px;
@@ -967,25 +776,25 @@ input[type="reset"] {
 	border: 1px solid #ccc;
 }
 
-input[type="submit"] {
+/*input[type="submit"] {
 	padding: .5em 1em;
 	border: none;
 	color: #fff;
 	/*border: 1px solid #ccc;*/
-}
+/*}*/
 
-form#register_form button,
-form#contact_form button {
+#register_form button,
+#contact_form button {
 	margin-top: 50px;
 	color: #fff;
 	
 }
 
-form#contact_form input[type="text"],
-form#contact_form input[type="email"],
-form#contact_form input[type="submit"],
-form#contact_form button,
-form#contact_form textarea {
+#contact_form input[type="text"],
+#contact_form input[type="email"],
+#contact_form input[type="submit"],
+#contact_form button,
+#contact_form textarea {
   width: 100%;
 }
 

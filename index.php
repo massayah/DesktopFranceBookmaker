@@ -24,8 +24,8 @@ On peut s'en servir avec une tablette ou un smartphone, c'est plus pratique pour
 <h3 class="h4-like">Identifiant</h3>
 <p>Choisissez&nbsp;:</p>
 <ul>
-<li>soit un pseudo que Laurène, Lana ou Martine puissent reconnaître FACILEMENT</li>
-<li>soit votre prénom + initiale de votre nom : ZezetteX</li>
+<li>soit un pseudo que Laurène ou Martine puissent reconnaître FACILEMENT + l'initiale de votre nom&nbsp;:<br>cricriF, chrisG, jpP, jpV</li>
+<li>soit votre prénom + initiale de votre nom&nbsp;:<br>ZezetteX</li>
 </ul>
 <h3 class="h4-like mtm">Mot de passe</h3>
 <p>Choisissez un mot de passe facile à retenir.</p>

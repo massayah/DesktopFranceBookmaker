@@ -45,7 +45,7 @@ if (isset($_SESSION['username']))
 	{
 ?>
 
-<p><a href="admin.php">Admin</a></p>
+<p class="mw1140p center txtright admin-connect"><a class="btn-rouge" href="admin.php">Admin</a></p>
 <?php
 }
 $isadmin->closeCursor();
