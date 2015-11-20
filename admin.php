@@ -18,7 +18,9 @@ error_reporting(E_ALL);
 <link href='http://fonts.googleapis.com/css?family=Exo+2:400,600' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="CSS/knacss-unminified.css" />
 <link rel="stylesheet" href="CSS/responsive-tabs.css" />
+<link rel="stylesheet" href="CSS/jquery-ui.css" media="all" />
 <link rel="stylesheet" href="CSS/style.css" />
+<link rel="stylesheet" href="CSS/theme.css" media="all" />
 
 	<!-- IE Fix for HTML5 Tags -->
 	<!--[if lt IE 9]>
@@ -40,6 +42,16 @@ error_reporting(E_ALL);
             });
         }); // end ready
     </script>
+    
+    <script>
+	$(function() {
+		$( ".accordion" ).accordion({
+				collapsible: true,
+				active: false,
+				autoHeight: false,
+		 });
+	});
+</script>
 
 </head>
 <body id="page_admin">
@@ -81,14 +93,9 @@ else
 ?>
 
 
-<div id="horizontalTab">
 
-<ul>
-        <li><a href="#tab-1">MAJ Poules</a></li>
-        <li><a href="#tab-2">MAJ Finales</a></li>
-        <li><a href="#tab-3">MAJ Gagnants</a></li>
-        <li><a href="#tab-4">USERS</a></li>
-    </ul>
+
+
  <div id="update">
 <h1>Mise à jour des Matchs</h1>
 <!-- Loop to display each match with inputs to enter the score -->
@@ -354,56 +361,12 @@ $users->closeCursor();
 <p class="up"><a href="#container">&uarr;&nbsp;Haut de page</a></p>
    </div><!--end tab-4 -->
    
- </div><!--end responsivetabsDemo-->
 
 </div><!--end center-->
 </div><!--end content-->
 <?php } }?>
 <?php include("footer.php"); ?>
 </div><!--end#container-->
-
- <!-- jQuery with fallback to the 1.* for old IE -->
-    <!--[if lt IE 9]>
-        <script src="javascript/jquery-1.11.0.min.js"></script>
-    <![endif]-->
-    <!--[if gte IE 9]><!-->
-        <script src="javascript/jquery-2.1.0.min.js"></script>
-    <!--<![endif]-->
-
-    <!-- Responsive Tabs JS -->
-    <script src="javascript/jquery.responsiveTabs.min.js"></script>
-    
-<script type="text/javascript">
-        $(document).ready(function () {
-            $('#horizontalTab').responsiveTabs({
-                rotate: false,
-                startCollapsed: 'accordion',
-                collapsible: 'accordion',
-                setHash: true,
-                activate: function(e, tab) {
-                    $('.info').html('Tab <strong>' + tab.id + '</strong> activated!');
-                },
-                activateState: function(e, state) {
-                    //console.log(state);
-                    $('.info').html('Switched from <strong>' + state.oldState + '</strong> state to <strong>' + state.newState + '</strong> state!');
-                }
-            });
-
-            $('#start-rotation').on('click', function() {
-                $('#horizontalTab').responsiveTabs('active');
-            });
-            $('#stop-rotation').on('click', function() {
-                $('#horizontalTab').responsiveTabs('stopRotation');
-            });
-            $('#start-rotation').on('click', function() {
-                $('#horizontalTab').responsiveTabs('active');
-            });
-            $('.select-tab').on('click', function() {
-                $('#horizontalTab').responsiveTabs('activate', $(this).val());
-            });
-
-        });
-    </script>
 
 </body>
 </html>
