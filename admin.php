@@ -326,7 +326,7 @@ $winnersfinal->closeCursor();
 </thead>
 <tbody>
 <?php
-$users = $bdd->query('SELECT euro_user.username, points, team1, team2, team3, team4 FROM euro_user LEFT OUTER JOIN euro_top ON brazil_user.username = euro_top.username WHERE euro_user.isadmin = 0');
+$users = $bdd->query('SELECT euro_user.username, points, team1, team2, team3, team4 FROM euro_user LEFT OUTER JOIN euro_top ON euro_user.username = euro_top.username WHERE euro_user.isadmin = 0');
 $i = 1;
 while ($userdata = $users->fetch())
 {

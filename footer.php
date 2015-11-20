@@ -4,7 +4,7 @@
 <?php
 if (isset($_SESSION['username']))
 {
-	$isadmin = $bdd->prepare('SELECT isadmin FROM brazil_user WHERE username = ?');
+	$isadmin = $bdd->prepare('SELECT isadmin FROM euro_user WHERE username = ?');
 	$isadmin->execute(array($_SESSION['username']));
 	$isadmindata = $isadmin->fetch();
 	if ($isadmindata[0] == 1)
