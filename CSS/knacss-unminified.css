@@ -1,5 +1,5 @@
 /*!
-* www.KNACSS.com V4.3.4 (27 août 2015) @author: Raphael Goetter, Alsacreations
+* www.KNACSS.com V4.4.0 (12 décembre 2015) @author: Raphael Goetter, Alsacreations
 * Licence WTFPL http://www.wtfpl.net/
 */
 /*! normalize.css v3.0.2 | MIT License | github.com/necolas/normalize.css */
@@ -371,9 +371,6 @@ ul,
 ol {
   padding-left: 2em;
 }
-ul.unstyled {
-  list-style: none;
-}
 img {
   vertical-align: middle;
 }
@@ -395,25 +392,21 @@ html {
   /* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
   /* thanks to @guardian, @victorbritopro and @eQRoeil */
   font-size: calc(1em * .625);
-  /* disallow text zooming on orientation change (non standard property) */
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
 }
 body {
-  /* set body font-size in em (1.4em equiv "14px") */
-  font-size: 1.4em;
-  background-color: #ffffff;
-  color: #000000;
-  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.4rem;
+  background-color: #fff;
+  color: #000;
+  font-family: sans-serif;
   line-height: 1.5;
 }
 a {
-  color: #333333;
+  color: #333;
 }
 a:hover,
 a:focus,
 a:active {
-  color: #000000;
+  color: #000;
 }
 /* font-sizing for content */
 p,
@@ -437,12 +430,12 @@ figure {
 h1,
 .h1-like {
   font-size: 3.2rem;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
 }
 h2,
 .h2-like {
   font-size: 2.8rem;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
 }
 h3,
 .h3-like {
@@ -483,7 +476,7 @@ kbd {
   /* IE fix */
   white-space: pre-line;
   white-space: pre-wrap;
-  font-family: Consolas, "DejaVu Sans Mono", Courier, monospace;
+  font-family: consolas, courier, monospace;
   line-height: normal;
 }
 em,
@@ -493,29 +486,6 @@ cite,
 i,
 var {
   font-style: italic;
-}
-/* ----------------------------- */
-/* == hiding content             */
-/* ----------------------------- */
-/* hidden but not for an assistive technology like a screen reader, Yahoo! method */
-.visually-hidden {
-  position: absolute !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  clip: rect(0, 0, 0, 0) !important;
-}
-@media (max-width: 640px) {
-  .no-small-screen {
-    display: none;
-  }
-}
-@media (min-width: 1280px) {
-  .no-large-screen {
-    display: none;
-  }
 }
 /* ----------------------------- */
 /* == browsers consistency       */
@@ -718,7 +688,7 @@ http://www.alsacreations.com/tuto/lire/1493-css3-flexbox-layout-module.html
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  margin-left: -1em;
+  margin-left: -2rem;
   /* inline-block fallback for IE9 generation */
   letter-spacing: -0.31em;
   text-rendering: optimizespeed;
@@ -729,8 +699,8 @@ http://www.alsacreations.com/tuto/lire/1493-css3-flexbox-layout-module.html
   -webkit-flex: 0 0 auto;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
-  width: calc(100% * 1 / 4 - 1em - .01px);
-  margin-left: 1em;
+  width: calc(100% * 1 / 4 - 2rem - .01px);
+  margin-left: 2rem;
   /* inline-block fallback for IE9 generation */
   display: inline-block;
   vertical-align: top;
@@ -738,186 +708,186 @@ http://www.alsacreations.com/tuto/lire/1493-css3-flexbox-layout-module.html
   text-rendering: auto;
 }
 [class*="grid-2"] > * {
-  width: calc(100% * 1 / 2 - 1em - .01px);
+  width: calc(100% * 1 / 2 - 2rem - .01px);
 }
 [class*="grid-2"] > .flex-item-double {
-  width: calc(100% * 2 / 2 - 1em - .01px);
+  width: calc(100% * 2 / 2 - 2rem - .01px);
 }
 [class*="grid-3"] > * {
-  width: calc(100% * 1 / 3 - 1em - .01px);
+  width: calc(100% * 1 / 3 - 2rem - .01px);
 }
 [class*="grid-3"] > .flex-item-double {
-  width: calc(100% * 2 / 3 - 1em - .01px);
+  width: calc(100% * 2 / 3 - 2rem - .01px);
 }
 [class*="grid-4"] > * {
-  width: calc(100% * 1 / 4 - 1em - .01px);
+  width: calc(100% * 1 / 4 - 2rem - .01px);
 }
 [class*="grid-4"] > .flex-item-double {
-  width: calc(100% * 2 / 4 - 1em - .01px);
+  width: calc(100% * 2 / 4 - 2rem - .01px);
 }
 [class*="grid-5"] > * {
-  width: calc(100% * 1 / 5 - 1em - .01px);
+  width: calc(100% * 1 / 5 - 2rem - .01px);
 }
 [class*="grid-5"] > .flex-item-double {
-  width: calc(100% * 2 / 5 - 1em - .01px);
+  width: calc(100% * 2 / 5 - 2rem - .01px);
 }
 [class*="grid-6"] > * {
-  width: calc(100% * 1 / 6 - 1em - .01px);
+  width: calc(100% * 1 / 6 - 2rem - .01px);
 }
 [class*="grid-6"] > .flex-item-double {
-  width: calc(100% * 2 / 6 - 1em - .01px);
+  width: calc(100% * 2 / 6 - 2rem - .01px);
 }
 [class*="grid-7"] > * {
-  width: calc(100% * 1 / 7 - 1em - .01px);
+  width: calc(100% * 1 / 7 - 2rem - .01px);
 }
 [class*="grid-7"] > .flex-item-double {
-  width: calc(100% * 2 / 7 - 1em - .01px);
+  width: calc(100% * 2 / 7 - 2rem - .01px);
 }
 [class*="grid-8"] > * {
-  width: calc(100% * 1 / 8 - 1em - .01px);
+  width: calc(100% * 1 / 8 - 2rem - .01px);
 }
 [class*="grid-8"] > .flex-item-double {
-  width: calc(100% * 2 / 8 - 1em - .01px);
+  width: calc(100% * 2 / 8 - 2rem - .01px);
 }
 [class*="grid-10"] > * {
-  width: calc(100% * 1 / 10 - 1em - .01px);
+  width: calc(100% * 1 / 10 - 2rem - .01px);
 }
 [class*="grid-10"] > .flex-item-double {
-  width: calc(100% * 2 / 10 - 1em - .01px);
+  width: calc(100% * 2 / 10 - 2rem - .01px);
 }
 [class*="grid-12"] > * {
-  width: calc(100% * 1 / 12 - 1em - .01px);
+  width: calc(100% * 1 / 12 - 2rem - .01px);
 }
 [class*="grid-12"] > .flex-item-double {
-  width: calc(100% * 2 / 12 - 1em - .01px);
+  width: calc(100% * 2 / 12 - 2rem - .01px);
 }
 /* Responsive grid */
 @media (max-width: 640px) {
   [class*="-small-4"] > * {
-    width: calc(100% * 1 / 4 - 1em - .01px);
+    width: calc(100% * 1 / 4 - 2rem - .01px);
   }
   [class*="-small-4"] > .flexitem-double {
-    width: calc(100% * 1 / 2 - 1em - .01px);
+    width: calc(100% * 1 / 2 - 2rem - .01px);
   }
   [class*="-small-3"] > * {
-    width: calc(100% * 1 / 3 - 1em - .01px);
+    width: calc(100% * 1 / 3 - 2rem - .01px);
   }
   [class*="-small-3"] > .flexitem-double {
-    width: calc(100% * 2 / 3 - 1em - .01px);
+    width: calc(100% * 2 / 3 - 2rem - .01px);
   }
   [class*="-small-2"] > * {
-    width: calc(100% * 1 / 2 - 1em - .01px);
+    width: calc(100% * 1 / 2 - 2rem - .01px);
   }
   [class*="-small-2"] > .flexitem-double {
-    width: calc(100% - 1em - .01px);
+    width: calc(100% - 2rem - .01px);
   }
   [class*="-small-1"] > * {
-    width: calc(100% - 1em - .01px);
+    width: calc(100% - 2rem - .01px);
   }
   [class*="-small-1"] > .flexitem-double {
-    width: calc(100% - 1em - .01px);
+    width: calc(100% - 2rem - .01px);
   }
 }
 @media (max-width: 320px) {
   [class*="-tiny-2"] > * {
-    width: calc(100% * 1 / 2 - 1em - .01px);
+    width: calc(100% * 1 / 2 - 2rem - .01px);
   }
   [class*="-tiny-2"] > .flexitem-double {
-    width: calc(100% - 1em - .01px);
+    width: calc(100% - 2rem - .01px);
   }
   [class*="-tiny-1"] > * {
-    width: calc(100% - 1em - .01px);
+    width: calc(100% - 2rem - .01px);
   }
   [class*="-tiny-1"] > .flexitem-double {
-    width: calc(100% - 1em - .01px);
+    width: calc(100% - 2rem - .01px);
   }
 }
 .grid-2-1 > *:nth-child(odd) {
-  width: calc(66.66666666666666% - 1em - .01px);
+  width: calc(66.66666666666666% - 2rem - .01px);
 }
 .grid-2-1 > *:nth-child(even) {
-  width: calc(33.33333333333333% - 1em - .01px);
+  width: calc(33.33333333333333% - 2rem - .01px);
 }
 @media (max-width: 640px) {
   .grid-2-1 > *:nth-child(n) {
-    width: calc(100% - 1em - .01px);
+    width: calc(100% - 2rem - .01px);
   }
 }
 .grid-1-2 > *:nth-child(odd) {
-  width: calc(33.33333333333333% - 1em - .01px);
+  width: calc(33.33333333333333% - 2rem - .01px);
 }
 .grid-1-2 > *:nth-child(even) {
-  width: calc(66.66666666666666% - 1em - .01px);
+  width: calc(66.66666666666666% - 2rem - .01px);
 }
 @media (max-width: 640px) {
   .grid-1-2 > *:nth-child(n) {
-    width: calc(100% - 1em - .01px);
+    width: calc(100% - 2rem - .01px);
   }
 }
 .grid-3-1 > *:nth-child(odd) {
-  width: calc(75% - 1em - .01px);
+  width: calc(75% - 2rem - .01px);
 }
 .grid-3-1 > *:nth-child(even) {
-  width: calc(25% - 1em - .01px);
+  width: calc(25% - 2rem - .01px);
 }
 @media (max-width: 640px) {
   .grid-3-1 > *:nth-child(n) {
-    width: calc(100% - 1em - .01px);
+    width: calc(100% - 2rem - .01px);
   }
 }
 .grid-1-3 > *:nth-child(odd) {
-  width: calc(25% - 1em - .01px);
+  width: calc(25% - 2rem - .01px);
 }
 .grid-1-3 > *:nth-child(even) {
-  width: calc(75% - 1em - .01px);
+  width: calc(75% - 2rem - .01px);
 }
 @media (max-width: 640px) {
   .grid-1-3 > *:nth-child(n) {
-    width: calc(100% - 1em - .01px);
+    width: calc(100% - 2rem - .01px);
   }
 }
 .grid-3-2 > *:nth-child(odd) {
-  width: calc(60% - 1em - .01px);
+  width: calc(60% - 2rem - .01px);
 }
 .grid-3-2 > *:nth-child(even) {
-  width: calc(40% - 1em - .01px);
+  width: calc(40% - 2rem - .01px);
 }
 @media (max-width: 640px) {
   .grid-3-2 > *:nth-child(n) {
-    width: calc(100% - 1em - .01px);
+    width: calc(100% - 2rem - .01px);
   }
 }
 .grid-2-3 > *:nth-child(odd) {
-  width: calc(40% - 1em - .01px);
+  width: calc(40% - 2rem - .01px);
 }
 .grid-2-3 > *:nth-child(even) {
-  width: calc(60% - 1em - .01px);
+  width: calc(60% - 2rem - .01px);
 }
 @media (max-width: 640px) {
   .grid-2-3 > *:nth-child(n) {
-    width: calc(100% - 1em - .01px);
+    width: calc(100% - 2rem - .01px);
   }
 }
 .grid-4-1 > *:nth-child(odd) {
-  width: calc(80% - 1em - .01px);
+  width: calc(80% - 2rem - .01px);
 }
 .grid-4-1 > *:nth-child(even) {
-  width: calc(20% - 1em - .01px);
+  width: calc(20% - 2rem - .01px);
 }
 @media (max-width: 640px) {
   .grid-4-1 > *:nth-child(n) {
-    width: calc(100% - 1em - .01px);
+    width: calc(100% - 2rem - .01px);
   }
 }
 .grid-1-4 > *:nth-child(odd) {
-  width: calc(20% - 1em - .01px);
+  width: calc(20% - 2rem - .01px);
 }
 .grid-1-4 > *:nth-child(even) {
-  width: calc(80% - 1em - .01px);
+  width: calc(80% - 2rem - .01px);
 }
 @media (max-width: 640px) {
   .grid-1-4 > *:nth-child(n) {
-    width: calc(100% - 1em - .01px);
+    width: calc(100% - 2rem - .01px);
   }
 }
 .pull {
@@ -979,7 +949,7 @@ input,
 optgroup,
 select,
 textarea {
-  color: #000000;
+  color: #000;
 }
 label {
   display: inline-block;
@@ -1019,7 +989,6 @@ textarea:-moz-placeholder {
 .btn:focus,
 input[type="button"]:focus,
 button:focus {
-  outline: 0;
   -webkit-tap-highlight-color: transparent;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1048,6 +1017,37 @@ input[type="submit"].unstyled:focus,
 input[type="reset"].unstyled:focus {
   box-shadow: none;
   outline: none;
+}
+/* ---------------------------------- */
+/* ==state helpers                    */
+/* ---------------------------------- */
+/* invisible for all */
+.is-hidden,
+[hidden] {
+  display: none;
+}
+/* hidden but not for an assistive technology like a screen reader, Yahoo! method */
+.visually-hidden {
+  position: absolute !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+}
+.is-disabled,
+[disabled] {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+ul.is-unstyled,
+ul.unstyled {
+  list-style: none;
+  padding-left: 0;
 }
 /* ---------------------------------- */
 /* ==visual helpers                   */
@@ -1223,6 +1223,21 @@ s,m,l,n = small, medium, large, none
 }
 .mll {
   margin-left: 4rem;
+}
+.mauto {
+  margin: auto;
+}
+.mtauto {
+  margin-top: auto;
+}
+.mrauto {
+  margin-right: auto;
+}
+.mbauto {
+  margin-bottom: auto;
+}
+.mlauto {
+  margin-left: auto;
 }
 .ptn,
 .pt0 {
@@ -1697,6 +1712,18 @@ s,m,l,n = small, medium, large, none
         -ms-hyphens: auto;
             hyphens: auto;
   }
+  a {
+    word-break: break-all;
+  }
+}
+@media (max-width: 640px) {
+  .no-wrapping {
+    word-wrap: normal;
+    -webkit-hyphens: manual;
+       -moz-hyphens: manual;
+        -ms-hyphens: manual;
+            hyphens: manual;
+  }
 }
 /* Google Gmap3 bug fix on images */
 .gm-style img {
@@ -1729,7 +1756,7 @@ code {
   color: #b11;
 }
 pre code {
-  padding: none;
+  padding: 0;
   background: none;
   color: inherit;
   border-radius: 0;
@@ -1805,165 +1832,6 @@ th {
   padding: 0.3em 0.8em;
   border: 1px #aaa dotted;
   text-align: left;
-}
-/* ----------------------------- */
-/* ==WordPress reset             */
-/* ----------------------------- */
-/*
-Author: Geoffrey Crofte, Alsacréations
-Contributors: Automattic, Geoffrey Crofte
-Description: Reset styles for WordPress usage of KNACSS
-*/
-/* ----------------------------- */
-/* ==Menus                       */
-/* ----------------------------- */
-.comment-navigation,
-.paging-navigation,
-.post-navigation {
-  margin: 0 0 1.5em;
-  overflow: hidden;
-}
-.comment-navigation .nav-previous,
-.paging-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%;
-}
-.comment-navigation .nav-next,
-.paging-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%;
-}
-/* ----------------------------- */
-/* ==Alignments                  */
-/* ----------------------------- */
-.alignnone {
-  margin: .25em 1.5em 1.5em 0;
-}
-.aligncenter {
-  clear: both;
-  display: block;
-  margin: 1.5em auto;
-}
-.alignleft {
-  float: left;
-  margin: 0 1.5em .25em 0;
-}
-.alignright {
-  float: right;
-  margin: 0 0 .25em 1.5em;
-}
-/* ----------------------------- */
-/* ==Clearings                   */
-/* ----------------------------- */
-.entry-content,
-.comment-content {
-  clear: both;
-}
-.entry-content::after,
-.comment-content::after,
-.entry-content::before,
-.comment-content::before {
-  content: "";
-  display: table;
-}
-/* ----------------------------- */
-/* ==Widgets                     */
-/* ----------------------------- */
-.widget + .widget {
-  margin: 1.5em 0 0;
-}
-.widget select {
-  max-width: 100%;
-}
-/* ----------------------------- */
-/* ==Posts and pages             */
-/* ----------------------------- */
-/* === 5.1 Posts - post_class === */
-/* === 5.2 Pages - body_class === */
-/* === 5.3 Posts and Pages - Contents === */
-.hentry {
-  margin: 0 0 1.5em;
-}
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 1.5em 0 0;
-}
-.page-links {
-  clear: both;
-  margin: 0 0 1.5em;
-}
-/* ----------------------------- */
-/* ==Comments                    */
-/* ----------------------------- */
-.comment-content a {
-  word-wrap: break-word;
-}
-/* ----------------------------- */
-/* ==Media                       */
-/* ----------------------------- */
-img.wp-smiley {
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0;
-  border: none;
-}
-/* ----------------------------- */
-/* ==Captions                    */
-/* ----------------------------- */
-.wp-caption {
-  max-width: 100%;
-  margin-bottom: 1.5em;
-}
-.wp-caption img {
-  display: block;
-  margin: 0 auto;
-}
-.wp-caption-text {
-  margin: 1em 0;
-  text-align: center;
-}
-/* ----------------------------- */
-/* ==Galleries                   */
-/* ----------------------------- */
-.gallery {
-  margin-bottom: 1.5em;
-}
-.gallery-item {
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-  vertical-align: top;
-}
-.gallery-columns-2 .gallery-item {
-  max-width: 50%;
-}
-.gallery-columns-3 .gallery-item {
-  max-width: 33.33%;
-}
-.gallery-columns-4 .gallery-item {
-  max-width: 25%;
-}
-.gallery-columns-5 .gallery-item {
-  max-width: 20%;
-}
-.gallery-columns-6 .gallery-item {
-  max-width: 16.66%;
-}
-.gallery-columns-7 .gallery-item {
-  max-width: 14.28%;
-}
-.gallery-columns-8 .gallery-item {
-  max-width: 12.5%;
-}
-.gallery-columns-9 .gallery-item {
-  max-width: 11.11%;
-}
-.gallery-caption {
-  display: block;
 }
 /* ----------------------------- */
 /* ==own stylesheet              */
