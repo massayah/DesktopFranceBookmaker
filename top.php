@@ -61,18 +61,19 @@ if ($gettop->rowCount() != 0)
 	$gettopdata = $gettop->fetch();
 	$team1 = $gettopdata['team1'];
 }
-echo "<form action=\"#\" method=\"post\">
-<div class=\"grid-4-small-2-tiny-1\">
+?><form action="#" method="post">
+<div class="grid-4-small-2-tiny-1">
 <div>
-   <label for=\"top-choix-1\" class=\"mbs h4-like\">1er</label><br>
-   <select multiple size=\"20\" name=\"top_premier\">";
+   <label for="top-choix-1" class="mbs h4-like">1er</label><br>
+   <select multiple size="20" name="top_premier">
+ <?php
 $i = 1;
 while ($data = $result->fetch())
 {
 	if ($i == 1 || $i == 21)
 		
 	?>
-	<option value="1-<?php echo $data['name']; ?>"><?php echo $data['name']; ?></option>
+	<option value="<?php echo $data['name']; ?>"><?php echo $data['name']; ?></option>
 	<?php
 	$i++;
 }
@@ -95,7 +96,7 @@ while ($data = $result->fetch())
 	if ($i == 1 || $i == 21)
 		echo "";
 	?>
-		<option value="2-<?php echo $data['name']; ?>"><?php echo $data['name']; ?></option>
+		<option value="<?php echo $data['name']; ?>"><?php echo $data['name']; ?></option>
 	<?php
 	$i++;
 }
@@ -119,7 +120,7 @@ while ($data = $result->fetch())
 	if ($i == 1 || $i == 21)
 		echo "";
 	?>
-		<option value="3-<?php echo $data['name']; ?>"><?php echo $data['name']; ?></option>
+		<option value="<?php echo $data['name']; ?>"><?php echo $data['name']; ?></option>
 	<?php
 	$i++;
 }
@@ -143,7 +144,7 @@ while ($data = $result->fetch())
 	if ($i == 1 || $i == 21)
 		echo "";
 	?>
-		<option value="4-<?php echo $data['name']; ?>"><?php echo $data['name']; ?></option>
+		<option value="<?php echo $data['name']; ?>"><?php echo $data['name']; ?></option>
 	<?php
 	$i++;
 }
