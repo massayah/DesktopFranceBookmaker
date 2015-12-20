@@ -61,7 +61,7 @@ if ($gettop->rowCount() != 0)
 	$gettopdata = $gettop->fetch();
 	$team1 = $gettopdata['team1'];
 }
-?><form action="#" method="post">
+?><form action="#top4-choice" method="post">
 <div class="grid-4-small-2-tiny-1">
 <div>
    <label for="top-choix-1" class="mbs h4-like">1er</label><br>
