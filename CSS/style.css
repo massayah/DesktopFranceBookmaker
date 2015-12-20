@@ -554,7 +554,9 @@ only screen and (max-width:760px),
 #top4-choice ul {
   margin-bottom: 1em;
   text-transform: uppercase;
-  color: #d72070;
+  color: #fff;
+  background-color: #0074c3;
+  padding-left: .5em;
 }
 
 
