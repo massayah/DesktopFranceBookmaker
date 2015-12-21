@@ -1,6 +1,8 @@
 <?php
+$numbermatchsquery = $bdd->query('SELECT COUNT(id) as nombre FROM euro_schedule WHERE euro_schedule.group IS NOT NULL');
+$numbermatchs = $numbermatchsquery->fetch();
 
-for ($i = 1; $i <= 64; $i++)
+for ($i = 1; $i <= $numbermatchs['nombre']; $i++)
 {
 	if (isset($_POST['save_bet' . $i]))
 	{
@@ -40,5 +42,17 @@ for ($i = 1; $i <= 64; $i++)
 		}
 		$possible->closeCursor();
 	}
+}
+function setLightbox($name, $previous)
+{
+	$formatlightbox = str_replace(" ", "", strtolower($name));
+	echo "<a id=\"lightbox_". $formatlightbox ."\" href=\"#lb_" . $formatlightbox . "\">Infos " . $name . "</a>";
+	echo "<div style=\"display: none;\">
+		  <div id=\"lb_" . $formatlightbox . "\" class=\"lbstyle\">
+		  <h2 class\"h3-like\">" . $name . "</h2>
+			<p><strong>Palmarès 2012</strong><br>" . $previous . "</p>
+			
+		</div>
+		</div>";
 }
 ?>

@@ -4,6 +4,12 @@
 <?php include("header.php"); ?>
 <?php include("menu.php"); ?>
 <?php include("PHP/bet_functions.php"); ?>
+<script src="javascript/jquery.min.js"></script>
+<script src="javascript/jquery-1.4.3.min.js"></script>
+<script src="fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script src="fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" href="fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+<script src="javascript/teams.js"></script>
 
 <div id="content">
 <div class="mw1140p center">
@@ -56,8 +62,8 @@ else
 <!-- Loop to display all matches in chronological order with a select element to select the potential winning team -->
 <div class="grid-2-small-1-tiny-1">
 <?php
-$bets = $bdd->prepare('SELECT t1.name AS tn1, t2.name AS tn2, t1.flag AS tf1, t2.flag as tf2, es.id, team1result, team2result, es.group, available, 
-MONTHNAME(date) as month, DAY(date) as day, HOUR(date) as hour, MINUTE(date) as minute 
+$bets = $bdd->prepare('SELECT t1.name AS tn1, t2.name AS tn2, t1.flag AS tf1, t2.flag as tf2, es.id as sid, team1result, team2result, es.group, available, 
+MONTHNAME(date) as month, DAY(date) as day, HOUR(date) as hour, MINUTE(date) as minute, win, available, t1.previous as previous1, t2.previous as previous2 
 FROM euro_schedule es  LEFT OUTER JOIN euro_bet eb ON es.id = eb.match_id AND username = ? JOIN euro_team t1 ON team1 = t1.id 
 JOIN euro_team t2 ON t2.id = team2  WHERE es.group IS NOT NULL ORDER BY date');
 $bets->execute(array($_SESSION['username']));
@@ -65,6 +71,10 @@ while ($betsdata = $bets->fetch())
 {
 $team1 = $betsdata['tn1'];
 $team2 = $betsdata['tn2'];
+$teamresult1 = $betsdata['team1result'];
+$teamresult2 = $betsdata['team2result'];
+$id = $betsdata['sid'];
+$hasplayed = $teamresult1 != NULL && $teamresult2 != NULL;
 ?>
 
 
@@ -85,41 +95,23 @@ $team2 = $betsdata['tn2'];
 </p>
 <p class="txtcenter h5-like mtn"><strong>
 <?php
-if ($betsdata['team1result'] != NULL && $betsdata['team2result'] != NULL)
+if ($hasplayed)
 	echo $betsdata['team1result'] . " - " . $betsdata['team2result'];
 else
 	echo "non joué";
 ?>
 </strong></p>
+<?php
+setLightbox($team1, $betsdata['previous1']);
+setLightbox($team2, $betsdata['previous2']);
+?>
 
-<a href="#lb_angleterre" id="lightbox_angleterre">Infos <?php echo $team1; ?></a>
-
-<!-- Setting the lightbox for each team available if we click on the name of the team -->
-		<div style="display: none;">
-		<div id="lb_angleterre" class="lbstyle">
-		<h2 class="h3-like">Angleterre</h2>
-			<p><strong>Palmarès 2011</strong><br>
-			Vainqueur</p>
-			<h3>Points Poule A</h3>
-			<ul class="unstyled pln">
-			<li>Australie&nbsp;:&nbsp;<strong>3</strong></li>
-			<li>Angleterre&nbsp;:&nbsp;<strong>1</strong></li>
-			<li>Pay de Galles&nbsp;:&nbsp;<strong>1</strong></li>
-			<li>Fidji&nbsp;:&nbsp;<strong>0</strong></li>
-			<li>Uruguay&nbsp;:&nbsp;<strong>0</strong></li>
-			</ul>
-			<h3>Phase finale</h3>
-			<ul class="unstyled pln">
-			<li><strong>quarts</strong>&nbsp;:&nbsp;non joué</li>
-			<li><strong>demies</strong>&nbsp;:&nbsp;non joué</li>
-			<li><strong>finale</strong>&nbsp;:&nbsp;non joué</li>
-			</ul>
-		</div>
-		</div>
 		<!-- End Setting the lightbox for each team available if we click on the name of the team -->
- - <a href="#lb_espagne" id="lightbox_espagne">Infos <?php echo $team2; ?></a>
+ 
 
 <!-- Setting the lightbox for each team available if we click on the name of the team -->
+<!--
+ <a href="#lb_espagne" id="lightbox_espagne">Infos Roumanie</a>
 		<div style="display: none;">
 		<div id="lb_espagne" class="lbstyle">
 		<h2 class="h3-like">Espagne</h2>
@@ -147,24 +139,64 @@ else
 			</ul>
 		</div>
 		</div>
+		-->
 		<!-- End Setting the lightbox for each team available if we click on the name of the team -->
 
 <div class="grid-2-small-1-tiny-1">
 <div>
-<form id="bet01" action="bet1.php#bet01" method="POST" class="border-bet-form">
+<form id="bet<?php echo $id; ?>" action="bet<?php echo $id; ?>.php#bet<?php echo $id; ?>" method="POST" class="border-bet-form">
 <ul class="unstyled pln bet-choix txtleft">
-			<li><label for="<?php echo $team1; ?>"><input type="radio" value="<?php echo $team1; ?>" name="select_bet01">&nbsp;<?php echo $team1; ?></label></li>
-			<li><label for="<?php echo $team2; ?>"><input type="radio" value="<?php echo $team2; ?>" name="select_bet01">&nbsp;<?php echo $team2; ?></label></li>
-			<li><label for="Nul"><input type="radio" name="select_bet01" value="Nul">&nbsp;Nul</label></li>
+			<li><label for="<?php echo $team1; ?>"><input type="radio" value="<?php echo $team1; ?>" name="select_bet<?php echo $id; ?>">&nbsp;<?php echo $team1; ?></label></li>
+			<li><label for="<?php echo $team2; ?>"><input type="radio" value="<?php echo $team2; ?>" name="select_bet<?php echo $id; ?>">&nbsp;<?php echo $team2; ?></label></li>
+			<li><label for="Nul"><input type="radio" name="select_bet1" value="Nul">&nbsp;Nul</label></li>
+			<?php
+				if ($betsdata['available'] == "1") {
+			?>
+			<li class="mtm"><input type="submit" class="btn-rouge mts mbs" name="save_bet<?php echo $id; ?>" id="save_bet<?php echo $id; ?>" value="Valider"></li>
+			<?php } else { ?>
 			<li class="pam"><strong>Paris fermés</strong></li>
+			<?php } ?>
 </ul></form>
 </div>
 <div class="pam">
 <p>Votre choix</p>
-<p class="couleur">Angleterre</p>
+<p class="couleur"><?php 
+if ($betsdata['win'] != "")
+      echo $betsdata['win'];
+    else
+      echo "Non Parié";
+?></p>
 <p class="mtm">Résultat</p>
-<p class="couleur">Gagné</p>
-<p>Perdu</p>
+<?php
+if ($teamresult1 != NULL && $teamresult2 != NULL)
+{
+	if ($teamresult1 > $teamresult2)
+		$winningteam = $team1;
+	else if ($teamresult2 > $teamresult1)
+		$winningteam= $team2;
+	else
+	{
+		if ($teamresult1 == $teamresult2 && $betsdata['group'] == null)
+		{
+			if ($betsdata['team1penalty'] > $betsdata['team2penalty'])
+				$winningteam = $team1;
+			else
+				$winningteam = $team2;
+				
+		}
+		else
+			$winningteam = "Nul";
+	}
+	if ($winningteam == $betsdata['win'])
+		echo "<p class=\"couleur\">Gagné</p>";
+	else
+		echo "<p>Perdu</p>";
+}
+else
+{
+	echo "<p class=\"couleur\">Match non joué</p>";
+}
+?>
 </div>
 </div><!--end grid-2-->
 </div><!--end panel-->
