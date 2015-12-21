@@ -54,17 +54,45 @@ else
 
 
 <!-- Loop to display all matches in chronological order with a select element to select the potential winning team -->
-
 <div class="grid-2-small-1-tiny-1">
+<?php
+$bets = $bdd->prepare('SELECT t1.name AS tn1, t2.name AS tn2, t1.flag AS tf1, t2.flag as tf2, es.id, team1result, team2result, es.group, available, 
+MONTHNAME(date) as month, DAY(date) as day, HOUR(date) as hour, MINUTE(date) as minute 
+FROM euro_schedule es  LEFT OUTER JOIN euro_bet eb ON es.id = eb.match_id AND username = ? JOIN euro_team t1 ON team1 = t1.id 
+JOIN euro_team t2 ON t2.id = team2  WHERE es.group IS NOT NULL ORDER BY date');
+$bets->execute(array($_SESSION['username']));
+while ($betsdata = $bets->fetch())
+{
+$team1 = $betsdata['tn1'];
+$team2 = $betsdata['tn2'];
+?>
+
+
+
 
 <div id="poule-ang-esp">
-<p class="h4-like pam"><span class="couleur">Vendredi 10 juin</span> - 21h - <span class="couleur">Groupe A</span></p>
+<p class="h4-like pam"><span class="couleur"><?php echo $betsdata['day']; if ($betsdata['month'] == "June") echo " Juin"; else if ($betsdata['day'] == "1" 
+&& $betsdata['month'] == "July") echo "er Juillet"; else echo " Juillet";
+	?></span> - <?php echo $betsdata['hour'] . ":";
+	if ($betsdata['minute'] < 10)
+		echo "0";
+	echo $betsdata['minute']; ?> - <span class="couleur">Groupe <?php echo $betsdata['group'];?></span></p>
 <div class="panel txtcenter">
-<p class="mbs"><img src="images/flags/angleterre.png" alt="Angleterre" width="50" height="50"> <span class="h4-like medium-hidden small-hidden tiny-hidden mls mrs">Angleterre</span><span class="h4-like large-hidden mls mrs">ANG</span> vs <span class="h4-like medium-hidden small-hidden tiny-hidden mls mrs">Espagne</span><span class="h4-like large-hidden mls mrs">ESP</span> <img src="images/flags/espagne.png" alt="Espagne" width="50" height="50">
+<p class="mbs"><img src="<?php echo $betsdata['tf1'];?>" alt="<?php echo $team1; ?>" width="50" height="50"> 
+<span class="h4-like medium-hidden small-hidden tiny-hidden mls mrs"><?php echo $team1; ?></span>
+<span class="h4-like large-hidden mls mrs">ANG</span> vs <span class="h4-like medium-hidden small-hidden tiny-hidden mls mrs"><?php echo $team2; ?></span>
+<span class="h4-like large-hidden mls mrs">ESP</span> <img src="<?php echo $betsdata['tf2'];?>" alt="<?php echo $team2; ?>" width="50" height="50">
 </p>
-<p class="txtcenter h2-like mtn"><strong>1 - 0</strong></p>
+<p class="txtcenter h2-like mtn"><strong>
+<?php
+if ($betsdata['team1result'] != NULL && $betsdata['team2result'] != NULL)
+	echo $betsdata['team1result'] . " - " . $betsdata['team2result'];
+else
+	echo "non joué";
+?>
+</strong></p>
 
-<a href="#lb_angleterre" id="lightbox_angleterre">Infos Angleterre</a>
+<a href="#lb_angleterre" id="lightbox_angleterre">Infos <?php echo $team1; ?></a>
 
 <!-- Setting the lightbox for each team available if we click on the name of the team -->
 		<div style="display: none;">
@@ -89,7 +117,7 @@ else
 		</div>
 		</div>
 		<!-- End Setting the lightbox for each team available if we click on the name of the team -->
- - <a href="#lb_espagne" id="lightbox_espagne">Infos Espagne</a>
+ - <a href="#lb_espagne" id="lightbox_espagne">Infos <?php echo $team2; ?></a>
 
 <!-- Setting the lightbox for each team available if we click on the name of the team -->
 		<div style="display: none;">
@@ -125,8 +153,8 @@ else
 <div>
 <form id="bet01" action="bet1.php#bet01" method="POST" class="border-bet-form">
 <ul class="unstyled pln bet-choix txtleft">
-			<li><label for="Angleterre"><input type="radio" value="Angleterre" name="select_bet01">&nbsp;Angleterre</label></li>
-			<li><label for="Espagne"><input type="radio" value="Espagne" name="select_bet01">&nbsp;Espagne</label></li>
+			<li><label for="<?php echo $team1; ?>"><input type="radio" value="<?php echo $team1; ?>" name="select_bet01">&nbsp;<?php echo $team1; ?></label></li>
+			<li><label for="<?php echo $team2; ?>"><input type="radio" value="<?php echo $team2; ?>" name="select_bet01">&nbsp;<?php echo $team2; ?></label></li>
 			<li><label for="Nul"><input type="radio" name="select_bet01" value="Nul">&nbsp;Nul</label></li>
 			<li class="pam"><strong>Paris fermés</strong></li>
 </ul></form>
@@ -141,7 +169,9 @@ else
 </div><!--end grid-2-->
 </div><!--end panel-->
 </div><!--end poule ang esp-->
-
+<?php
+}
+?>
 <div id="poule-fra-rou">
 <p class="bet-jour-mois h4-like pam"><span class="couleur">Samedi 11 juin</span> - 13h - <span class="couleur">Groupe A</span></p>
 <div class="panel txtcenter">
