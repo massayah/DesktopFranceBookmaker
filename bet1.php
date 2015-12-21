@@ -70,7 +70,7 @@ $team2 = $betsdata['tn2'];
 
 
 
-<div id="poule-ang-esp">
+<div class="bet-match-poule ptl pbl">
 <p class="h4-like pam"><span class="couleur"><?php echo $betsdata['day']; if ($betsdata['month'] == "June") echo " Juin"; else if ($betsdata['day'] == "1" 
 && $betsdata['month'] == "July") echo "er Juillet"; else echo " Juillet";
 	?></span> - <?php echo $betsdata['hour'] . ":";
@@ -78,12 +78,12 @@ $team2 = $betsdata['tn2'];
 		echo "0";
 	echo $betsdata['minute']; ?> - <span class="couleur">Groupe <?php echo $betsdata['group'];?></span></p>
 <div class="panel txtcenter">
-<p class="mbs"><img src="<?php echo $betsdata['tf1'];?>" alt="<?php echo $team1; ?>" width="50" height="50"> 
-<span class="h4-like medium-hidden small-hidden tiny-hidden mls mrs"><?php echo $team1; ?></span>
-<span class="h4-like large-hidden mls mrs">ANG</span> vs <span class="h4-like medium-hidden small-hidden tiny-hidden mls mrs"><?php echo $team2; ?></span>
-<span class="h4-like large-hidden mls mrs">ESP</span> <img src="<?php echo $betsdata['tf2'];?>" alt="<?php echo $team2; ?>" width="50" height="50">
+<p class="ptl pbl"><img src="<?php echo $betsdata['tf1'];?>" alt="<?php echo $team1; ?>" width="50" height="50"> 
+<span class="h4-like medium-hidden small-hidden tiny-hidden mls mrs"><strong><?php echo $team1; ?></strong></span>
+<span class="h4-like large-hidden mls mrs"><strong>ANG</strong></span> vs <span class="h4-like medium-hidden small-hidden tiny-hidden mls mrs"><strong><?php echo $team2; ?></strong></span>
+<span class="h4-like large-hidden mls mrs"><strong>ESP</strong></span> <img src="<?php echo $betsdata['tf2'];?>" alt="<?php echo $team2; ?>" width="50" height="50">
 </p>
-<p class="txtcenter h2-like mtn"><strong>
+<p class="txtcenter h5-like mtn"><strong>
 <?php
 if ($betsdata['team1result'] != NULL && $betsdata['team2result'] != NULL)
 	echo $betsdata['team1result'] . " - " . $betsdata['team2result'];
@@ -172,97 +172,6 @@ else
 <?php
 }
 ?>
-<div id="poule-fra-rou">
-<p class="bet-jour-mois h4-like pam"><span class="couleur">Samedi 11 juin</span> - 13h - <span class="couleur">Groupe A</span></p>
-<div class="panel txtcenter">
-<p class="mbs"><img src="images/flags/france.png" alt="France" width="50" height="50"> <span class="h4-like medium-hidden small-hidden tiny-hidden mls mrs">France</span><span class="h4-like large-hidden mls mrs">FRA</span> vs <span class="h4-like medium-hidden small-hidden tiny-hidden mls mrs">Roumanie</span><span class="h4-like large-hidden mls mrs">ROU</span> <img src="images/flags/roumanie.png" alt="Roumanie" width="50" height="50">
-</p>
-
-<p class="txtcenter h2-like mtn"><strong>non joué</strong></p>
-
-<a href="#lb_france" id="lightbox_france">Infos France</a>
-
-<!-- Setting the lightbox for each team available if we click on the name of the team -->
-		<div style="display: none;">
-		<div id="lb_france" class="lbstyle">
-		<h2 class="h3-like">France</h2>
-			<p><strong>Palmarès 2012 : </strong><br>
-			Matchs de Poule</p>
-			<h3>Matchs de Poule</h3>
-			<ul class="unstyled pln">
-			<li><strong>1er</strong> vs Ukraine&nbsp;:&nbsp;nul 1 - 1</li>
-			<li><strong>2ème</strong> vs Malte&nbsp;:&nbsp;non joué</li>
-			<li><strong>3ème</strong> vs France&nbsp;:&nbsp;non joué</li>
-			</ul>
-			<h3>Points Groupe A</h3>
-			<ul class="unstyled pln">
-			<li>France&nbsp;:&nbsp;<strong>3</strong></li>
-			<li>Ukraine&nbsp;:&nbsp;<strong>1</strong></li>
-			<li>Belgique&nbsp;:&nbsp;<strong>1</strong></li>
-			<li>Malte&nbsp;:&nbsp;<strong>0</strong></li>
-			</ul>
-			<h3>Phase finale</h3>
-			<ul class="unstyled pln">
-			<li><strong>8èmes</strong>&nbsp;:&nbsp;non joué</li>
-			<li><strong>quarts</strong>&nbsp;:&nbsp;non joué</li>
-			<li><strong>demies</strong>&nbsp;:&nbsp;non joué</li>
-			<li><strong>finale</strong>&nbsp;:&nbsp;non joué</li>
-			</ul>
-		</div>
-		</div>
-		<!-- End Setting the lightbox for each team available if we click on the name of the team -->
-
- - <a href="#lb_roumanie" id="lightbox_roumanie">Infos Roumanie</a>
-
-<!-- Setting the lightbox for each team available if we click on the name of the team -->
-		<div style="display: none;">
-		<div id="lb_roumanie" class="lbstyle">
-		<h2 class="h3-like">Roumanie</h2>
-			<p><strong>Palmarès 2012 : </strong><br>
-			Quarts de finale</p>
-			<h3>Matchs de Poule</h3>
-			<ul class="unstyled pln">
-			<li><strong>1er</strong> vs Belgique&nbsp;:&nbsp;nul 1 - 1</li>
-			<li><strong>2ème</strong> vs France&nbsp;:&nbsp;non joué</li>
-			<li><strong>3ème</strong> vs Malte&nbsp;:&nbsp;non joué</li>
-			</ul>
-			<h3>Points Groupe A</h3>
-			<ul class="unstyled pln">
-			<li>France&nbsp;:&nbsp;<strong>3</strong></li>
-			<li>Ukraine&nbsp;:&nbsp;<strong>1</strong></li>
-			<li>Belgique&nbsp;:&nbsp;<strong>1</strong></li>
-			<li>Malte&nbsp;:&nbsp;<strong>0</strong></li>
-			</ul>
-			<h3>Phase finale</h3>
-			<ul class="unstyled pln">
-			<li><strong>8èmes</strong>&nbsp;:&nbsp;non joué</li>
-			<li><strong>quarts</strong>&nbsp;:&nbsp;non joué</li>
-			<li><strong>demies</strong>&nbsp;:&nbsp;non joué</li>
-			<li><strong>finale</strong>&nbsp;:&nbsp;non joué</li>
-			</ul>
-		</div>
-		</div>
-		<!-- End Setting the lightbox for each team available if we click on the name of the team -->
-
-<div class="grid-2-small-1-tiny-1">
-<div>
-<form id="bet02" action="bet1.php#bet02" method="POST" class="border-bet-form">
-<ul class="unstyled pln bet-choix txtleft">
-			<li><label for="France"><input type="radio" value="France" name="select_bet2">&nbsp;France</label></li>
-			<li><label for="Roumanie"><input type="radio" value="Roumanie" name="select_bet2">&nbsp;Roumanie</label></li>
-			<li><label for="Nul"><input type="radio" name="select_bet2" value="Nul">&nbsp;Nul</label></li>
-			<li class="mtm"><input type="submit" class="btn-rouge mts mbs" name="save_bet02" id="save_bet02" value="Valider"></li>
-</ul>
-</form></div>
-<div class="pam">
-<p>Votre choix</p>
-<p class="couleur">France</p>
-<p class="mtm">Résultat</p>
-<p class="couleur">Match non joué</p>
-</div>
-</div><!--end grid-2-->
-</div><!--end panel-->
-</div><!--end poule-fra-rou-->
 </div><!--end grid-2-->
 
 
