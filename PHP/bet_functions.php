@@ -49,7 +49,7 @@ function setLightbox($name, $previous)
 	echo "<a id=\"lightbox_". $formatlightbox ."\" href=\"#lb_" . $formatlightbox . "\">Infos " . $name . "</a>";
 	echo "<div style=\"display: none;\">
 		  <div id=\"lb_" . $formatlightbox . "\" class=\"lbstyle\">
-		  <h2 class\"h3-like\">" . $name . "</h2>
+		  <h2 class=\"h3-like\">" . $name . "</h2>
 			<p><strong>Palmarès 2012</strong><br>" . $previous . "</p>
 			
 		</div>
