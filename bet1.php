@@ -142,7 +142,7 @@ setLightbox($team2, $betsdata['previous2']);
 		-->
 		<!-- End Setting the lightbox for each team available if we click on the name of the team -->
 
-<div class="grid-2-small-1-tiny-1">
+<div class="grid-2-small-1-tiny-1 ptl">
 <div>
 <form id="bet<?php echo $id; ?>" action="bet1.php#bet<?php echo $id; ?>" method="POST" class="border-bet-form">
 <ul class="unstyled pln bet-choix txtleft">
