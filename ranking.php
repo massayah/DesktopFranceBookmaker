@@ -108,7 +108,7 @@ if (isset($_SESSION['username']))
 </tr>
 </thead>
 <tbody>
-<tr>
+
 <?php
 $usergroup = $bdd->prepare('SELECT team FROM euro_user WHERE username = ?');
 $usergroup->execute(array($_SESSION['username']));
@@ -132,8 +132,9 @@ while ($userdata = $users->fetch())
 if ($prevpoints != $userdata['points'])
 	$prevrank = $i;
 ?>
-<td class="user" id="<?php echo $userdata['username']; ?>"><?php echo $userdata['username']; ?></td>
+<tr>
 <td class="rank"><?php if ($prevpoints == $userdata['points']) {echo $prevrank; if ($prevrank == 1) echo "er"; else echo "ème";} else {echo $i; if ($i == 1) echo "er";else echo "ème";} ?></td>
+<td class="user" id="<?php echo $userdata['username']; ?>"><?php echo $userdata['username']; ?></td>
 <td class="rank-top"><?php echo $userdata['team1'] . " - " . $userdata['team2'] . " - " . $userdata['team3'] . " - " . $userdata['team4']; ?></td>
 <td><?php echo $userdata['points']; ?> <span class="large-hidden"><?php if ($userdata['points'] == 1) echo "point"; else echo "points"; ?></span></td>
 </tr>
