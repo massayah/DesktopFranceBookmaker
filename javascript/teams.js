@@ -35,7 +35,7 @@ $(document).ready(function() {
 				'transitionOut'		: 'none'
 			});
 
-				$("#lightbox_pgalles").fancybox({
+				$("#lightbox_paysdegalles").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
@@ -65,7 +65,7 @@ $(document).ready(function() {
 				'transitionOut'		: 'none'
 			});
 
-				$("#lightbox_irlnord").fancybox({
+				$("#lightbox_irlandedunord").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
@@ -77,7 +77,7 @@ $(document).ready(function() {
 				'transitionOut'		: 'none'
 			});
 
-				$("#lightbox_rtcheque").fancybox({
+				$("#lightbox_républiquetchèque").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
@@ -106,13 +106,13 @@ $(document).ready(function() {
 				'transitionOut'		: 'none'
 			});
 
-				$("#lightbox_irlande").fancybox({
+				$("#lightbox_républiqued'irlande").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
 
-				$("#lightbox_suede").fancybox({
+				$("#lightbox_suède").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
