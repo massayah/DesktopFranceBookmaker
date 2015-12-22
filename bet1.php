@@ -144,7 +144,7 @@ setLightbox($team2, $betsdata['previous2']);
 
 <div class="grid-2-small-1-tiny-1">
 <div>
-<form id="bet<?php echo $id; ?>" action="bet<?php echo $id; ?>.php#bet<?php echo $id; ?>" method="POST" class="border-bet-form">
+<form id="bet<?php echo $id; ?>" action="bet1.php#bet<?php echo $id; ?>" method="POST" class="border-bet-form">
 <ul class="unstyled pln bet-choix txtleft">
 			<li><label for="<?php echo $team1; ?>"><input type="radio" value="<?php echo $team1; ?>" name="select_bet<?php echo $id; ?>">&nbsp;<?php echo $team1; ?></label></li>
 			<li><label for="<?php echo $team2; ?>"><input type="radio" value="<?php echo $team2; ?>" name="select_bet<?php echo $id; ?>">&nbsp;<?php echo $team2; ?></label></li>
@@ -159,14 +159,14 @@ setLightbox($team2, $betsdata['previous2']);
 </ul></form>
 </div>
 <div class="pam">
-<p>Votre choix</p>
-<p class="couleur"><?php 
+<p class="big pbn">Votre choix</p>
+<p class="couleur mtn"><?php 
 if ($betsdata['win'] != "")
       echo $betsdata['win'];
     else
       echo "Non Parié";
 ?></p>
-<p class="mtm">Résultat</p>
+<p class="mtm big pbn">Résultat</p>
 <?php
 if ($teamresult1 != NULL && $teamresult2 != NULL)
 {
@@ -194,7 +194,7 @@ if ($teamresult1 != NULL && $teamresult2 != NULL)
 }
 else
 {
-	echo "<p class=\"couleur\">Match non joué</p>";
+	echo "<p class=\"couleur mtn\">Match non joué</p>";
 }
 ?>
 </div>
