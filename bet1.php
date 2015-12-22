@@ -188,9 +188,9 @@ if ($teamresult1 != NULL && $teamresult2 != NULL)
 			$winningteam = "Nul";
 	}
 	if ($winningteam == $betsdata['win'])
-		echo "<p class=\"couleur\">Gagné</p>";
+		echo "<p class=\"couleur mtn\">Gagné</p>";
 	else
-		echo "<p>Perdu</p>";
+		echo "<p class=\"couleur mtn\">Perdu</p>";
 }
 else
 {
