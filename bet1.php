@@ -82,7 +82,7 @@ $hasplayed = $teamresult1 != NULL && $teamresult2 != NULL;
 
 
 <div class="bet-match-poule ptl pbl">
-<p class="h4-like pam"><span class="couleur"><?php echo $betsdata['day']; if ($betsdata['month'] == "June") echo " Juin"; else if ($betsdata['day'] == "1" 
+<p class="h4-like pam" id="<?php echo $betsdata['month'] . $betsdata['day']; ?>"><span class="couleur"><?php echo $betsdata['day']; if ($betsdata['month'] == "June") echo " Juin"; else if ($betsdata['day'] == "1" 
 && $betsdata['month'] == "July") echo "er Juillet"; else echo " Juillet";
 	?></span> - <?php echo $betsdata['hour'] . ":";
 	if ($betsdata['minute'] < 10)
@@ -91,8 +91,8 @@ $hasplayed = $teamresult1 != NULL && $teamresult2 != NULL;
 <div class="panel txtcenter">
 <p class="ptl pbl"><img src="<?php echo $betsdata['tf1'];?>" alt="<?php echo $team1; ?>" width="50" height="50"> 
 <span class="h4-like medium-hidden small-hidden tiny-hidden mls mrs"><strong><?php echo $team1; ?></strong></span>
-<span class="h4-like large-hidden mls mrs"><strong>ANG</strong></span> vs <span class="h4-like medium-hidden small-hidden tiny-hidden mls mrs"><strong><?php echo $team2; ?></strong></span>
-<span class="h4-like large-hidden mls mrs"><strong>ESP</strong></span> <img src="<?php echo $betsdata['tf2'];?>" alt="<?php echo $team2; ?>" width="50" height="50">
+<span class="h4-like large-hidden mls mrs"><strong><?php echo $betsdata['smallname1']; ?></strong></span> vs <span class="h4-like medium-hidden small-hidden tiny-hidden mls mrs"><strong><?php echo $team2; ?></strong></span>
+<span class="h4-like large-hidden mls mrs"><strong><?php echo $betsdata['smallname2']; ?></strong></span> <img src="<?php echo $betsdata['tf2'];?>" alt="<?php echo $team2; ?>" width="50" height="50">
 </p>
 <p class="txtcenter h5-like mtn"><strong>
 <?php
