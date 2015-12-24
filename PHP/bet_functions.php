@@ -43,10 +43,10 @@ for ($i = 1; $i <= $numbermatchs['nombre']; $i++)
 		$possible->closeCursor();
 	}
 }
-function setLightbox($name, $previous)
+function setLightbox($name, $previous, $smallname)
 {
-	$formatlightbox = str_replace(" ", "", strtolower($name));
-	echo "<a id=\"lightbox_". $formatlightbox ."\" href=\"#lb_" . $formatlightbox . "\">Infos " . $name . "</a>";
+	$formatlightbox = str_replace(" ", "", strtolower($smallname));
+	echo "<a class=\"lightbox_". $formatlightbox ."\" href=\"#lb_" . $formatlightbox . "\">Infos " . $name . "</a>";
 	echo "<div style=\"display: none;\">
 		  <div id=\"lb_" . $formatlightbox . "\" class=\"lbstyle\">
 		  <h2 class=\"h3-like\">" . $name . "</h2>

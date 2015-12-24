@@ -63,7 +63,8 @@ else
 <div class="grid-2-small-1-tiny-1">
 <?php
 $bets = $bdd->prepare('SELECT t1.name AS tn1, t2.name AS tn2, t1.flag AS tf1, t2.flag as tf2, es.id as sid, team1result, team2result, es.group, available, 
-MONTHNAME(date) as month, DAY(date) as day, HOUR(date) as hour, MINUTE(date) as minute, win, available, t1.previous as previous1, t2.previous as previous2 
+MONTHNAME(date) as month, DAY(date) as day, HOUR(date) as hour, MINUTE(date) as minute, win, available, t1.previous as previous1, t2.previous as previous2, 
+t1.smallname AS smallname1, t2.smallname AS smallname2 
 FROM euro_schedule es  LEFT OUTER JOIN euro_bet eb ON es.id = eb.match_id AND username = ? JOIN euro_team t1 ON team1 = t1.id 
 JOIN euro_team t2 ON t2.id = team2  WHERE es.group IS NOT NULL ORDER BY date');
 $bets->execute(array($_SESSION['username']));
@@ -102,8 +103,8 @@ else
 ?>
 </strong></p>
 <?php
-setLightbox($team1, $betsdata['previous1']);
-setLightbox($team2, $betsdata['previous2']);
+setLightbox($team1, $betsdata['previous1'], $betsdata['smallname1']);
+setLightbox($team2, $betsdata['previous2'], $betsdata['smallname2']);
 ?>
 
 		<!-- End Setting the lightbox for each team available if we click on the name of the team -->

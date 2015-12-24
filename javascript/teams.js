@@ -1,142 +1,142 @@
 $(document).ready(function() {
-			$("#lightbox_france").fancybox({
+			$(".lightbox_fra").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
 
-				$("#lightbox_roumanie").fancybox({
+				$(".lightbox_rou").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
 
-				$("#lightbox_albanie").fancybox({
+				$(".lightbox_alb").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
 
-				$("#lightbox_suisse").fancybox({
+				$(".lightbox_sui").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
 
-				$("#lightbox_angleterre").fancybox({
+				$(".lightbox_ang").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
 
-				$("#lightbox_russie").fancybox({
+				$(".lightbox_rus").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
 
-				$("#lightbox_paysdegalles").fancybox({
+				$(".lightbox_pga").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
 
-				$("#lightbox_slovaquie").fancybox({
+				$(".lightbox_slo").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
 
-				$("#lightbox_allemagne").fancybox({
+				$(".lightbox_all").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
 
-				$("#lightbox_ukraine").fancybox({
+				$(".lightbox_ukr").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
 
-				$("#lightbox_pologne").fancybox({
+				$(".lightbox_po").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
 
-				$("#lightbox_irlandedunord").fancybox({
+				$(".lightbox_irn").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
 
-				$("#lightbox_espagne").fancybox({
+				$(".lightbox_esp").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
 
-				$("#lightbox_républiquetchèque").fancybox({
+				$(".lightbox_rtc").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
 
-				$("#lightbox_turquie").fancybox({
+				$(".lightbox_tur").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
 
-				$("#lightbox_croatie").fancybox({
+				$(".lightbox_cro").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
-				$("#lightbox_belgique").fancybox({
-				'titlePosition'		: 'inside',
-				'transitionIn'		: 'none',
-				'transitionOut'		: 'none'
-			});
-
-				$("#lightbox_italie").fancybox({
+				$(".lightbox_bel").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
 
-				$("#lightbox_républiqued'irlande").fancybox({
+				$(".lightbox_ita").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
 
-				$("#lightbox_suède").fancybox({
+				$(".lightbox_irl").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
 
-				$("#lightbox_portugal").fancybox({
+				$(".lightbox_sue").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
 
-				$("#lightbox_islande").fancybox({
+				$(".lightbox_por").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
 
-				$("#lightbox_autriche").fancybox({
+				$(".lightbox_isl").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
 
-				$("#lightbox_hongrie").fancybox({
+				$(".lightbox_aut").fancybox({
+				'titlePosition'		: 'inside',
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none'
+			});
+
+				$(".lightbox_hon").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
