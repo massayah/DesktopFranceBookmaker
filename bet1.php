@@ -53,18 +53,28 @@ else
 </div><!--end grid-3-->
 </div><!--end Panel-->
 
-<div class="panel mbl">
-<h2>Les paris du jour</h2>
-<a href="#bet02">France/Roumanie - 13h</a>
-</div><!--end Panel-->
-
+<?php 
+$daymatch = $bdd->query('SELECT t1.name AS tn1, t2.name AS tn2, HOUR(date) as hour, es.id AS sid 
+FROM euro_schedule es JOIN euro_team t1 ON team1 = t1.id 
+JOIN euro_team t2 ON t2.id = team2 WHERE DATE(date) LIKE CURDATE()');
+if ($daymatch->rowCount() > 0)
+{
+	echo "<div class=\"panel mbl\" id=\"daymatch\">
+<h2>Les paris du jour</h2>";
+while ($daymatchdata = $daymatch->fetch())
+{
+	echo "<a href=\"#bet" . $daymatchdata['sid'] . "\" >" . $daymatchdata['tn1'] . "/" . $daymatchdata['tn2'] . " - " . $daymatchdata['hour'] . "h </a>";
+}
+echo "</div>";
+}
+?>
 
 <!-- Loop to display all matches in chronological order with a select element to select the potential winning team -->
 <div class="grid-2-small-1-tiny-1">
 <?php
 $bets = $bdd->prepare('SELECT t1.name AS tn1, t2.name AS tn2, t1.flag AS tf1, t2.flag as tf2, es.id as sid, team1result, team2result, es.group, available, 
 MONTHNAME(date) as month, DAY(date) as day, HOUR(date) as hour, MINUTE(date) as minute, win, available, t1.previous as previous1, t2.previous as previous2, 
-t1.smallname AS smallname1, t2.smallname AS smallname2 
+t1.smallname AS smallname1, t2.smallname AS smallname2, MONTHNAME(NOW()) as monthnow, DAY(NOW()) AS daynow 
 FROM euro_schedule es  LEFT OUTER JOIN euro_bet eb ON es.id = eb.match_id AND username = ? JOIN euro_team t1 ON team1 = t1.id 
 JOIN euro_team t2 ON t2.id = team2  WHERE es.group IS NOT NULL ORDER BY date');
 $bets->execute(array($_SESSION['username']));
