@@ -10,6 +10,7 @@
 <script src="fancybox/jquery.fancybox-1.3.4.pack.js"></script>
 <link rel="stylesheet" href="fancybox/jquery.fancybox-1.3.4.css" media="screen" />
 <script src="javascript/teams.js"></script>
+<script src="javascript/search.js"></script>
 
 <div id="content">
 <div class="mw1140p center">
@@ -33,7 +34,7 @@ else
 <h1 class="ptl">Pariez sur les Matchs de Poule.</h1>
 <div id="search_team" class="mtl mbl"><label for="info_team">Rechercher une équipe&nbsp;:&nbsp;</label><input id="info_team" /></div>
 
-<div class="panel mbl">
+<div class="panel mbl" id="datematch">
 <h2>Accès direct</h2>
 
 <div class="grid-3-small-1-tiny-1">
@@ -70,7 +71,7 @@ echo "</div>";
 ?>
 
 <!-- Loop to display all matches in chronological order with a select element to select the potential winning team -->
-<div class="grid-2-small-1-tiny-1">
+<div class="grid-2-small-1-tiny-1" id="mainblock">
 <?php
 $bets = $bdd->prepare('SELECT t1.name AS tn1, t2.name AS tn2, t1.flag AS tf1, t2.flag as tf2, es.id as sid, team1result, team2result, es.group, available, 
 MONTHNAME(date) as month, DAY(date) as day, HOUR(date) as hour, MINUTE(date) as minute, win, available, t1.previous as previous1, t2.previous as previous2, 

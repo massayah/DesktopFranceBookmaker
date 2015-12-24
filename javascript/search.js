@@ -8,7 +8,22 @@ $(document).ready(function(){
 		.indexOf((match[3] || "").toLowerCase()) >= 0;
 	}
 	});
-
+	
+	$('#info_team').keyup(function(){
+		if ($(this).val()=='')
+		{
+			$('#datematch').show();
+			$('#daymatch').show();
+			$('#mainblock div').show();
+		}
+		else
+		{
+			$('#datematch').hide();
+			$('#daymatch').hide();
+			$('#mainblock div').hide();
+			$('span.mls strong:containsi('+$(this).val()+')').parents('div').show();
+		}
+	});
 	
 	$('#search_users').keyup(function(){
 	if( $(this).val()=='')
