@@ -39,15 +39,15 @@ else
 <div class="grid-3-small-1-tiny-1">
 <div>
 <p class="plm">1ers Matchs</p>
-<p><a href="#juin10">Vendredi 10 juin</a> <a href="#juin11">Samedi 11 juin</a> <a href="#juin12">Dimanche 12 juin</a> <a href="#juin13">Lundi 13 juin</a> <a href="#juin14">Mardi 14 juin</a></p>
+<p><a href="#June10">Vendredi 10 juin</a> <a href="#June11">Samedi 11 juin</a> <a href="#June12">Dimanche 12 juin</a> <a href="#June13">Lundi 13 juin</a> <a href="#June14">Mardi 14 juin</a></p>
 </div>
 <div>
 <p class="plm">2èmes Matchs</p>
-<p> <a href="#juin15">Mercredi 15 juin</a> <a href="#juin16">Jeudi 16 juin</a> <a href="#juin17">Vendredi 17 juin</a> <a href="#juin18">Samedi 18 juin</a></p>
+<p> <a href="#June15">Mercredi 15 juin</a> <a href="#June16">Jeudi 16 juin</a> <a href="#June17">Vendredi 17 juin</a> <a href="#June18">Samedi 18 juin</a></p>
 </div>
 <div>
 <p class="plm">3èmes Matchs</p>
-<p> <a href="#juin19">Dimanche 19 juin</a> <a href="#juin20">Lundi 20 juin</a> <a href="#juin21">Mardi 21 juin</a> <a href="#juin22">Mercredi 22 juin</a></p>
+<p> <a href="#June19">Dimanche 19 juin</a> <a href="#June20">Lundi 20 juin</a> <a href="#June21">Mardi 21 juin</a> <a href="#June22">Mercredi 22 juin</a></p>
 </div>
 
 </div><!--end grid-3-->
