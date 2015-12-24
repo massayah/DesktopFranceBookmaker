@@ -216,7 +216,7 @@ else
 <?php
 }
 ?>
-</div><!--end grid-2-->
+<!--</div>--><!--end grid-2-->
 
 
 <p class="up"><a class="icon-up" href="#container">&nbsp;Haut de page</a></p>
