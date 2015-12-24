@@ -59,7 +59,7 @@ $(document).ready(function() {
 				'transitionOut'		: 'none'
 			});
 
-				$(".lightbox_po").fancybox({
+				$(".lightbox_pol").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
