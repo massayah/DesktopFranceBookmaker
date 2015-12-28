@@ -534,7 +534,7 @@ only screen and (max-width:760px),
 
 #top4-teams,
 #top4-choice {
-  border: 1px solid #ddd;
+  /*border: 1px solid #ddd;*/
 }
 
 #top4-teams h1,
