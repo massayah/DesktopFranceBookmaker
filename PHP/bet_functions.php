@@ -47,7 +47,7 @@ function setLightbox($name, $previous, $smallname)
 {
 	$formatlightbox = str_replace(" ", "", strtolower($smallname));
 	echo "<a class=\"lightbox_". $formatlightbox ."\" href=\"#lb_" . $formatlightbox . "\">Infos " . $name . "</a>";
-	echo "<div style=\"display: none;\">
+	echo "<div style=\"display: none;\" class=\"hidelightbox\">
 		  <div id=\"lb_" . $formatlightbox . "\" class=\"lbstyle\">
 		  <h2 class=\"h3-like\">" . $name . "</h2>
 			<p><strong>Palmarès 2012</strong><br>" . $previous . "</p>

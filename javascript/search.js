@@ -15,13 +15,14 @@ $(document).ready(function(){
 			$('#datematch').show();
 			$('#daymatch').show();
 			$('#mainblock div').show();
+			$('.hidelightbox').css("display", "none");
 		}
 		else
 		{
 			$('#datematch').hide();
 			$('#daymatch').hide();
-			$('#mainblock div').hide();
-			$('span.mls strong:containsi('+$(this).val()+')').parents('div').show();
+			$('#mainblock .class1test').hide();
+			$('span.mls strong:containsi('+$(this).val()+')').parents('.class1test').show();
 		}
 	});
 	

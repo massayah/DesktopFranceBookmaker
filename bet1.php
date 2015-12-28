@@ -92,7 +92,7 @@ $hasplayed = $teamresult1 != NULL && $teamresult2 != NULL;
 
 
 
-<div class="bet-match-poule ptl pbl">
+<div class="bet-match-poule ptl pbl class1test">
 <p class="h4-like pam" id="<?php echo $betsdata['month'] . $betsdata['day']; ?>"><span class="couleur"><?php echo $betsdata['day']; if ($betsdata['month'] == "June") echo " Juin"; else if ($betsdata['day'] == "1" 
 && $betsdata['month'] == "July") echo "er Juillet"; else echo " Juillet";
 	?></span> - <?php echo $betsdata['hour'] . ":";
