@@ -50,7 +50,9 @@ function setLightbox($name, $previous, $smallname)
 	echo "<div style=\"display: none;\" class=\"hidelightbox\">
 		  <div id=\"lb_" . $formatlightbox . "\" class=\"lbstyle\">
 		  <h2 class=\"h3-like\">" . $name . "</h2>
-			<p><strong>Palmarès 2012</strong><br>" . $previous . "</p>
+			<h3 class=\"h4-like\">Palmarès 2012</h3>" . $previous . "
+			<h3 class=\"h4-like\">Entraîneur</h3>
+			<h3 class=\"h4-like\">Joueur Star</h3>
 			
 		</div>
 		</div>";
