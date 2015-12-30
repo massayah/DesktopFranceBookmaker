@@ -86,6 +86,7 @@ $team2 = $betsdata['tn2'] != NULL ? $betsdata['tn2'] : $betsdata['tempname2'];
 $teamresult1 = $betsdata['team1result'];
 $teamresult2 = $betsdata['team2result'];
 $id = $betsdata['sid'];
+$pathflag = "images/flags/flag.png";
 $hasplayed = $teamresult1 != NULL && $teamresult2 != NULL;
 ?>
 
@@ -100,10 +101,11 @@ $hasplayed = $teamresult1 != NULL && $teamresult2 != NULL;
 		echo "0";
 	echo $betsdata['minute']; ?></p>
 <div class="panel txtcenter">
-<p class="ptl pbl"><img src="<?php echo $betsdata['tf1'];?>" alt="<?php echo $team1; ?>" width="50" height="50"> 
+<p class="ptl pbl"><img src="<?php echo $betsdata['tf1'] != NULL ? $betsdata['tf1'] : $pathflag;?>" alt="<?php echo $team1; ?>" width="50" height="50"> 
 <span class="h4-like medium-hidden small-hidden tiny-hidden mls mrs"><strong><?php echo $team1; ?></strong></span>
 <span class="h4-like large-hidden mls mrs"><strong><?php echo $betsdata['smallname1']; ?></strong></span> vs <span class="h4-like medium-hidden small-hidden tiny-hidden mls mrs"><strong><?php echo $team2; ?></strong></span>
-<span class="h4-like large-hidden mls mrs"><strong><?php echo $betsdata['smallname2']; ?></strong></span> <img src="<?php echo $betsdata['tf2'];?>" alt="<?php echo $team2; ?>" width="50" height="50">
+<span class="h4-like large-hidden mls mrs"><strong><?php echo $betsdata['smallname2']; ?></strong></span> 
+<img src="<?php echo $betsdata['tf2'] != NULL ? $betsdata['tf2'] : $pathflag;?>" alt="<?php echo $team2; ?>" width="50" height="50">
 </p>
 <p class="txtcenter h5-like mtn"><strong>
 <?php
@@ -114,8 +116,10 @@ else
 ?>
 </strong></p>
 <?php
-setLightbox($team1, $betsdata['previous1'], $betsdata['smallname1']);
-setLightbox($team2, $betsdata['previous2'], $betsdata['smallname2']);
+if ($betsdata['tn1'] != NULL)
+	setLightbox($team1, $betsdata['previous1'], $betsdata['smallname1']);
+if ($betsdata['tn2'] != NULL)
+	setLightbox($team2, $betsdata['previous2'], $betsdata['smallname2']);
 ?>
 
 		<!-- End Setting the lightbox for each team available if we click on the name of the team -->
