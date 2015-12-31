@@ -1,6 +1,6 @@
 <?php include('PHP/login.php'); ?>
 <?php include("head.php"); ?>
-<body id="page_bet1">
+<body id="page_bet2">
 <?php include("header.php"); ?>
 <?php include("menu.php"); ?>
 <?php include("PHP/bet_functions.php"); ?>
@@ -39,16 +39,17 @@ else
 
 <div class="grid-3-small-1-tiny-1">
 <div>
-<p class="plm">1ers Matchs</p>
-<p><a href="#June10">Vendredi 10 juin</a> <a href="#June11">Samedi 11 juin</a> <a href="#June12">Dimanche 12 juin</a> <a href="#June13">Lundi 13 juin</a> <a href="#June14">Mardi 14 juin</a></p>
+<p class="plm">8èmes de finale</p>
+<p><a href="#June25">Samedi 25 juin</a> <a href="#June26">Dimanche 26 juin</a> <a href="#June27">Lundi 27 juin</a></p>
 </div>
 <div>
-<p class="plm">2èmes Matchs</p>
-<p> <a href="#June15">Mercredi 15 juin</a> <a href="#June16">Jeudi 16 juin</a> <a href="#June17">Vendredi 17 juin</a> <a href="#June18">Samedi 18 juin</a></p>
+<p class="plm">Quarts de finale</p>
+<p> <a href="#June30">Jeudi 30 juin</a> <a href="#July1">Vendredi 1er juillet</a> <a href="#July2">Samedi 2 juillet</a> <a href="#July3">Dimanche 3 juillet</a></p>
 </div>
 <div>
-<p class="plm">3èmes Matchs</p>
-<p> <a href="#June19">Dimanche 19 juin</a> <a href="#June20">Lundi 20 juin</a> <a href="#June21">Mardi 21 juin</a> <a href="#June22">Mercredi 22 juin</a></p>
+<p class="plm">Demi-finales et Finale
+</p>
+<p> <a href="#July6">Mercredi 6 juin</a> <a href="#July7">Jeudi 7 juin</a> <a href="#July10">Dimanche 10 juin</a></p>
 </div>
 
 </div><!--end grid-3-->
@@ -164,7 +165,7 @@ if ($betsdata['tn2'] != NULL)
 <ul class="unstyled pln bet-choix txtleft">
 			<li><label for="<?php echo $team1; ?>"><input type="radio" value="<?php echo $team1; ?>" name="select_bet<?php echo $id; ?>">&nbsp;<?php echo $team1; ?></label></li>
 			<li><label for="<?php echo $team2; ?>"><input type="radio" value="<?php echo $team2; ?>" name="select_bet<?php echo $id; ?>">&nbsp;<?php echo $team2; ?></label></li>
-			<li><label for="Nul"><input type="radio" name="select_bet1" value="Nul">&nbsp;Nul</label></li>
+			
 			<?php
 				if ($betsdata['available'] == "1") {
 			?>
