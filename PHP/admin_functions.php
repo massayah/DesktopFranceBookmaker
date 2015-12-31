@@ -1,6 +1,6 @@
 <?php
 
-for ($i = 1; $i <= 64; $i++)
+for ($i = 1; $i <= 51; $i++)
 {
 	if (isset($_POST['submit_match' . $i]) || isset($_POST['reset_match' . $i]))
 	{

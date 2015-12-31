@@ -102,12 +102,17 @@ else
 <div id="update_matches" class="accordion">
 <?php
 
-$result = $bdd->query('SELECT * FROM euro_schedule ORDER BY ISNULL(euro_schedule.group), euro_schedule.group, id');
-$defaultvalue = $bdd->query('SELECT team1result, team2result, team1penalty, team2penalty FROM euro_schedule ORDER BY ISNULL(euro_schedule.group), euro_schedule.group, id');
+$result = $bdd->query('SELECT * FROM euro_schedule es ORDER BY ISNULL(es.group), es.group, es.id');
+$defaultvalue = $bdd->query('SELECT team1result, team2result, team1penalty, team2penalty, et1.name as teamname1, et2.name as teamname2, 
+es.group, tempname1, tempname2 
+FROM euro_schedule es LEFT OUTER JOIN euro_team et1 ON et1.id = es.team1 LEFT OUTER JOIN euro_team et2 ON et2.id = es.team2 
+ORDER BY ISNULL(es.group), es.group, es.id');
 $i = 1;
 while ($data = $result->fetch())
 {
-	$defaultvaluedata = $defaultvalue->fetch();
+$defaultvaluedata = $defaultvalue->fetch();
+$team1 = $defaultvaluedata['teamname1'] != NULL ? $defaultvaluedata['teamname1'] : $defaultvaluedata['tempname1'];
+$team2 = $defaultvaluedata['teamname2'] != NULL ? $defaultvaluedata['teamname2'] : $defaultvaluedata['tempname2'];
 	if ($i == 1)
 		echo "<h2 class=\"h3-like\"><a href=\"#\">Groupe A</a></h2><div>";
 	if ($i == 7)
@@ -121,10 +126,6 @@ while ($data = $result->fetch())
 	if ($i == 31)
 		echo "<h2 class=\"h3-like\"><a href=\"#\">Groupe F</a></h2><div>";
 	if ($i == 37)
-		echo "<h2 class=\"h3-like\"><a href=\"#\">Groupe G</a></h2><div>";
-	if ($i == 43)
-		echo "<h2 class=\"h3-like\"><a href=\"#\">Groupe H</a></h2><div>";
-	if ($i == 49)
 		echo "<h2 class=\"h3-like\"><a href=\"#\">Scores à partir des huitièmes</a></h2><div>";
 	if ($defaultvaluedata['team1result'] != NULL && $defaultvaluedata['team2result'] != NULL)
 		$disable = true;
@@ -134,12 +135,12 @@ while ($data = $result->fetch())
 	<hr>
 	<form id="match<?php echo $data['id'];?>_team1" method="POST" action="admin.php">
 	<fieldset>
-	<label for="score_match<?php echo $data['id'];?>_team1"><?php echo $data['team1']; ?></label>
+	<label for="score_match<?php echo $data['id'];?>_team1"><?php echo $team1; ?></label>
 	<input type="number" id="score_match<?php echo $data['id'];?>_team1" name="score_match<?php echo $data['id']; ?>_team1" <?php if ($defaultvaluedata['team1result'] != NULL) {
 	echo "value=\"" . $defaultvaluedata['team1result'] . "\""; }?> <?php if ($disable) echo "disabled=\"disabled\"";?>> - 
 	<input type="number" id="score_match<?php echo $data['id'];?>_team2" name="score_match<?php echo $data['id']; ?>_team2" <?php if ($defaultvaluedata['team2result'] != NULL) {
 	echo "value=\"" . $defaultvaluedata['team2result'] . "\""; }?> <?php if ($disable) echo "disabled=\"disabled\""; ?>>
-	<label for="score_match<?php echo $data['id'];?>_team2"><?php echo $data['team2']; ?></label>
+	<label for="score_match<?php echo $data['id'];?>_team2"><?php echo $team2; ?></label>
 	<input type="hidden" value="<?php echo $defaultvaluedata['team1result'];?>" name="edit_score_match<?php echo $data['id']; ?>_team1" id="edit_score_match<?php echo $data['id']; ?>_team1">
 	<input type="hidden" value="<?php echo $defaultvaluedata['team2result'];?>" name="edit_score_match<?php echo $data['id']; ?>_team2" id="edit_score_match<?php echo $data['id']; ?>_team2">
 	<?php 
@@ -167,7 +168,7 @@ while ($data = $result->fetch())
 	</form>
 	
 	<?php
-	if ($i == 6 || $i == 12 || $i == 18 || $i == 24 || $i == 30 || $i == 36 || $i == 42 || $i == 48 || $i == 64)
+	if ($i == 6 || $i == 12 || $i == 18 || $i == 24 || $i == 30 || $i == 36 || $i == 51)
 		echo "</div>";
 	$i++;
 }
