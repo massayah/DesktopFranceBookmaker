@@ -21,7 +21,7 @@ else
 ?>
 <div id="login">
 <p class="h4-like" title="cliquez pour faire apparaitre le formulaire">Connexion</p>
-<div id="inscript" class="h4-like login-inscription"><a href="register.php" title="vers la page d'inscription">Inscription</a></div>
+<div id="inscript" class="login-inscription"><a href="register.php" title="vers la page d'inscription">Inscription</a></div>
 <div id="login-form">
 <form id="header_form" method="post" action="index.php">
 

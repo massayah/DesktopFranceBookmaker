@@ -258,6 +258,7 @@ body {background: url(../images/greyzz.png)}
     margin:0;
     color: #fff;
     font-weight: bold;
+    font-size: 1em;
     padding: 10px 10px 10px 42px;
     cursor:pointer;
     background-color: #dd2235;
