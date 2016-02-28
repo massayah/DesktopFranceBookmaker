@@ -6,7 +6,7 @@ for ($i = 1; $i <= $numbermatchs['nombre']; $i++)
 {
 	if (isset($_POST['save_bet' . $i]))
 	{
-		// check of the bet is blocked or not
+		// check if the bet is blocked or not
 		$possible = $bdd->prepare('SELECT available FROM euro_schedule WHERE id = ?');
 		$possible->execute(array($i));
 		$possibledata = $possible->fetch();

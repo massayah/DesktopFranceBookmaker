@@ -75,7 +75,7 @@ echo "</div>";
 <?php
 $bets = $bdd->prepare('SELECT t1.name AS tn1, t2.name AS tn2, t1.flag AS tf1, t2.flag as tf2, es.id as sid, team1result, team2result, es.group, available, 
 MONTHNAME(date) as month, DAY(date) as day, HOUR(date) as hour, MINUTE(date) as minute, win, available, t1.previous as previous1, t2.previous as previous2, 
-t1.smallname AS smallname1, t2.smallname AS smallname2, MONTHNAME(NOW()) as monthnow, DAY(NOW()) AS daynow 
+t1.smallname AS smallname1, t2.smallname AS smallname2, MONTHNAME(NOW()) as monthnow, DAY(NOW()) AS daynow, t1.id as idt1, t2.id as idt2 
 FROM euro_schedule es  LEFT OUTER JOIN euro_bet eb ON es.id = eb.match_id AND username = ? JOIN euro_team t1 ON team1 = t1.id 
 JOIN euro_team t2 ON t2.id = team2  WHERE es.group IS NOT NULL ORDER BY date, es.id');
 $bets->execute(array($_SESSION['username']));
@@ -158,9 +158,9 @@ setLightbox($team2, $betsdata['previous2'], $betsdata['smallname2']);
 <div>
 <form id="bet<?php echo $id; ?>" action="bet1.php#bet<?php echo $id; ?>" method="POST" class="border-bet-form">
 <ul class="unstyled pln bet-choix txtleft">
-			<li><label for="<?php echo $team1; ?>"><input type="radio" value="<?php echo $team1; ?>" name="select_bet<?php echo $id; ?>">&nbsp;<?php echo $team1; ?></label></li>
-			<li><label for="<?php echo $team2; ?>"><input type="radio" value="<?php echo $team2; ?>" name="select_bet<?php echo $id; ?>">&nbsp;<?php echo $team2; ?></label></li>
-			<li><label for="Nul"><input type="radio" name="select_bet1" value="Nul">&nbsp;Nul</label></li>
+			<li><label for="<?php echo $team1; ?>"><input type="radio" value="<?php echo $betsdata['idt1']; ?>" name="select_bet<?php echo $id; ?>">&nbsp;<?php echo $team1; ?></label></li>
+			<li><label for="<?php echo $team2; ?>"><input type="radio" value="<?php echo $betsdata['idt2']; ?>" name="select_bet<?php echo $id; ?>">&nbsp;<?php echo $team2; ?></label></li>
+			<li><label for="Nul"><input type="radio" name="select_bet<?php echo $id; ?>" value="<?php echo 25;?>">&nbsp;Nul</label></li>
 			<?php
 				if ($betsdata['available'] == "1") {
 			?>
@@ -174,7 +174,16 @@ setLightbox($team2, $betsdata['previous2'], $betsdata['smallname2']);
 <p class="big pbn">Votre choix</p>
 <p class="couleur mtn"><?php 
 if ($betsdata['win'] != "")
-      echo $betsdata['win'];
+	{
+		if ($betsdata['win'] == 25)
+			echo "Nul";
+		else {
+		$chosenbet = $bdd->prepare('SELECT name FROM euro_team WHERE id = ?');
+		$chosenbet->execute(array($betsdata['win']));
+		$chosenbetdata = $chosenbet->fetch();
+		echo $chosenbetdata['name'];
+		}
+	}
     else
       echo "Non Parié";
 ?></p>
