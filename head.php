@@ -9,8 +9,6 @@
 
 <meta http-equiv="X-UA-Compatible" content="IE=10">
 <meta name="viewport" content="initial-scale=1.0">
-
-<link href='http://fonts.googleapis.com/css?family=Exo+2:400,600' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="CSS/knacss-unminified.css" />
 <link rel="stylesheet" href="CSS/style.css" />
 

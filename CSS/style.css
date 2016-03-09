@@ -6,10 +6,26 @@
 /* -------- */
 
 
-/* fontface pour localhost */
+/* fontface */
 
-/*@font-face { font-family: "Duru Sans"; 
-src: url('font/DuruSans-Regular.otf'); } */
+@font-face{ 
+	font-family: 'Exo 2';
+	src: url('font/exo2-regular-webfont.eot');
+	src: url('font/exo2-regular-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('font/exo2-regular-webfont.woff') format('woff'),
+	     url('font/exo2-regular-webfont.ttf') format('truetype'),
+	     url('font/exo2-regular-webfont.svg#webfont') format('svg');
+}
+
+@font-face{ 
+	font-family: 'Eurofurence';
+	src: url('font/eurof35-webfont.eot');
+	src: url('font/eurof35-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('font/eurof35-webfont.woff') format('woff'),
+	     url('font/eurof35-webfont.ttf') format('truetype'),
+	     url('font/eurof35-webfont.svg#webfont') format('svg');
+}
+
 
 
 /* styles temporaires a supprimer */
@@ -495,7 +511,12 @@ only screen and (max-width:760px),
 
 
 
-#page_accueil h1 {color: #027ac2; margin-top: 1em;}
+#page_accueil h1 {
+color: #027ac2; 
+margin-top: 1em;
+  font-family: 'Eurofurence', sans-serif;
+  font-size: 4em;
+}
 
 #intro {margin-bottom: 5em;}
 
