@@ -203,7 +203,12 @@ while ($data = $result->fetch())
 
 <!-- End Display of the droppable zone for the four positions of the top -->
 
-<p class="up"><a class="icon-up" href="#container">&nbsp;Haut de page</a></p>
+<p class="up"><a href="#container">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <circle cx="30" cy="30" r="25" class="circle" />
+  <polyline points="18,37 30,20 42,37" class="arrow" />
+  </svg></a></p>
+
 </div><!--end center-->
 </div><!--end content-->
 <?php } ?>

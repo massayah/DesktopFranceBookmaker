@@ -9,12 +9,16 @@
 <div id="intro" class="mtl mbl">
 <h1>It's Free, It's Fun, It's Competition</h1>
 <p>Après la coupe du monde 2014, place à l'Euro 2016.</p>
-<p>Venez discuter en direct sur la plate-forme Discussion, il y aura toujours quelqu'un connecté au moment des matchs.</p>
-<p>Le réseau est privé, il est installé dans mon hébergement tout comme le site lui-même, et à la fin de la compétition je supprime toutes les discussions.
-On peut s'en servir avec une tablette ou un smartphone, c'est plus pratique pour discuter lorsqu'on regarde un match.</p>
 <p>La compétition se déroulera du 10 juin au 10 juillet 2016.</p>
 <p>24 équipes - 1 champion</p>
 <p><a href="bet1.php">Pariez sur chaque match</a>, <a href="top.php">Faites votre Top 4</a> et Gagnez des cadeaux.</p>
+
+<h2 class="h4-like ptl">Au cours des matchs, venez discuter en direct avec les autres bookmakers sur la plate-forme Discussion</h2>
+<p>Le concept a été expérimenté pour la coupe du monde de 2014 et son succès nous l'a fait intégrer complètement dans le site.</p>
+<p>Au moment des matchs, il y aura toujours quelqu'un avec qui discuter, si ce n'est une grosse affluence pour les matchs à enjeu.</p>
+<p>On peut s'en servir avec une tablette ou un smartphone, très pratiques pour discuter lorsqu'on regarde un match.</p>
+<p>C'est un réseau privé que j'ai installé dans mon hébergement tout comme le site lui-même, donc pas de problème de confidentialité.</p>
+<p>À la fin de la compétition je supprimerai toutes les discussions.</p>
 </div><!--end intro-->
 
 <div class="register panel mbl">
@@ -76,15 +80,19 @@ On peut s'en servir avec une tablette ou un smartphone, c'est plus pratique pour
 
 <h1 class="h2-like mtl">Liens utiles</h1>
 <ul class="unstyled pln">
-<li>Tableau des matchs : <a href="#">site FIFA</a></li>
-<li>Cote des équipes : <a href="#">site FIFA</a></li>
+<li>Tableau des matchs : <a href="http://fr.uefa.com/uefaeuro/season=2016/matches/day=1/index.html">site FIFA</a></li>
+<li>Tout savoir sur les équipes : <a href="http://fr.uefa.com/uefaeuro/season=2016/teams/index.html">site FIFA</a></li>
 </ul>
 
 <h1 class="h2-like mtl">Bonne chance à tous !</h1>
 <h1 class="h2-like mtl">Une équipe de filles pour un site sur le foot</h1>
-<p>Laurène a créé tout le code interactif du site et de l'application Android.</p>
-<p>Martine a créé le design et le code de mise en page du site.</p>
-<p class="up"><a class="icon-up" href="#container">&nbsp;Haut de page</a></p>
+<p>Laurène a créé tout le code interactif du site.</p>
+<p>Martine a créé le design et le code de mise en page du site, et a installé et personnalisé le CMS WordPress avec extension BuddyPress pour la plate-forme Discussion.</p>
+<p class="up"><a href="#container">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <circle cx="30" cy="30" r="25" class="circle" />
+  <polyline points="18,37 30,20 42,37" class="arrow" />
+  </svg></a></p>
 </div><!--end center-->
 </div><!--end content-->
 <?php include("footer.php"); ?>

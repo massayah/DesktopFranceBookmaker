@@ -60,7 +60,7 @@ else
 
 <div id="content">
 <div class="mw1140p center mtl">
-<h1 class="h2-like">Pour tout problème avec le site ou avec une appli<br>contactez-nous.</h1>
+<h1 class="h2-like">Pour tout problème avec le site, <br>contactez-nous.</h1>
 <form id="contact_form" method="post" action="contact.php">
 <p id="contact_message"><?php if (isset($messageresponse)) echo $messageresponse; ?></p>
 <fieldset>
@@ -81,7 +81,11 @@ else
 </p>
 </fieldset>
 </form>
-<p class="up"><a class="icon-up" href="#container">&nbsp;Haut de page</a></p>
+<p class="up"><a href="#container">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <circle cx="30" cy="30" r="25" class="circle" />
+  <polyline points="18,37 30,20 42,37" class="arrow" />
+  </svg></a></p>
 </div><!--end center-->
 </div><!--end content-->
 <?php include("footer.php"); ?>

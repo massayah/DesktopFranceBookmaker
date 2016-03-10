@@ -31,7 +31,7 @@ else
 {
 ?>
 
-<h1 class="ptl">Pariez sur les Matchs de Poule.</h1>
+<h1 class="ptl h2-like">Pariez sur les Matchs de Poule</h1>
 <div id="search_team" class="mtl mbl"><label for="info_team">Rechercher une équipe&nbsp;:&nbsp;</label><input id="info_team" /></div>
 
 <div class="panel mbl" id="datematch">
@@ -227,8 +227,13 @@ else
 ?>
 <!--</div>--><!--end grid-2-->
 
+<p class="up"><a href="#container">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <circle cx="30" cy="30" r="25" class="circle" />
+  <polyline points="18,37 30,20 42,37" class="arrow" />
+  </svg></a></p>
 
-<p class="up"><a class="icon-up" href="#container">&nbsp;Haut de page</a></p>
+
 </div><!--end center-->
 </div><!--end content-->
 <?php } ?>

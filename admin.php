@@ -317,7 +317,11 @@ $winnersfinal->closeCursor();
 
 <!-- End Loop to display all potential qualified teams and choose the ones that will win in the group stage -->
 
-<p class="up"><a class="icon-up" href="#container">&nbsp;Haut de page</a></p>
+<p class="up"><a href="#container">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <circle cx="30" cy="30" r="25" class="circle" />
+  <polyline points="18,37 30,20 42,37" class="arrow" />
+  </svg></a></p>
 
 <!-- Loop to display all users in a table and be able to delete them -->
 <div id="search_user"><label for="search_users">Recherche Utilisateur&nbsp;: </label><input id="search_users" ></div>
@@ -359,7 +363,12 @@ $users->closeCursor();
 </table>
 
 <!-- End Loop to display all users in a table and be able to delete them -->
-<p class="up"><a href="#container">&uarr;&nbsp;Haut de page</a></p>
+<p class="up"><a href="#container">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <circle cx="30" cy="30" r="25" class="circle" />
+  <polyline points="18,37 30,20 42,37" class="arrow" />
+  </svg></a></p>
+  
    </div><!--end tab-4 -->
    
 
