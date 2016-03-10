@@ -2,7 +2,7 @@
 <div id="header">
 <div class="mw1140p center flex-container">
 <div class="logodiv">
-<a href="index.php" title="Retour Accueil"><img class="logo-standard" src="images/header.jpg" alt="Rugby Bookmaker" /><img class="logo-600-1023" src="images/header320.jpg" alt="Rugby Bookmaker" /></a>
+<a href="index.php" title="Retour Accueil"><img class="logo-standard" src="images/header.png" alt="Rugby Bookmaker" /><img class="logo-600-1023" src="images/header320.png" alt="Rugby Bookmaker" /></a>
 </div><!--end logodiv-->
 
 <?php
