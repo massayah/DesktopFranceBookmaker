@@ -99,7 +99,7 @@ if ($gettop->rowCount() != 0)
 
 <div class="panel mtl">
 <h2>Comment faire</h2>
-<div class="grid-2">
+<div class="grid-2-small-1-tiny-1">
 
 <div class="pas">
 <h3>Parier</h3>
