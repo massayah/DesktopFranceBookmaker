@@ -67,7 +67,7 @@
 </div><!--end win-->
 </div><!--end grid-2--> 
 
-<h1 class="h2-like mtl">Les Règles de la compétition</h1>
+<h2 class="mtl">Les Règles de la compétition</h2>
 <p><strong>Pour la première fois en championnat d'Europe, il y aura 24 équipes au lieu de 16.</strong> Elles sont réparties en 6 groupes par tirage au sort.</p>
 <p>Pour la première fois aussi, il y aura des huitièmes de finale.</p>
 <ul id="rules">
@@ -78,14 +78,14 @@
 <li><strong>Finale</strong>&nbsp;: le gagnant sera le champion d'Europe 2016.</li>
 </ul>
 
-<h1 class="h2-like mtl">Liens utiles</h1>
+<h2 class="mtl">Liens utiles</h2>
 <ul class="unstyled pln">
 <li>Tableau des matchs : <a href="http://fr.uefa.com/uefaeuro/season=2016/matches/day=1/index.html">site FIFA</a></li>
 <li>Tout savoir sur les équipes : <a href="http://fr.uefa.com/uefaeuro/season=2016/teams/index.html">site FIFA</a></li>
 </ul>
 
-<h1 class="h2-like mtl">Bonne chance à tous !</h1>
-<h1 class="h2-like mtl">Une équipe de filles pour un site sur le foot</h1>
+<h2 class="mtl">Bonne chance à tous !</h2>
+<h2 class="mtl">Une équipe de filles pour un site sur le foot</h2>
 <p>Laurène a créé tout le code interactif du site.</p>
 <p>Martine a créé le design et le code de mise en page du site, et a installé et personnalisé le CMS WordPress avec extension BuddyPress pour la plate-forme Discussion.</p>
 <p class="up"><a href="#container">
