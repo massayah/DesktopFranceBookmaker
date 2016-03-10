@@ -118,7 +118,8 @@ if ($gettop->rowCount() != 0)
 </div><!--end panel-->
 
 <div class="panel mtl">
-<h2>Choisissez</h2>
+<h2>Choisissez 4 équipes</h2>
+<p class="pbm">Vous devez sélectionner 1 équipe par tableau, sinon la validation ne marchera pas.</p>
 
 <?php
 $result = $bdd->query('SELECT * FROM euro_team;');

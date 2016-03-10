@@ -623,6 +623,10 @@ margin-top: 1em;
   padding-left: .5em;
 }
 
+#top4-choice ul li {
+  padding: 1em .5em;
+}
+
 
 #page_top p.up {    /* annulation du width 23,5% de grid3 */
   width: 100%;
