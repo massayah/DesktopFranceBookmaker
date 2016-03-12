@@ -89,21 +89,11 @@
 <h2 class="mtl">Une équipe de filles pour un site sur le foot</h2>
 <p>Laurène a créé tout le code interactif du site.</p>
 <p>Martine a créé le design et le code de mise en page du site, et a installé et personnalisé le CMS WordPress avec extension BuddyPress pour la plate-forme Discussion.</p>
+
 <p class="up"><a href="#container">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
-<defs>
-    <filter id="ombre" y="-10" height="40" x="-10" width="150">
-        <feOffset in="SourceAlpha" dx="1" dy="1" result="offset2" />
-        <feGaussianBlur in="offset2" stdDeviation="3"  result="blur2"/>
-
-        <feMerge>
-            <feMergeNode in="blur2" />
-            <feMergeNode in="SourceGraphic" />
-        </feMerge>
-    </filter>
-</defs>
-  <circle cx="30" cy="30" r="25" class="circle" style="filter: url(#ombre);" />
-  <polyline points="18,37 30,20 42,37" class="arrow" />
+  <circle cx="30" cy="30" r="25" class="circle" />
+  <polyline points="20,35 30,25 40,35" class="arrow" />
   </svg></a></p>
   
 </div><!--end center-->

@@ -228,11 +228,10 @@ else
 <!--</div>--><!--end grid-2-->
 
 <p class="up"><a href="#container">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
   <circle cx="30" cy="30" r="25" class="circle" />
-  <polyline points="18,37 30,20 42,37" class="arrow" />
+  <polyline points="20,35 30,25 40,35" class="arrow" />
   </svg></a></p>
-
 
 </div><!--end center-->
 </div><!--end content-->

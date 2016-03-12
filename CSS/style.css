@@ -159,30 +159,32 @@ a.btn-rouge:focus {
 
 /* SVG Haut de Page */
 
-svg {
+/*svg {
   width: 60px;
   height: 60px;
-}
+}*/
 
 .circle {
-  fill: #dd2235;
+   fill: #1777bc;
   stroke-width: 0px;
-}
-
-.arrow {
-  fill: transparent;
-  stroke: #fff;
-  stroke-width: 1px;
 }
 
 a:hover .circle,
 a:focus .circle {
-  opacity: 0.8;
+  fill: none;
+  stroke: #000;
+  stroke-width: 2px;
+}
+
+.arrow {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2px;
 }
 
 a:hover .arrow,
 a:focus .arrow {
- 
+ stroke: #000;
 }
 
 
