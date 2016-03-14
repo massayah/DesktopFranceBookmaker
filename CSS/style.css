@@ -257,7 +257,7 @@ body {background: url(../images/greyzz.png)}
   background-color: #206cac;
   background-color: #1777bc;
   margin: 0 0 30px 0;
-  padding: 0;
+  padding: 1em;
 }
 
 #login {
@@ -589,6 +589,16 @@ margin-top: 1em;
   width: 45%;
 }
 
+}
+
+@media (min-width:750px) {
+  
+  #page_accueil #intro img {
+    float: right;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
 }
 
 

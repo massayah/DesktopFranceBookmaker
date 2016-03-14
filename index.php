@@ -8,18 +8,17 @@
 <div class="mw1140p center">
 <div id="intro" class="mtl mbl">
 <h1>It's Free, It's Fun, It's Competition</h1>
-<img src="images/StadesMap.png" alt="Stades" width="360" height="369" class="fr" />
+<img src="images/StadesMap.png" alt="Stades" width="360" height="369" />
 <p>Après la coupe du monde 2014, place à l'Euro 2016.</p>
 <p>La compétition se déroulera du 10 juin au 10 juillet 2016.</p>
 <p>24 équipes - 1 champion</p>
-<p><a href="bet1.php">Pariez sur chaque match</a>, <a href="top.php">Faites votre Top 4</a> et Gagnez des cadeaux.</p>
+<p><a href="bet1.php">Pariez sur chaque match</a>, <a href="top.php">Faites&nbsp;votre&nbsp;Top&nbsp;4</a> et Gagnez des cadeaux.</p>
 
-<h2 class="h4-like ptl">Au cours des matchs, venez discuter en direct avec les autres bookmakers sur la plate-forme Discussion</h2>
-<p>Le concept a été expérimenté pour la coupe du monde de 2014 et son succès nous l'a fait intégrer complètement dans le site.</p>
+<h2 class="h4-like ptl">Pendant les matchs, venez discuter sur la plate-forme Discussion</h2>
+<p>C'est un réseau privé que j'ai installé dans mon hébergement tout comme le site lui-même, donc pas de problème de confidentialité.</p>
+<p>Le concept a été expérimenté pour la coupe du monde de 2014 et son succès nous l'a fait intégrer complètement dans le site. Ceux qui s'étaient inscrits en 2014 retrouveront leur compte, j'ai juste supprimé les discussions de l'époque.</p>
 <p>Au moment des matchs, il y aura toujours quelqu'un avec qui discuter, si ce n'est une grosse affluence pour les matchs à enjeu.</p>
 <p>On peut s'en servir avec une tablette ou un smartphone, très pratiques pour discuter lorsqu'on regarde un match.</p>
-<p>C'est un réseau privé que j'ai installé dans mon hébergement tout comme le site lui-même, donc pas de problème de confidentialité.</p>
-<p>À la fin de la compétition je supprimerai toutes les discussions.</p>
 </div><!--end intro-->
 
 <div class="register panel mbl">
