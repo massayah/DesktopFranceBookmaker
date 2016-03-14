@@ -45,7 +45,7 @@ $(document).ready(function() {
 	var rank = $('#' + username).next().html();
 	var top = $('#' + username).next().next().html();
 	var points = $('#' + username).next().next().next().html();
-	$('#my_rank').append('<tr><th class="first txtcenter">Place</th><td>' + rank + '</td></tr><tr><th class="first txtcenter">Top 4</th><td>' + top + '</td></tr><tr><th class="first txtcenter">Points</th><td>' + points + '</td></tr>');
+	$('#my_rank').append('<tr><th class="first txtcenter">Top 4</th><td>' + rank + '</td></tr><tr><th class="first txtcenter">Points</th><td>' + top + '</td></tr><tr><th class="first txtcenter">Place</th><td>' + points + '</td></tr>');
 });
 </script>
 
