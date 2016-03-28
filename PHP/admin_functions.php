@@ -125,7 +125,7 @@ for ($i = 1; $i <= 51; $i++)
 						if ($ispointsdata['group'] != NULL)
 						{
 						// Add or remove points to the users that had it right
-						$getusers->execute(array("Nul", $i));
+						$getusers->execute(array(25, $i));
 						while ($getusersdata = $getusers->fetch())
 						{
 							$addpoints->execute(array($getusersdata['points'] + $add, $getusersdata['username']));

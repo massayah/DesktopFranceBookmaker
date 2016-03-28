@@ -192,21 +192,21 @@ if ($betsdata['win'] != "")
 if ($teamresult1 != NULL && $teamresult2 != NULL)
 {
 	if ($teamresult1 > $teamresult2)
-		$winningteam = $team1;
+		$winningteam = $idt1;
 	else if ($teamresult2 > $teamresult1)
-		$winningteam= $team2;
+		$winningteam= $idt2;
 	else
 	{
 		if ($teamresult1 == $teamresult2 && $betsdata['group'] == null)
 		{
 			if ($betsdata['team1penalty'] > $betsdata['team2penalty'])
-				$winningteam = $team1;
+				$winningteam = $idt1;
 			else
-				$winningteam = $team2;
+				$winningteam = $idt2;
 				
 		}
 		else
-			$winningteam = "Nul";
+			$winningteam = 25;
 	}
 	if ($winningteam == $betsdata['win'])
 		echo "<p class=\"couleur mtn\">Gagné</p>";

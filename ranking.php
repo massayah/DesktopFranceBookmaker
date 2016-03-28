@@ -42,10 +42,10 @@
 <script>
 $(document).ready(function() {
 	var username = "<?php echo $_SESSION['username']; ?>";
-	var rank = $('#' + username).next().html();
-	var top = $('#' + username).next().next().html();
-	var points = $('#' + username).next().next().next().html();
-	$('#my_rank').append('<tr><th class="first txtcenter">Top 4</th><td>' + rank + '</td></tr><tr><th class="first txtcenter">Points</th><td>' + top + '</td></tr><tr><th class="first txtcenter">Place</th><td>' + points + '</td></tr>');
+	var rank = $('#' + username).prev().html();
+	var top = $('#' + username).next().html();
+	var points = $('#' + username).next().next().html();
+	$('#my_rank').append('<tr><th class="first txtcenter">Top 4</th><td>' + top + '</td></tr><tr><th class="first txtcenter">Points</th><td>' + points + '</td></tr><tr><th class="first txtcenter">Place</th><td>' + rank + '</td></tr>');
 });
 </script>
 
