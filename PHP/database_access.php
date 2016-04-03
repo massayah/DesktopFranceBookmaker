@@ -6,7 +6,7 @@
 // password to set of not null
 
 $user = 'root';
-$password = '';
+$password = 'laurene';
 
 try
 {

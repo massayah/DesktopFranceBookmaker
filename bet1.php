@@ -86,6 +86,9 @@ $team2 = $betsdata['tn2'];
 $teamresult1 = $betsdata['team1result'];
 $teamresult2 = $betsdata['team2result'];
 $id = $betsdata['sid'];
+$idt1 = $betsdata['idt1'];
+$idt2 = $betsdata['idt2'];
+
 $hasplayed = $teamresult1 != NULL && $teamresult2 != NULL;
 ?>
 
@@ -194,7 +197,7 @@ if ($teamresult1 != NULL && $teamresult2 != NULL)
 	if ($teamresult1 > $teamresult2)
 		$winningteam = $idt1;
 	else if ($teamresult2 > $teamresult1)
-		$winningteam= $idt2;
+		$winningteam = $idt2;
 	else
 	{
 		if ($teamresult1 == $teamresult2 && $betsdata['group'] == null)

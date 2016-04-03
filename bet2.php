@@ -76,7 +76,7 @@ echo "</div>";
 <?php
 $bets = $bdd->prepare('SELECT t1.name AS tn1, t2.name AS tn2, t1.flag AS tf1, t2.flag as tf2, es.id as sid, team1result, team2result, available, 
 MONTHNAME(date) as month, DAY(date) as day, HOUR(date) as hour, MINUTE(date) as minute, win, available, t1.previous as previous1, t2.previous as previous2, 
-t1.smallname AS smallname1, t2.smallname AS smallname2, MONTHNAME(NOW()) as monthnow, DAY(NOW()) AS daynow, tempname1, tempname2, en.name AS title 
+t1.smallname AS smallname1, t2.smallname AS smallname2, MONTHNAME(NOW()) as monthnow, DAY(NOW()) AS daynow, tempname1, tempname2, en.name AS title, t1.id as idt1, t2.id as idt2  
 FROM euro_schedule es  LEFT OUTER JOIN euro_bet eb ON es.id = eb.match_id AND username = ? LEFT OUTER JOIN euro_team t1 ON team1 = t1.id 
 LEFT OUTER JOIN euro_team t2 ON t2.id = team2 JOIN euro_namematch en ON en.id_match = es.id WHERE es.group IS NULL ORDER BY date');
 $bets->execute(array($_SESSION['username']));
@@ -89,6 +89,8 @@ $teamresult2 = $betsdata['team2result'];
 $id = $betsdata['sid'];
 $pathflag = "images/flags/flag.png";
 $hasplayed = $teamresult1 != NULL && $teamresult2 != NULL;
+$idt1 = $betsdata['idt1'];
+$idt2 = $betsdata['idt2'];
 ?>
 
 
@@ -163,11 +165,10 @@ if ($betsdata['tn2'] != NULL)
 
 <div class="grid-2-small-1-tiny-1 ptl">
 <div>
-<form id="bet<?php echo $id; ?>" action="bet1.php#bet<?php echo $id; ?>" method="POST" class="border-bet-form">
+<form id="bet<?php echo $id; ?>" action="bet2.php#bet<?php echo $id; ?>" method="POST" class="border-bet-form">
 <ul class="unstyled pln bet-choix txtleft">
-			<li><label for="<?php echo $team1; ?>"><input type="radio" value="<?php echo $team1; ?>" name="select_bet<?php echo $id; ?>">&nbsp;<?php echo $team1; ?></label></li>
-			<li><label for="<?php echo $team2; ?>"><input type="radio" value="<?php echo $team2; ?>" name="select_bet<?php echo $id; ?>">&nbsp;<?php echo $team2; ?></label></li>
-			
+			<li><label for="<?php echo $team1; ?>"><input type="radio" value="<?php echo $betsdata['idt1']; ?>" name="select_bet<?php echo $id; ?>">&nbsp;<?php echo $team1; ?></label></li>
+			<li><label for="<?php echo $team2; ?>"><input type="radio" value="<?php echo $betsdata['idt2']; ?>" name="select_bet<?php echo $id; ?>">&nbsp;<?php echo $team2; ?></label></li>
 			<?php
 				if ($betsdata['available'] == "1") {
 			?>
@@ -181,7 +182,16 @@ if ($betsdata['tn2'] != NULL)
 <p class="big pbn">Votre choix</p>
 <p class="couleur mtn"><?php 
 if ($betsdata['win'] != "")
-      echo $betsdata['win'];
+	{
+		if ($betsdata['win'] == 25)
+			echo "Nul";
+		else {
+		$chosenbet = $bdd->prepare('SELECT name FROM euro_team WHERE id = ?');
+		$chosenbet->execute(array($betsdata['win']));
+		$chosenbetdata = $chosenbet->fetch();
+		echo $chosenbetdata['name'];
+		}
+	}
     else
       echo "Non Parié";
 ?></p>
@@ -190,21 +200,21 @@ if ($betsdata['win'] != "")
 if ($teamresult1 != NULL && $teamresult2 != NULL)
 {
 	if ($teamresult1 > $teamresult2)
-		$winningteam = $team1;
+		$winningteam = $idt1;
 	else if ($teamresult2 > $teamresult1)
-		$winningteam= $team2;
+		$winningteam = $idt2;
 	else
 	{
 		if ($teamresult1 == $teamresult2 && $betsdata['group'] == null)
 		{
 			if ($betsdata['team1penalty'] > $betsdata['team2penalty'])
-				$winningteam = $team1;
+				$winningteam = $idt1;
 			else
-				$winningteam = $team2;
+				$winningteam = $idt2;
 				
 		}
 		else
-			$winningteam = "Nul";
+			$winningteam = 25;
 	}
 	if ($winningteam == $betsdata['win'])
 		echo "<p class=\"couleur mtn\">Gagné</p>";

@@ -223,30 +223,34 @@ for ($i = 1; $i <= 51; $i++)
 
 
 // Update the names of the teams that are qualified to go to the huitièmes
-for ($i = 1, $j = 1; $i <= 16; $i++)
+for ($i = 37; $i <= 44; $i++)
 {
-	if (isset($_POST['submit_huitieme' . $i]))
+  for ($j = 1; $j <= 2; $j++)
+  {
+	if (isset($_POST['submit_huitieme' . $i .$j]))
 	{
-		if (isset($_POST['update_huitieme_team' . $i]) && !empty($_POST['update_huitieme_team' . $i]))
+		if (isset($_POST['update_huitieme_team' . $i . $j]) && !empty($_POST['update_huitieme_team' . $i . $j]))
 		{
-			if ($i % 2 == 1)
+			$idteam = $bdd->prepare('SELECT id FROM euro_team WHERE name = ?');
+			$idteam->execute(array($_POST['update_huitieme_team' . $i .$j]));
+			$idteamdata = $idteam->fetch();
+			if ($j == 1)
 			{
 				/*$fixbdd = $bdd->prepare('UPDATE brazil_bet SET win = ? WHERE win = ?');
 				$fixbdd->execute(array(*/
 				$fillwinner = $bdd->prepare('UPDATE euro_schedule SET team1 = ? WHERE id = ?');
-				$fillwinner->execute(array($_POST['update_huitieme_team' . $i], $j + 48));
+				$fillwinner->execute(array($idteamdata['id'], $i));
 				$fillwinner->closeCursor();
 			}
 			else
 			{
 				$fillwinner = $bdd->prepare('UPDATE euro_schedule SET team2 = ? WHERE id= ?');
-				$fillwinner->execute(array($_POST['update_huitieme_team' . $i], $j + 48));
+				$fillwinner->execute(array($idteamdata['id'], $i));
 				$fillwinner->closeCursor();
 			}
 		}
 	}
-	if ($i % 2 == 0)
-		$j++;
+  }
 }
 
 // Update the names of the teams that are qualified to go to the quarter-finals

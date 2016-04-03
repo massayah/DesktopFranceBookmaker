@@ -182,32 +182,47 @@ $defaultvalue->closeCursor();
 <div>
 <h2 class="h3-like">Huitièmes de finale</h2>
 <?php
-	$huitieme = array("Premier Groupe A", "Second Groupe B",  "Premier Groupe C", "Second Groupe D",
-					 "Premier Groupe B", "Second Groupe A", "Premier Groupe D", "Second Groupe C",
-					 "Premier Groupe E", "Second Groupe F",  "Premier Groupe G", "Second Groupe H",
-					 "Premier Groupe F", "Second Groupe E", "Premier Groupe H", "Second Groupe G");
-	for ($i = 1; $i <= 16; $i++)
+  $huitieme = $bdd->query('SELECT tempname1, tempname2, id FROM euro_schedule WHERE id BETWEEN 37 AND 44');
+ 
+  while($huitiemedata = $huitieme->fetch())
+  {
+  ?>
+      <form id="update_huitieme<?php echo $huitiemedata['id'] . 1; ?>" method="POST" action="admin.php">
+      <fieldset>
+      <label for="update_huitieme_team<?php echo $huitiemedata['id'] . 1; ?>"><?php echo $huitiemedata['tempname1'];?></label>
+      <select id="update_huitieme_team<?php echo $huitiemedata['id'] . 1; ?>" name="update_huitieme_team<?php echo $huitiemedata['id'] . 1; ?>">
+      <option value="first"></option>
+      <?php
+	$winnershuitieme = $bdd->query('SELECT name FROM euro_team');
+	while ($winnershuitiemedata = $winnershuitieme->fetch())
 	{
-?>
-<form id="update_huitieme<?php echo $i; ?>" method="POST" action="admin.php">
-<fieldset>
-<label for="update_huitieme_team<?php echo $i; ?>"><?php echo $huitieme[$i - 1];?></label>
-<select id="update_huitieme_team<?php echo $i; ?>" name="update_huitieme_team<?php echo $i; ?>">
-<option value="first"></option>
-<?php
-$winnershuitieme = $bdd->prepare('SELECT name FROM euro_team WHERE euro_team.group = ?');
-$winnershuitieme->execute(array(substr($huitieme[$i - 1], -1)));
-while ($winnershuitiemedata = $winnershuitieme->fetch())
-{
-	echo "<option value=\"" . $winnershuitiemedata['name'] . "\">" . $winnershuitiemedata['name'] . "</option>";
-}
-$winnershuitieme->closeCursor();
-?>
-</select>
-<input type="submit" class="admin_updates_edit btn-rouge" name="submit_huitieme<?php echo $i;?>" value="Envoyer" id="submit_huitieme<?php echo $i;?>">
-</fieldset>
-</form>
-<?php } ?>
+	  echo "<option value=\"" . $winnershuitiemedata['name'] . "\">" . $winnershuitiemedata['name'] . "</option>";
+	}
+      $winnershuitieme->closeCursor();
+      ?>
+      </select>
+      <input type="submit" class="admin_updates_edit btn-rouge" name="submit_huitieme<?php echo $huitiemedata['id'] . 1;?>" value="Envoyer" id="submit_huitieme<?php echo $huitiemedata['id'] . 1;?>">
+      </fieldset>
+      </form>
+      
+      <form id="update_huitieme<?php echo $huitiemedata['id'] . 2; ?>" method="POST" action="admin.php">
+      <fieldset>
+      <label for="update_huitieme_team<?php echo $huitiemedata['id'] . 2; ?>"><?php echo $huitiemedata['tempname2'];?></label>
+      <select id="update_huitieme_team<?php echo $huitiemedata['id'] . 2; ?>" name="update_huitieme_team<?php echo $huitiemedata['id'] . 2; ?>">
+      <option value="first"></option>
+      <?php
+	$winnershuitieme2 = $bdd->query('SELECT name FROM euro_team');
+	while ($winnershuitiemedata = $winnershuitieme2->fetch())
+	{
+	  echo "<option value=\"" . $winnershuitiemedata['name'] . "\">" . $winnershuitiemedata['name'] . "</option>";
+	}
+      $winnershuitieme->closeCursor();
+      ?>
+      </select>
+      <input type="submit" class="admin_updates_edit btn-rouge" name="submit_huitieme<?php echo $huitiemedata['id'] . 2;?>" value="Envoyer" id="submit_huitieme<?php echo $huitiemedata['id'] . 2;?>">
+      </fieldset>
+      </form>
+ <?php } ?>
 
 
 <h2 class="h3-like">Quarts de finale</h2>
