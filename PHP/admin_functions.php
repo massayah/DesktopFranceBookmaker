@@ -254,73 +254,90 @@ for ($i = 37; $i <= 44; $i++)
 }
 
 // Update the names of the teams that are qualified to go to the quarter-finals
-for ($i = 1, $j = 1; $i <= 8; $i++)
+for ($i = 45; $i <= 48; $i++)
 {
-	if (isset($_POST['submit_quarter' . $i]))
+  for ($j = 1; $j <= 2; $j++)
+  {
+	if (isset($_POST['submit_quart' . $i .$j]))
 	{
-		if (isset($_POST['update_quarter_team' . $i]) && !empty($_POST['update_quarter_team' . $i]))
+		if (isset($_POST['update_quart_team' . $i . $j]) && !empty($_POST['update_quart_team' . $i . $j]))
 		{
-			if ($i % 2 == 1)
+			$idteam = $bdd->prepare('SELECT id FROM euro_team WHERE name = ?');
+			$idteam->execute(array($_POST['update_quart_team' . $i .$j]));
+			$idteamdata = $idteam->fetch();
+			if ($j == 1)
 			{
+				/*$fixbdd = $bdd->prepare('UPDATE brazil_bet SET win = ? WHERE win = ?');
+				$fixbdd->execute(array(*/
 				$fillwinner = $bdd->prepare('UPDATE euro_schedule SET team1 = ? WHERE id = ?');
-				$fillwinner->execute(array($_POST['update_quarter_team' . $i], $j + 56));
+				$fillwinner->execute(array($idteamdata['id'], $i));
 				$fillwinner->closeCursor();
 			}
 			else
 			{
 				$fillwinner = $bdd->prepare('UPDATE euro_schedule SET team2 = ? WHERE id= ?');
-				$fillwinner->execute(array($_POST['update_quarter_team' . $i], $j + 56));
+				$fillwinner->execute(array($idteamdata['id'], $i));
 				$fillwinner->closeCursor();
 			}
 		}
 	}
-	if ($i % 2 == 0)
-		$j++;
+  }
 }
 
 // Update the names of the teams that are qualified to go to the semi-finals
-for ($i = 1, $j = 1; $i <= 4; $i++)
+for ($i = 49; $i <= 50; $i++)
 {
-	if (isset($_POST['submit_semi' . $i]))
+  for ($j = 1; $j <= 2; $j++)
+  {
+	if (isset($_POST['submit_demi' . $i .$j]))
 	{
-		if (isset($_POST['update_semi_team' . $i]) && !empty($_POST['update_semi_team' . $i]))
+		if (isset($_POST['update_demi_team' . $i . $j]) && !empty($_POST['update_demi_team' . $i . $j]))
 		{
-			if ($i % 2 == 1)
+			$idteam = $bdd->prepare('SELECT id FROM euro_team WHERE name = ?');
+			$idteam->execute(array($_POST['update_demi_team' . $i .$j]));
+			$idteamdata = $idteam->fetch();
+			if ($j == 1)
 			{
-				$fillwinner = $bdd->prepare('UPDATE euro_schedule SET team1 = ? WHERE id= ?');
-				$fillwinner->execute(array($_POST['update_semi_team' . $i], $j + 60));
+				/*$fixbdd = $bdd->prepare('UPDATE brazil_bet SET win = ? WHERE win = ?');
+				$fixbdd->execute(array(*/
+				$fillwinner = $bdd->prepare('UPDATE euro_schedule SET team1 = ? WHERE id = ?');
+				$fillwinner->execute(array($idteamdata['id'], $i));
 				$fillwinner->closeCursor();
 			}
 			else
 			{
-				$fillwinner = $bdd->prepare('UPDATE euro_schedule SET team2 = ? WHERE id = ?');
-				$fillwinner->execute(array($_POST['update_semi_team' . $i], $j + 60));
+				$fillwinner = $bdd->prepare('UPDATE euro_schedule SET team2 = ? WHERE id= ?');
+				$fillwinner->execute(array($idteamdata['id'], $i));
 				$fillwinner->closeCursor();
 			}
 		}
 	}
-	if ($i % 2 == 0)
-		$j++;
+  }
 }
 
-
 // Update the names of the teams that are qualified to go to the final
-if (isset($_POST['submit_final1']))
+if (isset($_POST['submit_finale511']))
 {
-	if (isset($_POST['update_final_team1']) && !empty($_POST['update_final_team1']))
+	if (isset($_POST['update_finale_team511']) && !empty($_POST['update_finale_team511']))
 	{
-		$fillwinner = $bdd->prepare('UPDATE euro_schedule SET team1 = ? WHERE id = 64');
-		$fillwinner->execute(array($_POST['update_final_team1']));
+		$idteam = $bdd->prepare('SELECT id FROM euro_team WHERE name = ?');
+		$idteam->execute(array($_POST['update_finale_team511']));
+		$idteamdata = $idteam->fetch();
+		$fillwinner = $bdd->prepare('UPDATE euro_schedule SET team1 = ? WHERE id = 51');
+		$fillwinner->execute(array($idteamdata['id']));
 		$fillwinner->closeCursor();
 	}
 }
 
-if (isset($_POST['submit_final2']))
+if (isset($_POST['submit_finale512']))
 {
-	if (isset($_POST['update_final_team2']) && !empty($_POST['update_final_team2']))
+	if (isset($_POST['update_finale_team512']) && !empty($_POST['update_finale_team512']))
 	{
-		$fillwinner = $bdd->prepare('UPDATE euro_schedule SET team2 = ? WHERE id = 64');
-		$fillwinner->execute(array($_POST['update_final_team2']));
+		$idteam = $bdd->prepare('SELECT id FROM euro_team WHERE name = ?');
+		$idteam->execute(array($_POST['update_finale_team512']));
+		$idteamdata = $idteam->fetch();
+		$fillwinner = $bdd->prepare('UPDATE euro_schedule SET team2 = ? WHERE id = 51');
+		$fillwinner->execute(array($idteamdata['id']));
 		$fillwinner->closeCursor();
 	}
 }

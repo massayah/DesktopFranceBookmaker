@@ -183,14 +183,10 @@ if ($betsdata['tn2'] != NULL)
 <p class="couleur mtn"><?php 
 if ($betsdata['win'] != "")
 	{
-		if ($betsdata['win'] == 25)
-			echo "Nul";
-		else {
 		$chosenbet = $bdd->prepare('SELECT name FROM euro_team WHERE id = ?');
 		$chosenbet->execute(array($betsdata['win']));
 		$chosenbetdata = $chosenbet->fetch();
 		echo $chosenbetdata['name'];
-		}
 	}
     else
       echo "Non Parié";

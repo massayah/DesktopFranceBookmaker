@@ -216,7 +216,7 @@ $defaultvalue->closeCursor();
 	{
 	  echo "<option value=\"" . $winnershuitiemedata['name'] . "\">" . $winnershuitiemedata['name'] . "</option>";
 	}
-      $winnershuitieme->closeCursor();
+      $winnershuitieme2->closeCursor();
       ?>
       </select>
       <input type="submit" class="admin_updates_edit btn-rouge" name="submit_huitieme<?php echo $huitiemedata['id'] . 2;?>" value="Envoyer" id="submit_huitieme<?php echo $huitiemedata['id'] . 2;?>">
@@ -227,106 +227,138 @@ $defaultvalue->closeCursor();
 
 <h2 class="h3-like">Quarts de finale</h2>
 <?php
-	$quarter = array("Gagnant Huitième 1", "Gagnant Huitième 3", "Gagnant Huitième 2", "Gagnant Huitième 4", 
-					 "Gagnant Huitième 5", "Gagnant Huitième 7", "Gagnant Huitième 6", "Gagnant Huitième 8");
-	for ($i = 1; $i <= 8; $i++)
+  $quart = $bdd->query('SELECT tempname1, tempname2, id FROM euro_schedule WHERE id BETWEEN 45 AND 48');
+ 
+  while($quartdata = $quart->fetch())
+  {
+  ?>
+      <form id="update_quart<?php echo $quartdata['id'] . 1; ?>" method="POST" action="admin.php">
+      <fieldset>
+      <label for="update_quart_team<?php echo $quartdata['id'] . 1; ?>"><?php echo $quartdata['tempname1'];?></label>
+      <select id="update_quart_team<?php echo $quartdata['id'] . 1; ?>" name="update_quart_team<?php echo $quartdata['id'] . 1; ?>">
+      <option value="first"></option>
+      <?php
+	$winnersquart = $bdd->query('SELECT name FROM euro_team');
+	while ($winnersquartdata = $winnersquart->fetch())
 	{
-?>
-<form id="update_quarter<?php echo $i; ?>" method="POST" action="admin.php">
-<fieldset>
-<label for="update_quarter_team<?php echo $i; ?>"><?php echo $quarter[$i - 1];?></label>
-<select id="update_quarter_team<?php echo $i; ?>" name="update_quarter_team<?php echo $i; ?>">
-<option value="first"></option>
-<?php
-$winnersquarter = $bdd->prepare('SELECT name FROM euro_team');
-$winnersquarter->execute(array(substr($quarter[$i - 1], -1)));
-while ($winnersquarterdata = $winnersquarter->fetch())
-{
-	echo "<option value=\"" . $winnersquarterdata['name'] . "\">" . $winnersquarterdata['name'] . "</option>";
-}
-$winnersquarter->closeCursor();
-?>
-</select>
-<input type="submit" class="admin_updates_edit btn-rouge" name="submit_quarter<?php echo $i;?>" value="Envoyer" id="submit_quarter<?php echo $i;?>">
-</fieldset>
-</form>
-<?php } ?>
+	  echo "<option value=\"" . $winnersquartdata['name'] . "\">" . $winnersquartdata['name'] . "</option>";
+	}
+      $winnersquart->closeCursor();
+      ?>
+      </select>
+      <input type="submit" class="admin_updates_edit btn-rouge" name="submit_quart<?php echo $quartdata['id'] . 1;?>" value="Envoyer" id="submit_quart<?php echo $quartdata['id'] . 1;?>">
+      </fieldset>
+      </form>
+      
+      <form id="update_quart<?php echo $quartdata['id'] . 2; ?>" method="POST" action="admin.php">
+      <fieldset>
+      <label for="update_quart_team<?php echo $quartdata['id'] . 2; ?>"><?php echo $quartdata['tempname2'];?></label>
+      <select id="update_quart_team<?php echo $quartdata['id'] . 2; ?>" name="update_quart_team<?php echo $quartdata['id'] . 2; ?>">
+      <option value="first"></option>
+      <?php
+	$winnersquart2 = $bdd->query('SELECT name FROM euro_team');
+	while ($winnersquartdata = $winnersquart2->fetch())
+	{
+	  echo "<option value=\"" . $winnersquartdata['name'] . "\">" . $winnersquartdata['name'] . "</option>";
+	}
+      $winnersquart2->closeCursor();
+      ?>
+      </select>
+      <input type="submit" class="admin_updates_edit btn-rouge" name="submit_quart<?php echo $quartdata['id'] . 2;?>" value="Envoyer" id="submit_quart<?php echo $quartdata['id'] . 2;?>">
+      </fieldset>
+      </form>
+ <?php } ?>
 
 
 <h2 class="h3-like">Demi-finales</h2>
 <?php
-	$semi = array("Gagnant Quart 1","Gagnant Quart 3", "Gagnant Quart 2", "Gagnant Quart 4");
-	for ($i = 1; $i <= 4; $i++)
+  $demi = $bdd->query('SELECT tempname1, tempname2, id FROM euro_schedule WHERE id BETWEEN 49 AND 50');
+ 
+  while($demidata = $demi->fetch())
+  {
+  ?>
+      <form id="update_demi<?php echo $demidata['id'] . 1; ?>" method="POST" action="admin.php">
+      <fieldset>
+      <label for="update_demi_team<?php echo $demidata['id'] . 1; ?>"><?php echo $demidata['tempname1'];?></label>
+      <select id="update_demi_team<?php echo $demidata['id'] . 1; ?>" name="update_demi_team<?php echo $demidata['id'] . 1; ?>">
+      <option value="first"></option>
+      <?php
+	$winnersdemi = $bdd->query('SELECT name FROM euro_team');
+	while ($winnersdemidata = $winnersdemi->fetch())
 	{
-?>
-<form id="update_semi<?php echo $i; ?>" method="POST" action="admin.php">
-<fieldset>
-<label for="update_semi_team<?php echo $i; ?>"><?php echo $semi[$i - 1];?></label>
-<select id="update_semi_team<?php echo $i; ?>" name="update_semi_team<?php echo $i; ?>">
-<option value="first"></option>
-<?php
-$winnerssemi = $bdd->query('SELECT name FROM euro_team');
-while ($winnerssemidata = $winnerssemi->fetch())
-{
-	echo "<option value=\"" . $winnerssemidata['name'] . "\">" . $winnerssemidata['name'] . "</option>";
-}
-$winnerssemi->closeCursor();
-?>
-</select>
-<input type="submit" class="admin_updates_edit btn-rouge" name="submit_semi<?php echo $i;?>" value="Envoyer" id="submit_semi<?php echo $i;?>">
-</fieldset>
-</form>
-<?php } ?>
+	  echo "<option value=\"" . $winnersdemidata['name'] . "\">" . $winnersdemidata['name'] . "</option>";
+	}
+      $winnersdemi->closeCursor();
+      ?>
+      </select>
+      <input type="submit" class="admin_updates_edit btn-rouge" name="submit_demi<?php echo $demidata['id'] . 1;?>" value="Envoyer" id="submit_demi<?php echo $demidata['id'] . 1;?>">
+      </fieldset>
+      </form>
+      
+      <form id="update_demi<?php echo $demidata['id'] . 2; ?>" method="POST" action="admin.php">
+      <fieldset>
+      <label for="update_demi_team<?php echo $demidata['id'] . 2; ?>"><?php echo $demidata['tempname2'];?></label>
+      <select id="update_demi_team<?php echo $demidata['id'] . 2; ?>" name="update_demi_team<?php echo $demidata['id'] . 2; ?>">
+      <option value="first"></option>
+      <?php
+	$winnersdemi2 = $bdd->query('SELECT name FROM euro_team');
+	while ($winnersdemidata = $winnersdemi2->fetch())
+	{
+	  echo "<option value=\"" . $winnersdemidata['name'] . "\">" . $winnersdemidata['name'] . "</option>";
+	}
+      $winnersdemi2->closeCursor();
+      ?>
+      </select>
+      <input type="submit" class="admin_updates_edit btn-rouge" name="submit_demi<?php echo $demidata['id'] . 2;?>" value="Envoyer" id="submit_demi<?php echo $demidata['id'] . 2;?>">
+      </fieldset>
+      </form>
+ <?php } ?>
 
-<h2 class="h3-like">Petite Finale</h2>
-<?php
-	$petitefinal = array("Perdant Demi 1", "Perdant Demi 2");
-	for ($i = 1; $i <= 2; $i++)
-	{
-?>
-<form id="update_petitefinal<?php echo $i; ?>" method="POST" action="admin.php#update_petitefinal">
-<fieldset>
-<label for="update_petitefinal_team<?php echo $i; ?>"><?php echo $petitefinal[$i - 1];?></label>
-<select id="update_petitefinal_team<?php echo $i; ?>" name="update_petitefinal_team<?php echo $i; ?>">
-<option value="first"></option>
-<?php
-$winnerspetitefinal = $bdd->query('SELECT name FROM euro_team');
-while ($winnerspetitefinaldata = $winnerspetitefinal->fetch())
-{
-	echo "<option value=\"" . $winnerspetitefinaldata['name'] . "\">" . $winnerspetitefinaldata['name'] . "</option>";
-}
-$winnerspetitefinal->closeCursor();
-?>
-</select>&nbsp;
-<input type="submit" class="admin_updates_edit btn-rouge" name="submit_petitefinal<?php echo $i;?>" value="Envoyer" id="submit_petitefinal<?php echo $i;?>">
-</fieldset>
-</form>
-<?php } ?>
 
 <h2 class="h3-like">Finale</h2>
 <?php
-	$final = array("Gagnant Demi 1", "Gagnant Demi 2");
-	for ($i = 1; $i <= 2; $i++)
+  $finale = $bdd->query('SELECT tempname1, tempname2, id FROM euro_schedule WHERE id = 51');
+ 
+  while($finaledata = $finale->fetch())
+  {
+  ?>
+      <form id="update_finale<?php echo $finaledata['id'] . 1; ?>" method="POST" action="admin.php">
+      <fieldset>
+      <label for="update_finale_team<?php echo $finaledata['id'] . 1; ?>"><?php echo $finaledata['tempname1'];?></label>
+      <select id="update_finale_team<?php echo $finaledata['id'] . 1; ?>" name="update_finale_team<?php echo $finaledata['id'] . 1; ?>">
+      <option value="first"></option>
+      <?php
+	$winnersfinale = $bdd->query('SELECT name FROM euro_team');
+	while ($winnersfinaledata = $winnersfinale->fetch())
 	{
-?>
-<form id="update_final<?php echo $i; ?>" method="POST" action="admin.php">
-<fieldset>
-<label for="update_final_team<?php echo $i; ?>"><?php echo $final[$i - 1];?></label>
-<select id="update_final_team<?php echo $i; ?>" name="update_final_team<?php echo $i; ?>">
-<option value="first"></option>
-<?php
-$winnersfinal = $bdd->query('SELECT name FROM euro_team');
-while ($winnersfinaldata = $winnersfinal->fetch())
-{
-	echo "<option value=\"" . $winnersfinaldata['name'] . "\">" . $winnersfinaldata['name'] . "</option>";
-}
-$winnersfinal->closeCursor();
-?>
-</select>
-<input type="submit" class="admin_updates_edit btn-rouge" name="submit_final<?php echo $i;?>" value="Envoyer" id="submit_final<?php echo $i;?>">
-</fieldset>
-</form>
-<?php } ?>
+	  echo "<option value=\"" . $winnersfinaledata['name'] . "\">" . $winnersfinaledata['name'] . "</option>";
+	}
+      $winnersfinale->closeCursor();
+      ?>
+      </select>
+      <input type="submit" class="admin_updates_edit btn-rouge" name="submit_finale<?php echo $finaledata['id'] . 1;?>" value="Envoyer" id="submit_finale<?php echo $finaledata['id'] . 1;?>">
+      </fieldset>
+      </form>
+      
+      <form id="update_finale<?php echo $finaledata['id'] . 2; ?>" method="POST" action="admin.php">
+      <fieldset>
+      <label for="update_finale_team<?php echo $finaledata['id'] . 2; ?>"><?php echo $finaledata['tempname2'];?></label>
+      <select id="update_finale_team<?php echo $finaledata['id'] . 2; ?>" name="update_finale_team<?php echo $finaledata['id'] . 2; ?>">
+      <option value="first"></option>
+      <?php
+	$winnersfinale2 = $bdd->query('SELECT name FROM euro_team');
+	while ($winnersfinaledata = $winnersfinale2->fetch())
+	{
+	  echo "<option value=\"" . $winnersfinaledata['name'] . "\">" . $winnersfinaledata['name'] . "</option>";
+	}
+      $winnersfinale2->closeCursor();
+      ?>
+      </select>
+      <input type="submit" class="admin_updates_edit btn-rouge" name="submit_finale<?php echo $finaledata['id'] . 2;?>" value="Envoyer" id="submit_finale<?php echo $finaledata['id'] . 2;?>">
+      </fieldset>
+      </form>
+ <?php } ?>
+
 </div>
 </div>
 
