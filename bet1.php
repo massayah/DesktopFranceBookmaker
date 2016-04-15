@@ -125,36 +125,21 @@ setLightbox($team2, $betsdata['previous2'], $betsdata['smallname2']);
  
 
 <!-- Setting the lightbox for each team available if we click on the name of the team -->
-<!--
- <a href="#lb_espagne" id="lightbox_espagne">Infos Roumanie</a>
+
+ <a href="#lb_fra" class="lightbox_fra">Infos France</a>
 		<div style="display: none;">
-		<div id="lb_espagne" class="lbstyle">
-		<h2 class="h3-like">Espagne</h2>
-			<p><strong>Palmarès Euro 2012 : </strong><br>
-			non qualifié</p>
-			<h3>Matchs de Poule</h3>
-			<ul class="unstyled pln">
-			<li><strong>1er</strong> vs France&nbsp;:&nbsp;perdu 3 - 0</li>
-			<li><strong>2ème</strong> vs Belgique&nbsp;:&nbsp;non joué</li>
-			<li><strong>3ème</strong> vs Ukraine&nbsp;:&nbsp;non joué</li>
-			</ul>
-			<h3>Points Groupe A</h3>
-			<ul class="unstyled pln">
-			<li>France&nbsp;:&nbsp;<strong>3</strong></li>
-			<li>Ukraine&nbsp;:&nbsp;<strong>1</strong></li>
-			<li>Belgique&nbsp;:&nbsp;<strong>1</strong></li>
-			<li>Malte&nbsp;:&nbsp;<strong>0</strong></li>
-			</ul>
-			<h3>Phase finale</h3>
-			<ul class="unstyled pln">
-			<li><strong>8èmes</strong>&nbsp;:&nbsp;non joué</li>
-			<li><strong>quarts</strong>&nbsp;:&nbsp;non joué</li>
-			<li><strong>demies</strong>&nbsp;:&nbsp;non joué</li>
-			<li><strong>finale</strong>&nbsp;:&nbsp;non joué</li>
-			</ul>
+		<div id="lb_fra" class="lbstyle">
+		<h2 class="h3-like">France</h2>
+			<h3>Palmarès Euro 2012</h3>
+			<p>non qualifié</p>
+			<h3>Entraîneur</h3>
+			<p>Didier Deschamps</p>
+			<h3>Joueur Star</h3>
+			<p>Hugo Lloris</p>
+			
+			
 		</div>
 		</div>
-		-->
 		<!-- End Setting the lightbox for each team available if we click on the name of the team -->
 
 <div class="grid-2-small-1-tiny-1 ptl">
