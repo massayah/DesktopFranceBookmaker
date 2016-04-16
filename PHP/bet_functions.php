@@ -43,16 +43,16 @@ for ($i = 1; $i <= $numbermatchs['nombre']; $i++)
 		$possible->closeCursor();
 	}
 }
-function setLightbox($name, $previous, $smallname)
+function setLightbox($name, $previous, $smallname, $starplayer, $coach)
 {
 	$formatlightbox = str_replace(" ", "", strtolower($smallname));
 	echo "<a class=\"lightbox_". $formatlightbox ."\" href=\"#lb_" . $formatlightbox . "\">Infos " . $name . "</a>";
 	echo "<div style=\"display: none;\" class=\"hidelightbox\">
 		  <div id=\"lb_" . $formatlightbox . "\" class=\"lbstyle\">
 		  <h2 class=\"h3-like\">" . $name . "</h2>
-			<h3 class=\"h4-like\">Palmarès 2012</h3>" . $previous . "
-			<h3 class=\"h4-like\">Entraîneur</h3>
-			<h3 class=\"h4-like\">Joueur Star</h3>
+			<h3 class=\"h4-like\">Palmarès Euro 2012</h3>" . $previous . "
+			<h3 class=\"h4-like\">Entraîneur</h3>" .  $coach . "
+			<h3 class=\"h4-like\">Joueur Star</h3>" . $starplayer . "
 			
 		</div>
 		</div>";
