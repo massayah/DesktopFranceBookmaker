@@ -658,8 +658,9 @@ margin-top: 1em;
 
 .lbstyle {
   width: 320px;
-  width: 500px;
-  height:auto;
+  padding: 0 1em 2em 1em;
+  /*width: 500px;*/
+  /*height:auto;*/
   overflow:auto;
 }
 

@@ -127,7 +127,7 @@ setLightbox($team2, $betsdata['previous2'], $betsdata['smallname2'], $betsdata['
 
 <!-- Setting the lightbox for each team available if we click on the name of the team -->
 
- <a href="#lb_fra" class="lightbox_fra">Infos France</a>
+ <!--<a href="#lb_fra" class="lightbox_fra">Infos France</a>
 		<div style="display: none;">
 		<div id="lb_fra" class="lbstyle">
 		<h2 class="h3-like">France</h2>
@@ -140,7 +140,7 @@ setLightbox($team2, $betsdata['previous2'], $betsdata['smallname2'], $betsdata['
 			
 			
 		</div>
-		</div>
+		</div>-->
 		<!-- End Setting the lightbox for each team available if we click on the name of the team -->
 
 <div class="grid-2-small-1-tiny-1 ptl">
