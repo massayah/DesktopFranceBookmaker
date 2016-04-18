@@ -49,7 +49,7 @@ if ($gettop->rowCount() != 0)
 		<?php if (isset($team1) && !empty($team1)) { ?>
 			<li id="team1"><?php echo $team1; ?></li>
 		<?php } else { ?>
-			<li class="placeholder1">Faites votre choix</li>
+			<li class="placeholder1"><a href="#jefaismontop">Faites votre choix</a></li>
 		<?php } ?>
 		</ul>
 	<div id="result"></div>
@@ -63,7 +63,7 @@ if ($gettop->rowCount() != 0)
 		<?php if (isset($team2) && !empty($team2)) { ?>
 			<li id="team2"><?php echo $team2; ?></li>
 		<?php } else { ?>
-			<li class="placeholder2">Faites votre choix</li>
+			<li class="placeholder2"><a href="#jefaismontop">Faites votre choix</a></li>
 		<?php } ?>
 		</ul>
 	</div><!--end class ui-widget-content-->
@@ -76,7 +76,7 @@ if ($gettop->rowCount() != 0)
 		<?php if (isset($team3) && !empty($team3)) { ?>
 			<li id="team3"><?php echo $team3; ?></li>
 		<?php } else { ?>
-			<li class="placeholder3">Faites votre choix</li>
+			<li class="placeholder3"><a href="#jefaismontop">Faites votre choix</a></li>
 		<?php } ?>
 		</ul>
 	</div><!--end class ui-widget-content-->
@@ -89,7 +89,7 @@ if ($gettop->rowCount() != 0)
 		<?php if (isset($team4) && !empty($team4)) { ?>
 			<li id="team4"><?php echo $team4; ?></li>
 		<?php } else { ?>
-			<li class="placeholder4">Faites votre choix</li>
+			<li class="placeholder4"><a href="#jefaismontop">Faites votre choix</a></li>
 		<?php } ?>
 		</ul>
 	</div>
@@ -124,7 +124,7 @@ if ($gettop->rowCount() != 0)
 <?php
 $result = $bdd->query('SELECT * FROM euro_team;');
 ?><form action="#top4-choice" method="post">
-<div class="grid-4-small-2-tiny-1">
+<div class="grid-4-small-2-tiny-1" id="jefaismontop">
 <div>
    <label for="top-choix-1" class="mbs h4-like">1er</label><br>
    <select multiple size="20" name="top_premier">

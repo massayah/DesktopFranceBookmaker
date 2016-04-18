@@ -641,6 +641,10 @@ margin-top: 1em;
   padding: 1em .5em;
 }
 
+#top4-choice a {
+  color: #fff;
+}
+
 
 #page_top p.up {    /* annulation du width 23,5% de grid3 */
   width: 100%;
