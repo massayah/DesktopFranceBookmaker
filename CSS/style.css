@@ -340,12 +340,19 @@ border: 1px solid transparent;
     background-color:#fff;
     border:solid 1px rgb(220,220,220);
     padding:12px;
-    width:250px;
+    width:170px;
     box-shadow:1px 1px 4px rgb(220,220,220);
     top: 60px;
     left:0;
     display:none;
 }
+@media (min-width:1238px) {
+  #login-form {
+    width: 200px;
+  }
+  
+}
+
 
 #login-form label {
     display:block;
