@@ -76,7 +76,8 @@ echo "</div>";
 <?php
 $bets = $bdd->prepare('SELECT t1.name AS tn1, t2.name AS tn2, t1.flag AS tf1, t2.flag as tf2, es.id as sid, team1result, team2result, available, 
 MONTHNAME(date) as month, DAY(date) as day, HOUR(date) as hour, MINUTE(date) as minute, win, available, t1.previous as previous1, t2.previous as previous2, 
-t1.smallname AS smallname1, t2.smallname AS smallname2, MONTHNAME(NOW()) as monthnow, DAY(NOW()) AS daynow, tempname1, tempname2, en.name AS title, t1.id as idt1, t2.id as idt2  
+t1.smallname AS smallname1, t2.smallname AS smallname2, MONTHNAME(NOW()) as monthnow, DAY(NOW()) AS daynow, tempname1, tempname2, en.name AS title, t1.id as idt1, t2.id as idt2, t1.starplayer as starplayer1, t2.starplayer as starplayer2, t1.coach as coach1, t2.coach as coach2, overtime, 
+team1penalty as t1pen, team2penalty as t2pen 
 FROM euro_schedule es  LEFT OUTER JOIN euro_bet eb ON es.id = eb.match_id AND username = ? LEFT OUTER JOIN euro_team t1 ON team1 = t1.id 
 LEFT OUTER JOIN euro_team t2 ON t2.id = team2 JOIN euro_namematch en ON en.id_match = es.id WHERE es.group IS NULL ORDER BY date');
 $bets->execute(array($_SESSION['username']));
@@ -91,6 +92,11 @@ $pathflag = "images/flags/flag.png";
 $hasplayed = $teamresult1 != NULL && $teamresult2 != NULL;
 $idt1 = $betsdata['idt1'];
 $idt2 = $betsdata['idt2'];
+$prolong = $betsdata['overtime'];
+$peno1 = $betsdata['t1pen'];
+$peno2 = $betsdata['t2pen'];
+
+
 ?>
 
 
@@ -115,53 +121,29 @@ $idt2 = $betsdata['idt2'];
 <p class="txtcenter h5-like mtn"><strong>
 <?php
 if ($hasplayed)
+{
 	echo $betsdata['team1result'] . " - " . $betsdata['team2result'];
+	if ($prolong != NULL)
+	{
+	  echo "(a.p)";
+	  if ($peno1 != NULL && $peno2 != NULL)
+	    echo $peno1 . " t.a.b à " . $peno2;
+	 }
+}
 else
 	echo "non joué";
 ?>
 </strong></p>
 <?php
 if ($betsdata['tn1'] != NULL)
-	setLightbox($team1, $betsdata['previous1'], $betsdata['smallname1']);
+	setLightbox($team1, $betsdata['previous1'], $betsdata['smallname1'], $betsdata['starplayer1'], $betsdata['coach1']);
 if ($betsdata['tn2'] != NULL)
-	setLightbox($team2, $betsdata['previous2'], $betsdata['smallname2']);
+	setLightbox($team2, $betsdata['previous2'], $betsdata['smallname2'], $betsdata['starplayer2'], $betsdata['coach2']);
 ?>
 
 		<!-- End Setting the lightbox for each team available if we click on the name of the team -->
  
 
-<!-- Setting the lightbox for each team available if we click on the name of the team -->
-<!--
- <a href="#lb_espagne" id="lightbox_espagne">Infos Roumanie</a>
-		<div style="display: none;">
-		<div id="lb_espagne" class="lbstyle">
-		<h2 class="h3-like">Espagne</h2>
-			<p><strong>Palmarès Euro 2012 : </strong><br>
-			non qualifié</p>
-			<h3>Matchs de Poule</h3>
-			<ul class="unstyled pln">
-			<li><strong>1er</strong> vs France&nbsp;:&nbsp;perdu 3 - 0</li>
-			<li><strong>2ème</strong> vs Belgique&nbsp;:&nbsp;non joué</li>
-			<li><strong>3ème</strong> vs Ukraine&nbsp;:&nbsp;non joué</li>
-			</ul>
-			<h3>Points Groupe A</h3>
-			<ul class="unstyled pln">
-			<li>France&nbsp;:&nbsp;<strong>3</strong></li>
-			<li>Ukraine&nbsp;:&nbsp;<strong>1</strong></li>
-			<li>Belgique&nbsp;:&nbsp;<strong>1</strong></li>
-			<li>Malte&nbsp;:&nbsp;<strong>0</strong></li>
-			</ul>
-			<h3>Phase finale</h3>
-			<ul class="unstyled pln">
-			<li><strong>8èmes</strong>&nbsp;:&nbsp;non joué</li>
-			<li><strong>quarts</strong>&nbsp;:&nbsp;non joué</li>
-			<li><strong>demies</strong>&nbsp;:&nbsp;non joué</li>
-			<li><strong>finale</strong>&nbsp;:&nbsp;non joué</li>
-			</ul>
-		</div>
-		</div>
-		-->
-		<!-- End Setting the lightbox for each team available if we click on the name of the team -->
 
 <div class="grid-2-small-1-tiny-1 ptl">
 <div>

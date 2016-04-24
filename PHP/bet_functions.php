@@ -1,6 +1,7 @@
 <?php
-$numbermatchsquery = $bdd->query('SELECT COUNT(id) as nombre FROM euro_schedule WHERE euro_schedule.group IS NOT NULL');
+$numbermatchsquery = $bdd->query('SELECT COUNT(id) as nombre FROM euro_schedule');
 $numbermatchs = $numbermatchsquery->fetch();
+
 
 for ($i = 1; $i <= $numbermatchs['nombre']; $i++)
 {
