@@ -125,9 +125,9 @@ if ($hasplayed)
 	echo $betsdata['team1result'] . " - " . $betsdata['team2result'];
 	if ($prolong != NULL)
 	{
-	  echo "(a.p)";
+	  echo " prolongations<br />";
 	  if ($peno1 != NULL && $peno2 != NULL)
-	    echo $peno1 . " t.a.b à " . $peno2;
+	    echo "t.a.b " . $peno1 . " à " . $peno2;
 	 }
 }
 else
