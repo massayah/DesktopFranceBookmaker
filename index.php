@@ -13,8 +13,10 @@
 <p>La compétition se déroulera du 10 juin au 10 juillet 2016.</p>
 <p>24 équipes - 1 champion</p>
 <p><a href="bet1.php">Pariez sur chaque match</a>, <a href="top.php">Faites&nbsp;votre&nbsp;Top&nbsp;4</a> et Gagnez des cadeaux.</p>
+<h2 class="h4-like">Nous n'avons pas gardé vos identifiants et mots de passe de BrazilBookmaker, vous devez vous réinscrire.</h2>
+<p>En revanche, si vous aviez un compte dans la partie <a href="http://assayah.com/Discussion">Discussion</a> pour papoter, nous avons gardé votre compte.</p>
 
-<h2 class="h4-like ptl">Pendant les matchs, venez discuter sur la plate-forme Discussion</h2>
+<h2 class="h4-like ptl">Pendant les matchs, venez discuter sur la plate-forme <a href="http://assayah.com/Discussion">Discussion</a></h2>
 <p>C'est un réseau privé que j'ai installé dans mon hébergement tout comme le site lui-même, donc pas de problème de confidentialité.</p>
 <p>Le concept a été expérimenté pour la coupe du monde de 2014 et son succès nous l'a fait intégrer complètement dans le site. Ceux qui s'étaient inscrits en 2014 retrouveront leur compte, j'ai juste supprimé les discussions de l'époque.</p>
 <p>Au moment des matchs, il y aura toujours quelqu'un avec qui discuter, si ce n'est une grosse affluence pour les matchs à enjeu.</p>
