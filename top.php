@@ -97,6 +97,61 @@ if ($gettop->rowCount() != 0)
 </div><!--fin grid-->
 </div><!--fin panel-->
 
+<div class="panel grpes">
+<h2 class="mtl">Les Groupes</h2>
+<div class="grid-6-small-2-tiny-1">
+
+<div class="mbl">
+<h3>A</h3>
+<p><img src="images/flags/albanie.png" width="20" height="20" alt="" /><span class="medium-hidden small-hidden tiny-hidden mls mrs"><strong>Albanie</strong></span><span class="large-hidden"><strong>ALB</strong></span></p>
+<p><img src="images/flags/france.png" width="20" height="20" alt="" /><span class="medium-hidden small-hidden tiny-hidden mls mrs"><strong>France</strong></span><span class="large-hidden"><strong>FRA</strong></span></p>
+<p><img src="images/flags/roumanie.png" width="20" height="20" alt="" /><span class="medium-hidden small-hidden tiny-hidden mls mrs"><strong>Roumanie</strong></span><span class="large-hidden"><strong>ROU</strong></span></p>
+<p><img src="images/flags/suisse.png" width="20" height="20" alt="" /><span class="medium-hidden small-hidden tiny-hidden mls mrs"><strong>Suisse</strong></span><span class="large-hidden"><strong>SUI</strong></span></p>
+</div>
+
+<div class="mbl">
+<h3>B</h3>
+<p><img src="images/flags/angleterre.png" width="20" height="20" alt="" /><span class="medium-hidden small-hidden tiny-hidden mls mrs"><strong>Angleterre</strong></span><span class="large-hidden"><strong>ANG</strong></span></p>
+<p><img src="images/flags/russie.png" width="20" height="20" alt="" /><span class="medium-hidden small-hidden tiny-hidden mls mrs"><strong>Russie</strong></span><span class="large-hidden"><strong>RUS</strong></span></p>
+<p><img src="images/flags/slovaquie.png" width="20" height="20" alt="" /><span class="medium-hidden small-hidden tiny-hidden mls mrs"><strong>Slovaquie</strong></span><span class="large-hidden"><strong>SLO</strong></span></p>
+<p><img src="images/flags/pgalles.png" width="20" height="20" alt="" /><span class="medium-hidden small-hidden tiny-hidden mls mrs"><strong>P Galles</strong></span><span class="large-hidden"><strong>PGA</strong></span></p>
+</div>
+
+<div class="mbl">
+<h3>C</h3>
+<p><img src="images/flags/allemagne.png" width="20" height="20" alt="" /><span class="medium-hidden small-hidden tiny-hidden mls mrs"><strong>Allemagne</strong></span><span class="large-hidden"><strong>ALL</strong></span></p>
+<p><img src="images/flags/irlnord.png" width="20" height="20" alt="" /><span class="medium-hidden small-hidden tiny-hidden mls mrs"><strong>Irl du Nord</strong></span><span class="large-hidden"><strong>IRN</strong></span></p>
+<p><img src="images/flags/pologne.png" width="20" height="20" alt="" /><span class="medium-hidden small-hidden tiny-hidden mls mrs"><strong>Pologne</strong></span><span class="large-hidden"><strong>POL</strong></span></p>
+<p><img src="images/flags/ukraine.png" width="20" height="20" alt="" /><span class="medium-hidden small-hidden tiny-hidden mls mrs"><strong>Ukraine</strong></span><span class="large-hidden"><strong>UKR</strong></span></p>
+</div>
+
+<div class="mbl">
+<h3>D</h3>
+<p><img src="images/flags/croatie.png" width="20" height="20" alt="" /><span class="medium-hidden small-hidden tiny-hidden mls mrs"><strong>Croatie</strong></span><span class="large-hidden"><strong>CRO</strong></span></p>
+<p><img src="images/flags/rtcheque.png" width="20" height="20" alt="" /><span class="medium-hidden small-hidden tiny-hidden mls mrs"><strong>Rép Tchèque</strong></span><span class="large-hidden"><strong>RTC</strong></span></p>
+<p><img src="images/flags/espagne.png" width="20" height="20" alt="" /><span class="medium-hidden small-hidden tiny-hidden mls mrs"><strong>Espagne</strong></span><span class="large-hidden"><strong>ESP</strong></span></p>
+<p><img src="images/flags/turquie.png" width="20" height="20" alt="" /><span class="medium-hidden small-hidden tiny-hidden mls mrs"><strong>Turquie</strong></span><span class="large-hidden"><strong>TUR</strong></span></p>
+</div>
+
+<div class="mbl">
+<h3>E</h3>
+<p><img src="images/flags/belgique.png" width="20" height="20" alt="" /><span class="medium-hidden small-hidden tiny-hidden mls mrs"><strong>Belgique</strong></span><span class="large-hidden"><strong>BEL</strong></span></p>
+<p><img src="images/flags/italie.png" width="20" height="20" alt="" /><span class="medium-hidden small-hidden tiny-hidden mls mrs"><strong>Italie</strong></span><span class="large-hidden"><strong>ITA</strong></span></p>
+<p><img src="images/flags/irlande.png" width="20" height="20" alt="" /><span class="medium-hidden small-hidden tiny-hidden mls mrs"><strong>Rép Irlande</strong></span><span class="large-hidden"><strong>IRL</strong></span></p>
+<p><img src="images/flags/suede.png" width="20" height="20" alt="" /><span class="medium-hidden small-hidden tiny-hidden mls mrs"><strong>Suède</strong></span><span class="large-hidden"><strong>SUE</strong></span></p>
+</div>
+
+<div class="mbl">
+<h3>F</h3>
+<p><img src="images/flags/autriche.png" width="20" height="20" alt="" /><span class="medium-hidden small-hidden tiny-hidden mls mrs"><strong>Autriche</strong></span><span class="large-hidden"><strong>AUT</strong></span></p>
+<p><img src="images/flags/hongrie.png" width="20" height="20" alt="" /><span class="medium-hidden small-hidden tiny-hidden mls mrs"><strong>Hongrie</strong></span><span class="large-hidden"><strong>HON</strong></span></p>
+<p><img src="images/flags/islande.png" width="20" height="20" alt="" /><span class="medium-hidden small-hidden tiny-hidden mls mrs"><strong>Islande</strong></span><span class="large-hidden"><strong>ISL</strong></span></p>
+<p><img src="images/flags/portugal.png" width="20" height="20" alt="" /><span class="medium-hidden small-hidden tiny-hidden mls mrs"><strong>Portugal</strong></span><span class="large-hidden"><strong>POR</strong></span></p>
+</div>
+
+</div><!--fin grid-->
+</div><!--fin panel-->
+
 <div class="panel mtl">
 <h2>Comment faire</h2>
 <div class="grid-2-small-1-tiny-1">
