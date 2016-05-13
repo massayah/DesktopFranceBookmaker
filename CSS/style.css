@@ -714,6 +714,10 @@ table.infoteam {
   max-width: 500px;
 }
 
+#page_ranking table td.user {
+  font-weight: bold;
+}
+
 /* Label the data pour tableau ranking */
 
 @media (max-width:1024px) { 
